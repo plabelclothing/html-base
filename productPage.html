@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./style.css'>
+    <title>Plabel</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="container__country">
+                <div class="country">
+                    <img class="country__icon" alt="country" src="assets/images/usa.png">
+                    <div class="country__text">Ship to: United States</div>
+                </div>
+                <div class="select-box">
+                    <div class="select-box__current" tabindex="1">
+                        <div class="select-box__value">
+                          <input class="select-box__input" type="radio" id="0" value="English" name="lang" checked="checked"/>
+                          <p class="select-box__input-text">English</p>
+                        </div>
+                        <div class="select-box__value">
+                          <input class="select-box__input" type="radio" id="4" value="Русский" name="lang" />
+                          <p class="select-box__input-text">Русский</p>
+                        </div>
+                        <img class="select-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
+                    </div>
+                    <ul class="select-box__list">
+                      <li>
+                        <label class="select-box__option" for="0" aria-hidden="aria-hidden">English</label>
+                      </li>
+                      <li>
+                        <label class="select-box__option" for="4" aria-hidden="aria-hidden">Русский</label>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container__nav-bar">
+                <nav class="burger">
+                    <div class="burger__button">
+                      <div class="burger__button_top"></div>
+                      <div class="burger__button_bottom"></div>
+                    </div>
+                    <div class="burger__menu">
+                      <label class="burger__search">
+                        <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
+                        <input placeholder="Search" type="search">
+                      </label>  
+                      <a class="nav_text" href="#">T-shirts</a>
+                      <a class="nav_text" href="#">Company</a>
+                    </div>
+                </nav>
+                <img class="logo" alt="logo" src="assets/images/logo.svg">
+                <nav class="nav-icons">
+                    <a class="nav_icon open-search-modal-btn" href="#">
+                        <img alt="search" src="assets/images/icons-search.svg">
+                    </a>
+                    <a class="nav_icon account" href="account.html">
+                        <img alt="account" src="assets/images/icons-account.svg">
+                    </a>
+                    <a class="nav_icon cart" href="cart.html">
+                        <img alt="cart" src="assets/images/icons-cart.svg">
+                        <span class="cart__counter">22</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="modal-search">
+          <div class="container">
+            <label>
+              <img alt="search" src="assets/images/icons-search.svg">
+              <input placeholder="Search" type="search">
+              <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg">
+            </label>
+            <div class="container__search-results">
+              <div class="search-results__item">
+                <a href="#" class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+                <div class="item-text">
+                  <a href="#" class="item-title">T-shirt-1</a>
+                  <p class="item-price price">150</p>
+                </div>
+              </div>
+              <div class="search-results__item">
+                <a href="#" class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+                <div class="item-text">
+                  <a href="#" class="item-title">T-shirt-2</a>
+                  <p class="item-price price">120</p>
+                </div>
+              </div>
+            </div>
+            <button class="container__all-btn black-btn">view all products</button>
+          </div>
+        </div>
+    </header>
+    <main class="products-page">
+      <section class="filter sticky">
+        <div class="container">
+          <div class="filter-title">
+            <span class="bold">All t-shirts</span>
+            <span class="regular">(120 products)</span>
+          </div>
+          <button class="filter-btn">
+            <svg class="ui-icon-controls-filter" id="sprite-controls-filter" viewBox="0 0 80 80"><path d="M67.3 79.9V31.6h6.5v48.3zm0-72V.1h6.5v7.8zm-4.6 19.2V11.5h15.6v15.6zM36.8 79.9V51.6h6.5v28.3zm0-51.1V.1h6.5v28.7zm-4.5 19.3V32.5h15.6v15.6zm-26 31.8v-7.8h6.5v7.8zm0-29.8V.1h6.5v50zm-4.6 18V52.5h15.6v15.6z" fill-rule="evenodd"></path></svg>
+            <span>Filters</span>
+          </button>
+        </div>
+        <div class="modal-filter">
+          <div class="container">
+            <form class="modal-filter__main">
+              <div class="modal-filter__main-item collection">
+                <div class="title">Collections</div>
+                <fieldset>
+                  <input type="checkbox" value="winter" id="winter">
+                  <label for="winter">
+                    Winter 
+                  </label>
+                  <input type="checkbox" value="summer" id="summer">
+                  <label for="summer">
+                    Summer
+                  </label>
+                  <input type="checkbox" value="spring" id="spring">
+                  <label for="spring">
+                    Spring 2021
+                  </label>
+                </fieldset>
+              </div>
+              <div class="modal-filter__main-item size">
+                <div class="title">Size</div>
+                <fieldset>
+                  <input type="checkbox" value="s" id="s">
+                  <label for="s">s</label>
+                  <input type="checkbox" value="m" id="m">
+                  <label for="m">m</label>
+                  <input type="checkbox" value="l" id="l">
+                  <label for="l">l</label>
+                </fieldset>
+              </div>
+              <div class="modal-filter__main-item color">
+                <div class="title">Colors</div>
+                <fieldset>
+                  <input type="checkbox" value="white" id="white">
+                  <label class="color-bg" for="white" style="background-color: white"></label>
+                  <input type="checkbox" id="black" value="black">
+                  <label class="color-bg" for="black" style="background-color: black"></label>
+                  <input type="checkbox" value="red" id="red">
+                  <label class="color-bg" for="red" style="background-color: red"></label>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <button class="hide-filter-btn">
+            <img alt="arrow" src="assets/images/icons-chevron-down.svg">
+            <span>Hide filters</span>
+          </button>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="container__products-wrapper">
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+          </div>
+          <button class="products-info__btn">view all products</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <img class="logo_white" alt="logo" src="assets/images/logo-white.png">
+        <div class="columns-wrapper">
+          <div class="columns-wrapper__column  accordion">
+            <div class="column__title">
+              Company
+            </div>
+            <ul>
+              <li>About us</li>
+              <li>Contact us</li>
+              <li>Find a store</li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column  accordion">
+            <div class="column__title">
+              Customer Support
+            </div>
+            <ul>
+              <li>COVID-19 Updates</li>
+              <li>Return policy</li>
+              <li>Shipping policy</li>
+              <li>Your privacy</li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column  accordion">
+            <div class="column__title">
+              Account
+            </div>
+            <ul>
+              <li><a href="account.html">My account</a></li>
+              <li>Create account</li>
+              <li>Check order status</li>
+              <li>Order history</li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column  accordion language">
+            <div class="column__title">
+              Language
+            </div>
+            <ul>
+              <li>
+                <input type="radio" name="language" id="EN" value="English" checked>
+                <label for="EN">English</label>
+              </li>
+              <li>
+                <input type="radio" name="language" id="RU" value="Русский">
+                <label for="RU">Русский</label>
+              </li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column">
+            <div class="column__title">
+              <a href="#"><img src="assets/images/fb.svg" al="fb"></a>
+              <a href="#"><img src="assets/images/in.svg" al="in"></a>
+              <a href="#"><img src="assets/images/tt.svg" al="tt"></a>
+            </div>
+            <div class="country">
+              <img class="country__icon" alt="country" src="assets/images/usa.png">
+              <div class="country__text">Ship to: United States</div>
+            </div>
+            <p>© Copyrights 2020 plabel.</p>
+            <p> All right reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-region">
+      <div class="modal-region__background-lines container">
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+      </div>
+      <div class="container">
+        <div class="modal-region__header">
+          <img class="logo" alt="logo" src="assets/images/logo.svg">
+          <p class="title">Choose your country/region</p>
+          <div class="close-btn">
+            <img alt="close" src="assets/images/icons-close.svg">
+            <p>close</p>
+          </div>
+        </div>
+        <div class="modal-region__main">
+          <div class="region">
+            <div class="region__title">Americas</div>
+            <ul>
+              <li>USA</li>
+              <li>Brasil</li>
+              <li>Canada (English)</li>
+              <li>Canada (Français)</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Europe</div>
+            <ul>
+              <li>Belgium (English)</li>
+              <li>Denmark (English)</li>
+              <li>Deutschland</li>
+              <li>España</li>
+              <li>France</li>
+              <li>Ireland</li>
+              <li>Italia</li>
+              <li>Luxembourg (English)</li>
+              <li>Monaco (English)</li>
+              <li>Nederland (English)</li>
+              <li>Österreich (English)</li>
+              <li>Suomi (English)</li>
+              <li>Sweden (English)</li>
+              <li>United Kingdom</li>
+              <li>Россия</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Asia</div>
+            <ul>
+              <li>中国大陆</li>
+              <li>日本</li>
+              <li>대한민국</li>
+              <li>Hong Kong SAR</li>
+              <li>香港特別行政區</li>
+              <li>Singapore</li>
+              <li>Malaysia</li>
+              <li>台灣地區</li>
+              <li>ประเทศไทย</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Oceania</div>
+            <ul>
+              <li>Australia</li>
+              <li>New Zealand</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Middle East</div>
+            <ul>
+              <li>UAE (English)</li>
+              <li>(الإمارات العربية المتحدة (العربية</li>
+              <li>KSA (English)</li>
+              <li>(المملكة العربية السعودية (العربية</li>
+              <li>Kuwait (English)</li>
+              <li>(الكويت (العربية</li>
+              <li>Qatar (English)</li>
+              <li>(قطر (العربية</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-background region-bg"></div>
+    <div class="modal-background search-bg"></div>
+    <div class="modal-background filter-bg"></div>
+    <script src="script.js"></script>
+</body>
+</html>

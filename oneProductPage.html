@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./style.css'>
+    <title>Plabel</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="container__country">
+                <div class="country">
+                    <img class="country__icon" alt="country" src="assets/images/usa.png">
+                    <div class="country__text">Ship to: United States</div>
+                </div>
+                <div class="select-box">
+                    <div class="select-box__current" tabindex="1">
+                        <div class="select-box__value">
+                          <input class="select-box__input" type="radio" id="0" value="English" name="lang" checked="checked"/>
+                          <p class="select-box__input-text">English</p>
+                        </div>
+                        <div class="select-box__value">
+                          <input class="select-box__input" type="radio" id="4" value="Русский" name="lang" />
+                          <p class="select-box__input-text">Русский</p>
+                        </div>
+                        <img class="select-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
+                    </div>
+                    <ul class="select-box__list">
+                      <li>
+                        <label class="select-box__option" for="0" aria-hidden="aria-hidden">English</label>
+                      </li>
+                      <li>
+                        <label class="select-box__option" for="4" aria-hidden="aria-hidden">Русский</label>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container__nav-bar">
+                <nav class="burger">
+                    <div class="burger__button">
+                      <div class="burger__button_top"></div>
+                      <div class="burger__button_bottom"></div>
+                    </div>
+                    <div class="burger__menu">
+                      <label class="burger__search">
+                        <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
+                        <input placeholder="Search" type="search">
+                      </label>  
+                      <a class="nav_text" href="productPage.html">T-shirts</a>
+                      <a class="nav_text" href="#">Company</a>
+                    </div>
+                </nav>
+                <img class="logo" alt="logo" src="assets/images/logo.svg">
+                <nav class="nav-icons">
+                    <a class="nav_icon open-search-modal-btn" href="#">
+                        <img alt="search" src="assets/images/icons-search.svg">
+                    </a>
+                    <a class="nav_icon account" href="account.html">
+                        <img alt="account" src="assets/images/icons-account.svg">
+                    </a>
+                    <a class="nav_icon cart" href="cart.html">
+                        <img alt="cart" src="assets/images/icons-cart.svg">
+                        <span class="cart__counter">99+</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="modal-search">
+          <div class="container">
+            <label>
+              <img alt="search" src="assets/images/icons-search.svg">
+              <input placeholder="Search" type="search">
+              <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg">
+            </label>
+            <div class="container__search-results">
+              <div class="search-results__item">
+                <a href="#" class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+                <div class="item-text">
+                  <a href="#" class="item-title">T-shirt-1</a>
+                  <p class="item-price price">150</p>
+                </div>
+              </div>
+              <div class="search-results__item">
+                <a href="#" class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+                <div class="item-text">
+                  <a href="#" class="item-title">T-shirt-2</a>
+                  <p class="item-price price">120</p>
+                </div>
+              </div>
+            </div>
+            <button class="container__all-btn black-btn">view all products</button>
+          </div>
+        </div>
+    </header>
+    <main class="one-product-page">
+      <section class="one-product">
+        <div class="container">
+          <div class="container__product-block">
+            <div class="left-column">
+              <div class="photo" style="background-image: url('assets/images/t-shirt.jfif')"></div>
+              <div class="info-text">
+                  <p>worldwide free delivery</p>
+                  <p>info about tax *</p>
+              </div>
+            </div>
+            <div class="right-column">
+              <div class="one-product-info">
+                <div class="title">T-Shirt-1</div>
+                <p>worldwide free delivery</p>
+              </div>
+              <div class="size">
+                <div class="size__title">Choose your size.</div>
+                  <form class="size-form">
+                    <input type="radio" name="size" value="s" id="s">
+                    <label for="s">s</label>
+                    <input type="radio" name="size" value="m" id="m">
+                    <label for="m">m</label>
+                    <input type="radio" name="size" value="l" id="l">
+                    <label for="l">l</label>
+                    <input type="radio" name="size" value="xl" id="xl">
+                    <label for="xl">xl</label>
+                    <input type="radio" name="size" value="xxl" id="xxl">
+                    <label for="xxl">xxl</label>
+                    <input type="radio" name="size" value="xxxl" id="xxxl">
+                    <label for="xxxl">xxxl</label>
+                  </form>
+                </div>
+                <div class="colors">
+                <div class="colors__title">Choose your color.</div>
+                  <form class="colors-form">
+                    <input type="radio" name="one-product-color" value="white" id="white">
+                    <label for="white" class="white">
+                        <p class="color-bg" style="background-color: white"></p>
+                        <p class="text">White</p>
+                    </label>
+                    <input type="radio" name="one-product-color" id="black" value="black">
+                    <label class="black" for="black">
+                        <p class="color-bg" style="background-color: black"></p>
+                        <p class="text">Black</p>
+                    </label>
+                    <input type="radio" name="one-product-color" value="red" id="red">
+                    <label class="red" for="red">
+                        <p class="color-bg" style="background-color: red"></p>
+                        <p class="text">Red</p>
+                    </label>
+                  </form>
+                </div>
+                <div class="addition">
+                    <div class="addition__price price">160</div>
+                    <div class="info-text">
+                        <p>worldwide free delivery</p>
+                        <p>info about tax *</p>
+                    </div>
+                    <div class="addition__buttons">
+                      <button class="black-btn">pay</button>
+                      <a class="cart" href="#">
+                        <img alt="cart" src="assets/images/icons-cart.svg">
+                    </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="container__cart-block">
+            <div class="cart-block__title block-title">
+              <span class="bold">What’s in the Box</span>
+            </div>
+            <div class="cart-block__main">
+              <div class="cart-product" style="background-image: url(assets/images/iphone-cart.jfif)">
+                <p class="cart-product__name">iPhone</p>
+              </div>
+              <div class="cart-product" style="background-image: url(assets/images/usb-cart.jfif)">
+                <p class="cart-product__name">USB-C to Lightning Cable</p>
+              </div>
+            </div>
+            <div class="cart-block__product-image first-image" style="background-image: url(assets/images/karsten-winegeart-sda-u-6-n-4-dki-8-unsplash.jpg)"></div>
+            <div class="cart-block__product-image" style="background-image: url(assets/images/karsten-winegeart-sda-u-6-n-4-dki-8-unsplash.jpg)"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <img class="logo_white" alt="logo" src="assets/images/logo-white.png">
+        <div class="columns-wrapper">
+          <div class="columns-wrapper__column  accordion">
+            <div class="column__title">
+              Company
+            </div>
+            <ul>
+              <li>About us</li>
+              <li>Contact us</li>
+              <li>Find a store</li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column  accordion">
+            <div class="column__title">
+              Customer Support
+            </div>
+            <ul>
+              <li>COVID-19 Updates</li>
+              <li>Return policy</li>
+              <li>Shipping policy</li>
+              <li>Your privacy</li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column  accordion">
+            <div class="column__title">
+              Account
+            </div>
+            <ul>
+              <li><a href="account.html">My account</a></li>
+              <li>Create account</li>
+              <li>Check order status</li>
+              <li>Order history</li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column  accordion language">
+            <div class="column__title">
+              Language
+            </div>
+            <ul>
+              <li>
+                <input type="radio" name="language" id="EN" value="English" checked>
+                <label for="EN">English</label>
+              </li>
+              <li>
+                <input type="radio" name="language" id="RU" value="Русский">
+                <label for="RU">Русский</label>
+              </li>
+            </ul>
+          </div>
+          <div class="columns-wrapper__column">
+            <div class="column__title">
+              <a href="#"><img src="assets/images/fb.svg" al="fb"></a>
+              <a href="#"><img src="assets/images/in.svg" al="in"></a>
+              <a href="#"><img src="assets/images/tt.svg" al="tt"></a>
+            </div>
+            <div class="country">
+              <img class="country__icon" alt="country" src="assets/images/usa.png">
+              <div class="country__text">Ship to: United States</div>
+            </div>
+            <p>© Copyrights 2020 plabel.</p>
+            <p> All right reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-region">
+      <div class="modal-region__background-lines container">
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+        <div class="background-line"></div>
+      </div>
+      <div class="container">
+        <div class="modal-region__header">
+          <img class="logo" alt="logo" src="assets/images/logo.svg">
+          <p class="title">Choose your country/region</p>
+          <div class="close-btn">
+            <img alt="close" src="assets/images/icons-close.svg">
+            <p>close</p>
+          </div>
+        </div>
+        <div class="modal-region__main">
+          <div class="region">
+            <div class="region__title">Americas</div>
+            <ul>
+              <li>USA</li>
+              <li>Brasil</li>
+              <li>Canada (English)</li>
+              <li>Canada (Français)</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Europe</div>
+            <ul>
+              <li>Belgium (English)</li>
+              <li>Denmark (English)</li>
+              <li>Deutschland</li>
+              <li>España</li>
+              <li>France</li>
+              <li>Ireland</li>
+              <li>Italia</li>
+              <li>Luxembourg (English)</li>
+              <li>Monaco (English)</li>
+              <li>Nederland (English)</li>
+              <li>Österreich (English)</li>
+              <li>Suomi (English)</li>
+              <li>Sweden (English)</li>
+              <li>United Kingdom</li>
+              <li>Россия</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Asia</div>
+            <ul>
+              <li>中国大陆</li>
+              <li>日本</li>
+              <li>대한민국</li>
+              <li>Hong Kong SAR</li>
+              <li>香港特別行政區</li>
+              <li>Singapore</li>
+              <li>Malaysia</li>
+              <li>台灣地區</li>
+              <li>ประเทศไทย</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Oceania</div>
+            <ul>
+              <li>Australia</li>
+              <li>New Zealand</li>
+            </ul>
+          </div>
+          <div class="region">
+            <div class="region__title">Middle East</div>
+            <ul>
+              <li>UAE (English)</li>
+              <li>(الإمارات العربية المتحدة (العربية</li>
+              <li>KSA (English)</li>
+              <li>(المملكة العربية السعودية (العربية</li>
+              <li>Kuwait (English)</li>
+              <li>(الكويت (العربية</li>
+              <li>Qatar (English)</li>
+              <li>(قطر (العربية</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-background region-bg"></div>
+    <div class="modal-background search-bg"></div>
+    <div class="modal-background filter-bg"></div>
+    <script src="script.js"></script>
+</body>
+</html>
