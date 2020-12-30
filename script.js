@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modalRegion.classList.remove('visible');
         modalRegionBg.classList.remove('visible');
         
-        for (i = 0; i < accordionCountriesTitles.length; i++) {
-            accordionCountriesTitles[i].setAttribute('aria-expanded', 'false');
-        }
+        accordionCountriesTitles.forEach(item => item.setAttribute('aria-expanded', 'false'));
     }
 
     const closeModalSearch = () => {
@@ -54,13 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleAccordion(e) {
         const target = e.currentTarget;
 
-        for (i = 0; i < accordionTitles.length; i++) {
-            if(accordionTitles[i] !== target) {
-                accordionTitles[i].setAttribute('aria-expanded', 'false');
+        accordionTitles.forEach(item => {
+            if (item !== target) {
+                item.setAttribute('aria-expanded', 'false');
             }
-        }
+        });
 
-        if (target.getAttribute('aria-expanded') == 'true') {
+        if (target.getAttribute('aria-expanded') === 'true') {
             target.setAttribute('aria-expanded', 'false');
         } else {
             target.setAttribute('aria-expanded', 'true');
@@ -72,13 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleCountriesAccordion(e) {
         const target = e.currentTarget;
         
-        for (i = 0; i < accordionCountriesTitles.length; i++) {
-            if (accordionCountriesTitles[i] !== target) {
-                accordionCountriesTitles[i].setAttribute('aria-expanded', 'false');
+        accordionCountriesTitles.forEach(item => {
+            if (item !== target) {
+                item.setAttribute('aria-expanded', 'false');
             }
-        }
+        });
 
-        if (target.getAttribute('aria-expanded') == 'true') {
+        if (target.getAttribute('aria-expanded') === 'true') {
             target.setAttribute('aria-expanded', 'false');
         } else {
             target.setAttribute('aria-expanded', 'true');
@@ -111,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener('scroll', () => {
         if (modalSearch.classList.contains('visible')) {
-            const elemBottom = document.querySelector('.modal-search').getBoundingClientRect().height;
+            const elemBottom = document.querySelector('.modal-search').getBoundingClientRect().height - 150;
             if (elemBottom <= window.pageYOffset) closeModalSearch();
         }
     })
@@ -126,10 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (modalRegion.classList.contains('visible') && e.target.closest('.modal-background.region-bg')) {
             closeModalRegion();
             document.body.style.overflow = 'auto';
-        };
+        }
         if (modalSearch.classList.contains('visible') && e.target.closest('.modal-background.search-bg')) {
             closeModalSearch();
-        };
+        }
     })
 
     document.querySelector('.open-search-modal-btn').addEventListener('click', () => {
@@ -183,13 +181,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleFilterAccordion(e) {
         const target = e.currentTarget;
         
-        for (i = 0; i < accordionFilterTitles.length; i++) {
-            if (accordionFilterTitles[i] !== target) {
-                accordionFilterTitles[i].setAttribute('aria-expanded', 'false');
+        accordionFilterTitles.forEach(item => {
+            if (item !== target) {
+                item.setAttribute('aria-expanded', 'false');
             }
-        }
+        });
 
-        if (target.getAttribute('aria-expanded') == 'true') {
+        if (target.getAttribute('aria-expanded') === 'true') {
             target.setAttribute('aria-expanded', 'false');
         } else {
             target.setAttribute('aria-expanded', 'true');
@@ -197,4 +195,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     accordionFilterTitles.forEach(item => item.addEventListener('click', toggleFilterAccordion));
-})
+});
