@@ -66,6 +66,21 @@ header, main, footer {
     outline: 0 !important;
 }
 
+/* input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+} */
+
+input[type="search"]::-webkit-search-cancel-button { /* псевдо что-то, что отвечает за кнопку очистки */
+    -webkit-appearance: none; /* без сброса оформление не применится */
+    width: 18px; /* размеры кастомного крестика */
+    height: 18px;
+    background-image: url(assets/images/icons-close.png); /* новый вид крестика */
+    cursor: pointer; /* вот это не работает */
+    background-size: contain;
+    background-position: center;
+}
+    
+
 /*header*/
 header {
     position: relative;
@@ -337,6 +352,11 @@ header {
 
 .container__nav-bar .nav_icon {
     display: block;
+    cursor: pointer;
+}
+
+.container__nav-bar .nav_text {
+    cursor: pointer;
 }
 
 .container__nav-bar .nav-icons {
@@ -406,7 +426,7 @@ header {
     text-align: center;
 }
 
-.modal-search .clear-search-btn {
+/* .modal-search .clear-search-btn {
     width: 18px;
     height: 18px;
     cursor: pointer;
@@ -414,7 +434,7 @@ header {
 
 .clear-search-btn:hover {
     opacity: .6;
-}
+} */
 
 .modal-search label {
     display: flex;
@@ -466,6 +486,7 @@ header {
     background-position: center;
     width: 10%;
     padding-bottom: 10%;
+    cursor: pointer;
 }
 
 .modal-search .item-image:hover {
@@ -834,7 +855,7 @@ footer .accordion.language {
     padding: 32px 0 15px;
 }
 
-.columns-wrapper__column:not(:last-child) .column__title {
+.column__title a {
     cursor: pointer;
 }
 
@@ -845,7 +866,7 @@ footer .accordion.language {
     color: #ffffff;
 }
 
-.columns-wrapper__column li:hover, .columns-wrapper__column:not(:last-child) .column__title:hover, .column__title a:hover {
+.columns-wrapper__column li:hover, .column__title a:hover {
     opacity: .6;
 }
 
@@ -1159,7 +1180,8 @@ main.products-page {
     font-size: 16px;
 }
 
-.modal-filter__main-item fieldset label:hover {
+.modal-filter__main-item fieldset label:hover,
+.one-product-page .size-form label:hover {
     opacity: .6;
 }
 
@@ -1508,6 +1530,7 @@ main.one-product-page {
 
 .addition__buttons .cart {
     margin-left: 4%;
+    cursor: pointer;
 }
 
 .addition__buttons .cart:hover {
@@ -1938,6 +1961,10 @@ input.password {
         top: 0;
     }
 
+    .filter.sticky {
+        top: 58px;
+    }
+
     main.products-page {
         padding: 0px 0px 30px;
     }
@@ -2297,6 +2324,7 @@ input.password {
         font-family: 'Inter-Regular';
         font-size: 18px;
         padding: 3px 5px;
+        width: 100%;
    }
 
    .burger__button_top, .burger__button_bottom {
