@@ -103,7 +103,7 @@
         <div class="welcome-btn">Sing out</div>
       </div>
     </section>
-    <section class="account-menu">
+    <!-- <section class="account-menu">
       <div class="container">
         <div class="account-menu__item">
           <div class="item-title">Account info</div>
@@ -118,60 +118,100 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="account-settings">
       <div class="container">
-        <div class="settings-block">
-          <div class="settings-block__title">Account Settings</div>
-          <div class="settings-block__subtitle">Shipping</div>
-          <form class="settings-block__form">
-            <div class="form__main">
-              <input type="text" placeholder="Firstname">
-              <input class="red" type="text" placeholder="Lastname">
-              <input type="text" placeholder="Street Address">
-              <input type="text" placeholder="Apt, Suite, Building (Optional)">
-              <div class="city-wrapper">
-                <input type="text" placeholder="Zip Code">
-                <input type="text" placeholder="City, State">
-              </div>
-              <div class="select-country-box">
-                <div class="select-country-box__current" tabindex="1">
-                  <div class="select-country-box__value">
-                    <input class="select-country-box__input" type="radio" id="usa" value="USA" name="country" checked="checked"/>
-                    <p class="select-country-box__input-text">USA</p>
-                  </div>
-                  <div class="select-country-box__value">
-                    <input class="select-country-box__input" type="radio" id="poland" value="Poland" name="country" />
-                    <p class="select-country-box__input-text">Poland</p>
-                  </div>
-                  <img class="select-country-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
-                </div>
-                <ul class="select-country-box__list">
-                  <li>
-                    <label class="select-country-box__option" for="usa" aria-hidden="aria-hidden">USA</label>
-                  </li>
-                  <li>
-                    <label class="select-country-box__option" for="poland" aria-hidden="aria-hidden">Poland</label>
-                  </li>
-                </ul>
-              </div>
-              <input type="email" placeholder="Email Address">
-              <input type="tel" placeholder="Phone Number">
-            </div>
-            <input type="submit" value="apply" class="black-btn">
-            </form>
+        <div class="account-menu">
+          <div class="account-menu-title">Account info</div>
+          <div class="account-menu-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
         </div>
-        <div class="settings-block">
-          <div class="settings-block__title">Password</div>
-          <div class="settings-block__subtitle">Change Password</div>
-          <form class="settings-block__form">
-            <div class="form__main">
-              <input type="text" class="password" placeholder="Current Password" />
-              <input type="text" class="password" placeholder="New Password" />
-              <input type="text" class="password" placeholder="New Password" />
-            </div>
-            <input type="submit" value="apply" class="black-btn">
-          </form>
+        <div class="account-block-main">
+          <div class="settings-block">
+            <div class="settings-block__title">Account Settings</div>
+            <div class="settings-block__subtitle">Shipping</div>
+            <form class="settings-block__form">
+              <div class="form__main">
+                <input type="text" placeholder="Firstname">
+                <input class="red" type="text" placeholder="Lastname">
+                <input type="text" placeholder="Street Address">
+                <input type="text" placeholder="Apt, Suite, Building (Optional)">
+                <div class="city-wrapper">
+                  <input type="text" placeholder="Zip Code">
+                  <input type="text" placeholder="City, State">
+                </div>
+                <div class="select-country-box">
+                  <div class="select-country-box__current" tabindex="1">
+                    <div class="select-country-box__value">
+                      <input class="select-country-box__input" type="radio" id="usa" value="USA" name="country" checked="checked"/>
+                      <p class="select-country-box__input-text">USA</p>
+                    </div>
+                    <div class="select-country-box__value">
+                      <input class="select-country-box__input" type="radio" id="poland" value="Poland" name="country" />
+                      <p class="select-country-box__input-text">Poland</p>
+                    </div>
+                    <img class="select-country-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
+                  </div>
+                  <ul class="select-country-box__list">
+                    <li>
+                      <label class="select-country-box__option" for="usa" aria-hidden="aria-hidden">USA</label>
+                    </li>
+                    <li>
+                      <label class="select-country-box__option" for="poland" aria-hidden="aria-hidden">Poland</label>
+                    </li>
+                  </ul>
+                </div>
+                <input type="email" placeholder="Email Address">
+                <input type="tel" placeholder="Phone Number">
+              </div>
+              <input type="submit" value="apply" class="black-btn">
+              </form>
+          </div>
+          <div class="settings-block">
+            <div class="settings-block__title">Password</div>
+            <div class="settings-block__subtitle">Change Password</div>
+            <form class="settings-block__form">
+              <div class="form__main">
+                <input type="text" class="password" placeholder="Current Password" />
+                <input type="text" class="password" placeholder="New Password" />
+                <input type="text" class="password" placeholder="New Password" />
+              </div>
+              <input type="submit" value="apply" class="black-btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="order">
+      <div class="container">
+        <div class="account-menu">
+          <div class="account-menu-title">Your order</div>
+          <div class="account-menu-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="account-block-main">
+          <div class="order-block">
+            <div class="order-block__title">Your order</div>
+            <div class="order-block__subtitle">Status: ship in progress</div>
+              <div class="order-block__product">
+                <a href="oneProductPage.html" class="photo" style="background-image: url(assets/images/t-shirt.jfif)"></a>
+                <div class="info-wrapper">
+                  <a href="oneProductPage.html" class="title">T-shirt black "Summer 2021"</a>
+                  <div class="amount">1</div>
+                  <div class="price">1000</div>
+                </div>
+              </div>
+              <div class="order-block__product">
+                <a href="oneProductPage.html" class="photo" style="background-image: url(assets/images/t-shirt.jfif)"></a>
+                <div class="info-wrapper">
+                  <a href="oneProductPage.html" class="title">T-shirt black "Summer 2021"</a>
+                  <div class="amount">1</div>
+                  <div class="price">1000</div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </section>
