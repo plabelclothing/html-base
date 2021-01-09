@@ -38,16 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!e.target.classList.contains('select-country-box__input')) selectCountryBox.classList.toggle('visible');
     })
 
+    const closeBurger = () => {
+        document.body.classList.remove('open-burger');
+        document.body.style.overflow = 'auto';
+    }
+
     document.querySelector('.burger__button').addEventListener('click', () => {
         const body = document.body;
         if (body.classList.contains('open-burger')) {
-            body.classList.remove('open-burger');
-            document.body.style.overflow = 'auto';
+            closeBurger();
         } else {
             body.classList.add('open-burger');
-            document.body.style.overflow = 'hidden';
+            body.style.overflow = 'hidden';
         }
-    })
+    });
+
+    document.querySelectorAll('.burger__menu a').forEach(elem => elem.addEventListener('click', () => {
+        if (document.body.classList.contains('open-burger')) {
+            closeBurger();
+        } 
+    }));
 
     function toggleAccordion(e) {
         const target = e.currentTarget;
@@ -104,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll('.modal-region .region li').forEach(elem => elem.addEventListener('click', () => {
         closeModalRegion();
+        window.scrollTo(0, 0);
         document.body.style.overflow = 'auto';
     }))
 
@@ -123,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('click', (e) => {
         if (modalRegion.classList.contains('visible') && e.target.closest('.modal-background.region-bg')) {
             closeModalRegion();
+            window.scrollTo(0, 0);
             document.body.style.overflow = 'auto';
         }
         if (modalSearch.classList.contains('visible') && e.target.closest('.modal-background.search-bg')) {
