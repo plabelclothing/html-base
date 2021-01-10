@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalSearch = document.querySelector('.modal-search');
     const accordionTitles = document.querySelectorAll('.accordion .column__title');
     const accordionCountriesTitles = document.querySelectorAll('.modal-region .region__title');
+    const accordionAccount = document.querySelectorAll('.account-page .account-menu');
     const languageTitle = document.querySelector('.language .column__title');
 
     if (modalSearchBg && modalSearch) {
@@ -59,10 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
         } 
     }));
 
-    function toggleAccordion(e) {
+    function toggleAccordion(e, arr) {
         const target = e.currentTarget;
 
-        accordionTitles.forEach(item => {
+        arr.forEach(item => {
             if (item !== target) {
                 item.setAttribute('aria-expanded', 'false');
             }
@@ -75,25 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    accordionTitles.forEach(item => item.addEventListener('click', toggleAccordion));
+    accordionTitles.forEach(item => item.addEventListener('click', (e) => toggleAccordion(e, accordionTitles)));
 
-    function toggleCountriesAccordion(e) {
-        const target = e.currentTarget;
-        
-        accordionCountriesTitles.forEach(item => {
-            if (item !== target) {
-                item.setAttribute('aria-expanded', 'false');
-            }
-        });
+    accordionCountriesTitles.forEach(item => item.addEventListener('click', (e) => toggleAccordion(e, accordionCountriesTitles)));
 
-        if (target.getAttribute('aria-expanded') === 'true') {
-            target.setAttribute('aria-expanded', 'false');
-        } else {
-            target.setAttribute('aria-expanded', 'true');
-        }
-    }
-
-    accordionCountriesTitles.forEach(item => item.addEventListener('click', toggleCountriesAccordion));
+    accordionAccount.forEach(item => item.addEventListener('click', (e) => toggleAccordion(e, accordionAccount)));
 
     document.querySelector('header .country').addEventListener('click', () => {
         modalRegion.classList.add('visible');
