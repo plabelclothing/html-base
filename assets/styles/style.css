@@ -1819,18 +1819,18 @@ section.account-menu {
 .account-menu .account-menu-title {
     font-family: 'Inter-Bold';
     letter-spacing: -0.44px;
-    font-size: 20px;
+    font-size: 80px;
     color: #191716;
 }
 
-.account-menu .account-menu-description {
+/* .account-menu .account-menu-description {
     padding-top: 10px;
     font-family: 'Inter-Regular';
     font-size: 14px;
     color: #191716;
     letter-spacing: -0.44px;
     max-width: 450px;
-}
+} */
 
 .order-block__products-container {
     display: flex;
@@ -1845,12 +1845,21 @@ section.account-menu {
     font-size: 14px;
 }
 
+.order-block__products-container .info-wrapper .price {
+    font-family: 'Inter-SemiBold';
+}
+
 .order-block__product {
     padding-top: 34px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
+}
+
+.order-block__product:last-of-type {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d8d8d8;
 }
 
 .order-block__product .info-wrapper {
@@ -1966,22 +1975,41 @@ input.password {
     margin-top: 24px;
 }
 
-.settings-block__title, .settings-block__subtitle, .order-block__title {
+.settings-block__title,
+.order-block__title {
+    font-size: 32px;
+    padding: 20px 0 10px;
     font-family: 'Inter-Bold';
     letter-spacing: -0.44px;
     color: #191716;
 }
 
+.order-block__one-order,
 .settings-block__title,
-.order-block__title {
-    font-size: 16px;
-    padding: 20px 0 10px;
+.settings-block__subtitle {
+    width: 70%;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .settings-block__subtitle,
 .order-block__subtitle {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 0;
+    font-family: 'Inter-Bold';
+    letter-spacing: -0.44px;
+    color: #191716;
+}
+
+.order-block__subtitle a {
+    font-family: 'Inter-Bold';
+    letter-spacing: -0.44px;
+    color: #191716;
+    cursor: pointer;  
+}
+
+.order-block__subtitle a:hover {
+    opacity: .7; 
 }
 
 .container form input.red {
@@ -2597,6 +2625,10 @@ input.password {
     .account-menu .account-menu-description {
         max-width: 350px;
     }
+
+    .account-menu .account-menu-title {
+        font-size: 64px;
+    }
 }
 
 @media (max-width: 479px) {
@@ -2698,5 +2730,19 @@ input.password {
     .order-block__product .info-wrapper {
         width: 100%;
         padding-left: 0;
+    }
+
+    .settings-block__title,
+    .settings-block__subtitle,
+    .order-block__one-order {
+    width: 100%;
+    }
+
+    .account-menu .account-menu-title {
+        font-size: 38px;
+    }
+
+    .settings-block__title, .order-block__title {
+        font-size: 24px;
     }
 }
