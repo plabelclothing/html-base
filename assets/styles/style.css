@@ -1171,7 +1171,7 @@ main.products-page {
 }
 
 .modal-filter__main-item fieldset label,
-.one-product-page .size-form label {
+.one-product-page .size-form div label {
     letter-spacing: -0.44px;
     font-family: 'Inter-Regular';
     cursor: pointer;
@@ -1180,7 +1180,7 @@ main.products-page {
 }
 
 .modal-filter__main-item fieldset label:hover,
-.one-product-page .size-form label:hover {
+.one-product-page .size-form div label:hover {
     opacity: .6;
 }
 
@@ -1195,7 +1195,7 @@ main.products-page {
 }
 
 .modal-filter__main-item.size fieldset label,
-.one-product-page .size-form label {
+.one-product-page .size-form div label {
     border: 1px solid #d8d8d8;
     width: 35px;
     height: 35px;
@@ -1353,6 +1353,7 @@ main.products-page {
     font-size: 16px;
     cursor: pointer;
     color: #191716;
+    white-space: nowrap;
 }
 
 .product-card__title:hover {
@@ -1464,8 +1465,18 @@ main.one-product-page {
     padding-top: 10px;
 }
 
+.size-form-div {
+    flex-basis: calc(50% - 5px);
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
 .size-form {
     justify-content: flex-start;
+}
+
+.size-form-div label {
+    width: 100%;
 }
 
 .color-bg {
@@ -1475,12 +1486,12 @@ main.one-product-page {
     box-shadow: inset 0px 1px 2px rgba(146, 146, 146, .6);
 }
 
-.one-product-page .size-form input {
+.one-product-page .size-form div input {
     display: none;
 }
 
 .colors-form input:checked + label,
-.one-product-page .size-form input:checked + label {
+.one-product-page .size-form div input:checked + label {
     border: 1px solid #fffe1c;
 }
 
@@ -1505,7 +1516,7 @@ main.one-product-page {
     font-size: 16px;
 }
 
-.one-product-page .size-form label {
+.one-product-page .size-form div label {
     margin: 10px 20px 0 0;
 }
 
@@ -1921,9 +1932,9 @@ input.password {
 .settings-block__form input:not([type="submit"]):focus,
 .settings-block__form .select-country-box.visible {
     transform: scale(1.02);
-    box-shadow: 0px 1px 5px -4px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 1px 5px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.75);
     transition: all .4 ease;
 }
 
@@ -1959,7 +1970,6 @@ input.password {
     position: relative;
     display: block;
     letter-spacing: -0.44px;
-    transition: all .4 ease;
 }
 
 .select-country-box__input-text {
@@ -2005,11 +2015,11 @@ input.password {
     font-family: 'Inter-Bold';
     letter-spacing: -0.44px;
     color: #191716;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 .order-block__subtitle a:hover {
-    opacity: .7; 
+    opacity: .7;
 }
 
 .container form input.red {
@@ -2735,7 +2745,7 @@ input.password {
     .settings-block__title,
     .settings-block__subtitle,
     .order-block__one-order {
-    width: 100%;
+        width: 100%;
     }
 
     .account-menu .account-menu-title {
