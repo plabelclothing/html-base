@@ -94,131 +94,74 @@
           </div>
         </div>
   </header>
-  <main class="account-page">
-    <section class="welcome">
+  <main class="order-page">
+    <section class="top-bar">
       <div class="container">
-        <div class="block-title">
-          Hi, <span class="bold">Alex</span>!
-        </div>
-        <div class="welcome-btn">Sing out</div>
+        <div class="checkout-btn">Checkout</div>
+        <a class="show-order">Show Order Summary 1000</a>
       </div>
     </section>
-    <!-- <section class="account-menu">
+    <section class="order-main">
       <div class="container">
-        <div class="account-menu__item">
-          <div class="item-title">Account info</div>
-          <div class="item-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <div class="title">Where should we send your order?</div>
+        <form class="order-main__form">
+          <div class="subtitle">Enter your name and adress:</div>
+          <input type="text" placeholder="Firstname">
+          <input class="red" type="text" placeholder="Lastname">
+          <input type="text" placeholder="Street Address">
+          <input type="text" placeholder="Apt, Suite, Building (Optional)">
+          <div class="city-wrapper">
+            <input type="text" placeholder="Zip Code">
+            <input type="text" placeholder="City, State">
           </div>
-        </div>
-        <div class="account-menu__item">
-          <div class="item-title">Your order</div>
-          <div class="item-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <div class="select-country-box">
+            <div class="select-country-box__current" tabindex="1">
+              <div class="select-country-box__value">
+                <input class="select-country-box__input" type="radio" id="usa" value="USA" name="country" checked="checked"/>
+                <p class="select-country-box__input-text">USA</p>
+              </div>
+              <div class="select-country-box__value">
+                <input class="select-country-box__input" type="radio" id="poland" value="Poland" name="country" />
+                <p class="select-country-box__input-text">Poland</p>
+              </div>
+              <img class="select-country-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
+            </div>
+            <ul class="select-country-box__list">
+              <li>
+                <label class="select-country-box__option" for="usa" aria-hidden="aria-hidden">USA</label>
+              </li>
+              <li>
+                <label class="select-country-box__option" for="poland" aria-hidden="aria-hidden">Poland</label>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </section> -->
-    <section class="account-settings">
-      <div class="container">
-        <div class="account-menu">
-          <div class="account-menu-title">Account info</div>
-          <!-- <div class="account-menu-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div> -->
-        </div>
-        <div class="account-block-main">
-          <div class="settings-block">
-            <div class="settings-block__title">Account Settings</div>
-            <div class="settings-block__subtitle">Shipping</div>
-            <form class="settings-block__form">
-              <div class="form__main">
-                <input type="text" placeholder="Firstname">
-                <input class="red" type="text" placeholder="Lastname">
-                <input type="text" placeholder="Street Address">
-                <input type="text" placeholder="Apt, Suite, Building (Optional)">
-                <div class="city-wrapper">
-                  <input type="text" placeholder="Zip Code">
-                  <input type="text" placeholder="City, State">
-                </div>
-                <div class="select-country-box">
-                  <div class="select-country-box__current" tabindex="1">
-                    <div class="select-country-box__value">
-                      <input class="select-country-box__input" type="radio" id="usa" value="USA" name="country" checked="checked"/>
-                      <p class="select-country-box__input-text">USA</p>
-                    </div>
-                    <div class="select-country-box__value">
-                      <input class="select-country-box__input" type="radio" id="poland" value="Poland" name="country" />
-                      <p class="select-country-box__input-text">Poland</p>
-                    </div>
-                    <img class="select-country-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
-                  </div>
-                  <ul class="select-country-box__list">
-                    <li>
-                      <label class="select-country-box__option" for="usa" aria-hidden="aria-hidden">USA</label>
-                    </li>
-                    <li>
-                      <label class="select-country-box__option" for="poland" aria-hidden="aria-hidden">Poland</label>
-                    </li>
-                  </ul>
-                </div>
-                <input type="email" placeholder="Email Address">
-                <input type="tel" placeholder="Phone Number">
-              </div>
-              <input type="submit" value="apply" class="black-btn">
-            </form>
-          </div>
-          <div class="settings-block">
-            <div class="settings-block__title">Password</div>
-            <div class="settings-block__subtitle">Change Password</div>
-            <form class="settings-block__form">
-              <div class="form__main">
-                <input type="text" class="password" placeholder="Current Password" />
-                <input type="text" class="password" placeholder="New Password" />
-                <input type="text" class="password" placeholder="New Password" />
-              </div>
-              <input type="submit" value="apply" class="black-btn">
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="order">
-      <div class="container">
-        <div class="account-menu">
-          <div class="account-menu-title">Your order</div>
-          <!-- <div class="account-menu-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div> -->
-        </div>
-        <div class="account-block-main">
-          <div class="order-block">
-            <div class="order-block__one-order">
-              <div class="order-block__title">Order ID: 120001020</div>
-              <div class="order-block__subtitle">Status: 
-                <a>ship in progress</a>
-              </div>
-              <div class="order-block__products-container">
-                <div class="order-block__product">
-                  <a href="oneProductPage.html" class="photo" style="background-image: url(assets/images/t-shirt.jfif)"></a>
-                  <div class="info-wrapper">
-                    <a href="oneProductPage.html" class="title">T-shirt black "Summer 2021"</a>
-                    <div class="amount">1</div>
-                    <div class="price">1000</div>
-                  </div>
-                </div>
-                <div class="order-block__product">
-                  <a href="oneProductPage.html" class="photo" style="background-image: url(assets/images/t-shirt.jfif)"></a>
-                  <div class="info-wrapper">
-                    <a href="oneProductPage.html" class="title">T-shirt black "Summer 2021"</a>
-                    <div class="amount">1</div>
-                    <div class="price">1000</div>
-                  </div>
-                </div>
-              </div>
+          <div class="subtitle">What`s your contact information?</div>
+          <div class="input-with-description">
+            <input type="email" placeholder="Email Address">
+            <div class="input-with-description__desc">
+              We`ll email you a receipt and send order updates to ypur modile phone via SMS or iMessage
             </div>
           </div>
-        </div>
+          <div class="input-with-description">
+            <input type="tel" placeholder="Phone Number">
+            <div class="input-with-description__desc">
+              The phone number you enter can`t be changed after you place your order, so please make sure it`s correct.
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="pay-btns">
+      <div class="container">
+        <button class="black-btn">
+          <img src="assets/images/icons8-google-48.png" width="20px" alt="G-pay">Pay
+        </button>
+        <button class="black-btn">
+          <img src="assets/images/icons8-apple-pay-50.png" width="50px"  alt="Apple-pay">
+        </button>
+        <button class="black-btn">
+          <img src="assets/images/paypal.png" width="100px" alt="Paypal">
+        </button>
       </div>
     </section>
   </main>
