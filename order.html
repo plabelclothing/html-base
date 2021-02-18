@@ -97,7 +97,7 @@
   <main class="order-page">
     <section class="top-bar">
       <div class="container">
-        <div class="checkout-btn">Checkout</div>
+        <div class="block-title"><span class="bold">Checkout</span></div>
         <a class="show-order">Show Order Summary 1000</a>
       </div>
     </section>
@@ -148,20 +148,35 @@
               The phone number you enter can`t be changed after you place your order, so please make sure it`s correct.
             </div>
           </div>
+          <div class="subtitle">Add Information</div>
+          <div class="input-with-description">
+            <textarea></textarea>
+            <div class="input-with-description__desc">
+              An addition
+            </div>
+          </div>
+          <div class="agreement">
+            <input type="checkbox" id="agreement-checkbox">
+            <label for="agreement-checkbox"></label>
+            <span>I agree to the <a>terms of use</a> and the <a>privacy policy</a></span>
+          </div>
         </form>
       </div>
     </section>
     <section class="pay-btns">
       <div class="container">
-        <button class="black-btn">
-          <img src="assets/images/icons8-google-48.png" width="20px" alt="G-pay">Pay
-        </button>
-        <button class="black-btn">
-          <img src="assets/images/icons8-apple-pay-50.png" width="50px"  alt="Apple-pay">
-        </button>
-        <button class="black-btn">
-          <img src="assets/images/paypal.png" width="100px" alt="Paypal">
-        </button>
+        <div class="pay-btns__wrapper">
+          <button class="black-btn margin-right">
+            <img src="assets/images/icons8-google-48.png" width="20px" alt="G-pay">
+            <span>Pay</span>
+          </button>
+          <button class="black-btn">
+            <img src="assets/images/icons8-apple-pay-50.png" width="50px"  alt="Apple-pay">
+          </button>
+          <button class="black-btn">
+            <img src="assets/images/paypal.png" width="90px" alt="Paypal">
+          </button>
+        </div>
       </div>
     </section>
   </main>
