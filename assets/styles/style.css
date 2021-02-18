@@ -1474,7 +1474,7 @@ main.one-product-page {
     padding-top: 10px;
 }
 
-.size-form-div {
+.color-form-div {
     flex-basis: calc(50% - 5px);
     margin: 10px 0 0 0;
     cursor: pointer;
@@ -1484,7 +1484,7 @@ main.one-product-page {
     justify-content: flex-start;
 }
 
-.size-form-div label {
+.color-form-div label {
     width: 100%;
 }
 
@@ -1726,6 +1726,13 @@ main.cart-page section.total .container:after {
     justify-content: center;
 }
 
+.info-wrapper .characteristics p {
+    padding-top: 3px;
+    font-size: 14px;
+    font-family: "Inter-Regular";
+    color: #191716;
+}
+
 .total-price .price {
     font-family: "Inter-SemiBold";
     font-size: 16px;
@@ -1737,6 +1744,12 @@ main.cart-page section.total .container:after {
     max-width: 120px;
     overflow: hidden;
     word-wrap: break-word;
+    padding: 5px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d8d8d8;
 }
 
 .amount .plus, .amount .minus {
