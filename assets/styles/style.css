@@ -1058,8 +1058,7 @@ footer .accordion.language {
     text-align: center;
 }
 
-.modal-region__header .title,
-.authorization__header .title {
+.modal-region__header .title {
     font-family: 'Inter-Bold';
     font-size: 32px;
     color: #191716;
@@ -1695,8 +1694,7 @@ main.cart-page section.total .container:after {
 
 .amount-info .remove-btn,
 .welcome .welcome-btn,
-.order-page .show-order,
-.authorization a {
+.order-page .show-order {
     font-size: 14px;
     font-family: "Inter-Regular";
     color: #191716;
@@ -1709,7 +1707,7 @@ main.cart-page section.total .container:after {
 .welcome .welcome-btn:hover,
 .order-main__form .agreement a:hover,
 .order-page .show-order:hover,
-.authorization a:hover {
+.authorization .buttons__container a:hover {
     border-bottom: 1px solid #191716;
 }
 
@@ -2269,17 +2267,50 @@ main.order-page {
 
 .authorization .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     min-height: 100%;
     padding: 0;
 }
 
+.authorithation__footer {
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Inter-Regular';
+    letter-spacing: -0.44px;
+    font-size: 14px;
+    color: #191716;
+}
+
+@media (hover: hover) and (pointer: fine){
+    .authorization a.logo:hover {
+        opacity: .6;
+    }
+}
+
 .authorization .buttons__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.authorization .form-fields__input {
+    position: relative;
+}
+
+.authorization .placeholder {
+    color: #8a8989;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    background-color: #ffffff;
+    transition: all .3s;
+}
+
+.authorization .form-fields__input input:focus + .placeholder {
+    top: -5px;
+    transition: all .3s;
 }
 
 .authorization__main {
@@ -2292,12 +2323,20 @@ main.order-page {
     text-align: center;
 }
 
+.authorization__header .title {
+    padding-top: 70px;
+    font-family: 'Inter-Bold';
+    font-size: 32px;
+    color: #191716;
+}
+
 .authorithation__content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
+    padding-top: 72px;
 }
 
 .authorization form {
@@ -2318,16 +2357,18 @@ main.order-page {
 
 .authorization .form-fields input {
     width: 100%;
+    margin-top: 12px;
+    padding: 8px;
     font-family: 'Inter-Regular';
     letter-spacing: -0.44px;
-    padding: 5px;
-    font-size: 16px;
+    font-size: 14px;
     color: #191716;
-    margin-top: 12px;
+    margin: 5px 0;
+    border: 1px solid #d8d8d8;  
 }
 
 .authorization .black-btn {
-    margin-top: 32px;
+    margin-top: 10px;
 }
 
 .authorization .background-line {
@@ -2337,6 +2378,15 @@ main.order-page {
 
 .authorization .background-line:not(:last-child) {
     border-right: 1px solid rgba(25, 23, 22, .2);
+}
+
+.authorization a {
+    font-size: 12px;
+    font-family: "Inter-Regular";
+    color: #191716;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    margin: 5px 0;
 }
 
 
@@ -3100,5 +3150,13 @@ main.order-page {
     .order-main__form .city-wrapper,
     .order-main__form .select-country-box {
         width: 100%;
+    }
+
+    .authorithation__content {
+        padding-top: 42px;
+    }
+
+    .authorization__header .title {
+        padding-top: 32px;
     }
 }
