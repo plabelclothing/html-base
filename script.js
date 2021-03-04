@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const accordionCountriesTitles = document.querySelectorAll('.modal-region .region__title');
     const accordionAccount = document.querySelectorAll('.account-page .account-menu');
     const languageTitle = document.querySelector('.language .column__title');
+    const burgerBtn = document.querySelector('.burger__button');
+    const headerCountry = document.querySelector('header .country');
+    const modalRegionCloseBtn = document.querySelector('.modal-region__header .close-btn');
+    const footerCountry = document.querySelector('footer .country');
+    const openSearchModalBtn = document.querySelector('.open-search-modal-btn');
 
     if (modalSearchBg && modalSearch) {
         modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height + 80}px`;
@@ -27,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.select-box')) selectBox.classList.remove('visible');
+        if (!e.target.closest('.select-box') && selectBox) selectBox.classList.remove('visible');
         if (!e.target.closest('.select-country-box') && selectCountryBox) selectCountryBox.classList.remove('visible');
     })
 
-    selectBox.addEventListener('click', (e) => {
+    selectBox && selectBox.addEventListener('click', (e) => {
         if (!e.target.classList.contains('select-box__input')) selectBox.classList.toggle('visible');
     })
 
@@ -44,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = 'auto';
     }
 
-    document.querySelector('.burger__button').addEventListener('click', () => {
+    burgerBtn && burgerBtn.addEventListener('click', () => {
         const body = document.body;
         if (body.classList.contains('open-burger')) {
             closeBurger();
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     accordionAccount.forEach(item => item.addEventListener('click', (e) => toggleAccordion(e, accordionAccount)));
 
-    document.querySelector('header .country').addEventListener('click', () => {
+    headerCountry && headerCountry.addEventListener('click', () => {
         modalRegion.classList.add('visible');
         modalRegionBg.classList.add('visible');
 
@@ -94,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })
 
-    document.querySelector('.modal-region__header .close-btn').addEventListener('click', () => {
+    modalRegionCloseBtn && modalRegionCloseBtn.addEventListener('click', () => {
         closeModalRegion();
         document.body.style.overflow = 'auto';
     })
@@ -112,24 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    document.querySelector('footer .country').addEventListener('click', () => {
+    footerCountry && footerCountry.addEventListener('click', () => {
         modalRegion.classList.add('visible');
         modalRegionBg.classList.add('visible');
         document.body.style.overflow = 'hidden';
     })
 
     document.addEventListener('click', (e) => {
-        if (modalRegion.classList.contains('visible') && e.target.closest('.modal-background.region-bg')) {
+        if (modalRegion && modalRegion.classList.contains('visible') && e.target.closest('.modal-background.region-bg')) {
             closeModalRegion();
             window.scrollTo(0, 0);
             document.body.style.overflow = 'auto';
         }
-        if (modalSearch.classList.contains('visible') && e.target.closest('.modal-background.search-bg')) {
+        if (modalSearch && modalSearch.classList.contains('visible') && e.target.closest('.modal-background.search-bg')) {
             closeModalSearch();
         }
     })
 
-    document.querySelector('.open-search-modal-btn').addEventListener('click', () => {
+    openSearchModalBtn && openSearchModalBtn.addEventListener('click', () => {
         if (modalSearch.classList.contains('visible')) {
             closeModalSearch()
         } else {
@@ -194,4 +199,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     accordionFilterTitles.forEach(item => item.addEventListener('click', toggleFilterAccordion));
+
+    //authorization
+    const authorizationInputs = [...document.querySelectorAll('.form-fields__input input')];
+    if (authorizationInputs.length) {
+        const onFocusFunc = (e) => e.target.classList.add('up');
+        const onBlurFunc = (e) => {
+            const target = e.target;
+            if (!target.value) target.classList.remove('up');
+        }
+        authorizationInputs.forEach(elem => {
+            elem.addEventListener('focus', onFocusFunc);
+            elem.addEventListener('blur', onBlurFunc);
+        });
+    }
 });

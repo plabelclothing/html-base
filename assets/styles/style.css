@@ -2272,6 +2272,7 @@ main.order-page {
     position: relative;
     min-height: 100%;
     padding: 0;
+    max-width: unset;
 }
 
 .authorithation__footer {
@@ -2306,9 +2307,10 @@ main.order-page {
     left: 8px;
     background-color: #ffffff;
     transition: all .3s;
+    font-size: 14px;
 }
 
-.authorization .form-fields__input input:focus + .placeholder {
+.authorization .form-fields__input input.up + .placeholder {
     top: -5px;
     transition: all .3s;
 }
