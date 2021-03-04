@@ -201,14 +201,24 @@ document.addEventListener("DOMContentLoaded", () => {
     accordionFilterTitles.forEach(item => item.addEventListener('click', toggleFilterAccordion));
 
     //authorization
+    const onFocusFunc = (e) => e.target.classList.add('up');
+    const onBlurFunc = (e) => {
+        const target = e.target;
+        if (!target.value) target.classList.remove('up');
+    }
+
     const authorizationInputs = [...document.querySelectorAll('.form-fields__input input')];
     if (authorizationInputs.length) {
-        const onFocusFunc = (e) => e.target.classList.add('up');
-        const onBlurFunc = (e) => {
-            const target = e.target;
-            if (!target.value) target.classList.remove('up');
-        }
         authorizationInputs.forEach(elem => {
+            elem.addEventListener('focus', onFocusFunc);
+            elem.addEventListener('blur', onBlurFunc);
+        });
+    }
+
+    //order
+    const orderInputs = [...document.querySelectorAll('.order-form__input input')];
+    if (orderInputs.length) {
+        orderInputs.forEach(elem => {
             elem.addEventListener('focus', onFocusFunc);
             elem.addEventListener('blur', onBlurFunc);
         });

@@ -2056,10 +2056,9 @@ input.password {
 
 .container form input.red {
     border: 1px solid #fc7373;
-    background-color: #f8e9e9;
 }
 
-.container form input.red::placeholder {
+.container form input.red + .placeholder {
     color: #fc7373;
 }
 
@@ -2132,29 +2131,36 @@ main.order-page {
     letter-spacing: -0.44px;
 }
 
-.order-main__form input:not([type="checkbox"]),
+.order-form__input,
 .order-main__form textarea {
-    padding: 8px;
     width: 50%;
     min-width: 280px;
     max-width: 560px;
+    color: #191716;
     font-family: 'Inter-Regular';
     letter-spacing: -0.44px;
     font-size: 14px;
-    color: #191716;
-    margin: 5px 0;
-    border: 1px solid #d8d8d8;
     transition: all .4 ease;
 }
 
-.order-main__form input:focus:not([type="checkbox"]),
+.order-main__form textarea  {
+    padding: 8px;
+}
+
+.order-main__form input:not([type="checkbox"]) {
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    padding: 10px 8px;
+}
+
+/* .order-main__form input:focus:not([type="checkbox"]),
 .order-main__form .select-country-box.visible {
     transform: scale(1.02);
     box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.75);
     transition: all .4 ease;
-}
+} */
 
 .order-main__form .agreement {
     font-family: 'Inter-Regular';
@@ -2234,7 +2240,7 @@ main.order-page {
     max-width: 560px;
 }
 
-.order-main__form .city-wrapper input {
+.order-main__form .city-wrapper .order-form__input{
     width: calc((100% - 10px) / 2);
     min-width: 135px;
     max-width: 275px;
@@ -2296,22 +2302,30 @@ main.order-page {
     justify-content: space-between;
 }
 
-.authorization .form-fields__input {
+.authorization .form-fields__input,
+.order-form__input {
     position: relative;
+    margin: 8px 0;
 }
 
-.authorization .placeholder {
+.authorization .form-fields__input {
+    margin-top: 12px;
+}
+
+.authorization .placeholder,
+.order-form__input .placeholder {
     color: #8a8989;
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 8px;
     background-color: #ffffff;
     transition: all .3s;
     font-size: 14px;
 }
 
-.authorization .form-fields__input input.up + .placeholder {
-    top: -5px;
+.authorization .form-fields__input input.up + .placeholder,
+.order-form__input input.up + .placeholder  {
+    top: -10px;
     transition: all .3s;
 }
 
@@ -2359,13 +2373,11 @@ main.order-page {
 
 .authorization .form-fields input {
     width: 100%;
-    margin-top: 12px;
-    padding: 8px;
+    padding: 10px 8px;
     font-family: 'Inter-Regular';
     letter-spacing: -0.44px;
     font-size: 14px;
     color: #191716;
-    margin: 5px 0;
     border: 1px solid #d8d8d8;  
 }
 
@@ -2388,7 +2400,7 @@ main.order-page {
     color: #191716;
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    margin: 5px 0;
+    margin: 7px 0;
 }
 
 
@@ -3147,7 +3159,7 @@ main.order-page {
     }
 
     .order-main__form .input-with-description__desc,
-    .order-main__form input:not([type="checkbox"]),
+    .order-form__input,
     .order-main__form textarea,
     .order-main__form .city-wrapper,
     .order-main__form .select-country-box {

@@ -106,13 +106,31 @@
         <div class="title">Where should we send your order?</div>
         <form class="order-main__form">
           <div class="subtitle">Enter your name and adress:</div>
-          <input type="text" placeholder="Firstname">
-          <input class="red" type="text" placeholder="Lastname">
-          <input type="text" placeholder="Street Address">
-          <input type="text" placeholder="Apt, Suite, Building (Optional)">
+          <div class="order-form__input">
+            <input type="text" id="order-firstname">
+            <label for="order-firstname" class="placeholder">Firstname</label>
+          </div>
+          <div class="order-form__input">
+            <input class="red" type="text" id="order-lastname">
+            <label for="order-lastname" class="placeholder">Lastname</label>
+          </div>
+          <div class="order-form__input">
+            <input type="text" id="order-address">
+            <label for="order-address" class="placeholder">Street Address</label>
+          </div>
+          <div class="order-form__input">
+            <input type="text" id="order-apt">
+            <label for="order-apt" class="placeholder">Apt, Suite, Building (Optional)</label>
+          </div>
           <div class="city-wrapper">
-            <input type="text" placeholder="Zip Code">
-            <input type="text" placeholder="City, State">
+            <div class="order-form__input">
+              <input type="text" id="order-zip">
+              <label for="order-zip" class="placeholder">Zip Code</label>
+            </div>
+            <div class="order-form__input">
+              <input type="text" id="order-city">
+              <label for="order-city" class="placeholder">City, State</label>
+            </div>
           </div>
           <div class="select-country-box">
             <div class="select-country-box__current" tabindex="1">
@@ -137,13 +155,19 @@
           </div>
           <div class="subtitle">What`s your contact information?</div>
           <div class="input-with-description">
-            <input type="email" placeholder="Email Address">
+            <div class="order-form__input">
+              <input type="text" id="order-email">
+              <label for="order-email" class="placeholder">Email Address</label>
+            </div>
             <div class="input-with-description__desc">
               We`ll email you a receipt and send order updates to ypur modile phone via SMS or iMessage
             </div>
           </div>
           <div class="input-with-description">
-            <input type="tel" placeholder="Phone Number">
+            <div class="order-form__input">
+              <input type="text" id="order-phone">
+              <label for="order-phone" class="placeholder">Phone Numbe</label>
+            </div>
             <div class="input-with-description__desc">
               The phone number you enter can`t be changed after you place your order, so please make sure it`s correct.
             </div>
