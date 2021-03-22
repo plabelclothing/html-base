@@ -270,7 +270,7 @@ header {
 
 .select-box__option, .select-country-box__option {
     display: block;
-    padding: 5px 20px 0px 0px;
+    padding: 5px 20px 0px 10px;
 }
 
 .select-box__option:hover,
@@ -2005,7 +2005,7 @@ input.password {
 
 .select-country-box__input-text {
     font-family: 'Inter-Regular';
-    font-size: 14px;
+    font-size: 16px;
     color: #191716;
     margin: 0;
     letter-spacing: -0.44px;
@@ -2088,6 +2088,7 @@ main.order-page {
     cursor: pointer;
     color: #191716;
     padding-top: 10px;
+    letter-spacing: -0.5px;
 }
 
 .order-page .order-main .subtitle {
@@ -2138,7 +2139,7 @@ main.order-page {
     color: #191716;
     font-family: 'Inter-Regular';
     letter-spacing: -0.44px;
-    font-size: 14px;
+    font-size: 16px;
     transition: all .4 ease;
 }
 
@@ -2149,17 +2150,9 @@ main.order-page {
 .order-main__form input:not([type="checkbox"]) {
     width: 100%;
     border: 1px solid #d8d8d8;
-    padding: 10px 8px;
+    padding: 18px 14px;
+    font-size: 16px;
 }
-
-/* .order-main__form input:focus:not([type="checkbox"]),
-.order-main__form .select-country-box.visible {
-    transform: scale(1.02);
-    box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.75);
-    transition: all .4 ease;
-} */
 
 .order-main__form .agreement {
     font-family: 'Inter-Regular';
@@ -2175,9 +2168,9 @@ main.order-page {
 
 .order-main__form .agreement [for="agreement-checkbox"] {
     cursor: pointer;
-	position: relative;
+	  position: relative;
     border: 1px solid #d8d8d8;
-	width: 12px;
+	  width: 12px;
     height: 12px;
     display: inline-block;
     margin-right: 7px;
@@ -2246,12 +2239,12 @@ main.order-page {
 }
 
 .order-main__form .select-country-box {
-    padding: 8px 5px;
+    padding: 18px 14px;
     width: 50%;
     min-width: 280px;
     max-width: 560px;
     font-family: 'Inter-Regular';
-    font-size: 14px;
+    font-size: 16px;
     color: #191716;
     margin: 5px 0;
     border: 1px solid #d8d8d8;
@@ -2290,32 +2283,45 @@ section.registration {
 .registration .title {
     font-family: 'Inter-SemiBold';
     font-size: 24px;
+    letter-spacing: -0.5px;
     padding: 54px 0 16px;
 }
 
 .registration .bg-white {
     background-color: #ffffff;
 }
-.registration .bg-grey {
+
+.bg-grey {
     background-color: rgba(24, 22, 22, 0.1);
 }
 
-.registration .black-btn {
+.registration .black-btn,
+.transaction .black-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 65px;
     padding: 0;
-    margin: 26px 0;
+    margin: 26px 0 0 0;
 }
 
-.registration-block__header {
+.registration .black-btn:last-of-type {
+  margin-bottom: 26px;
+}
+
+.registration-block__header,
+.registration-block__help {
     text-align: left;
     width: 360px;
 }
 
-.registration .black-btn:after {
+.registration-block__main {
+    width: 100%;
+}
+
+.registration .black-btn:after,
+.transaction .black-btn:after {
     transform: translateX(5px);
     content: url(../images/icons-arrow.svg);
     margin-left: 5px;
@@ -2323,7 +2329,8 @@ section.registration {
     transition: 0.3s ease;
 }
 
-.registration .black-btn:hover:after {
+.registration .black-btn:hover:after,
+.transaction .black-btn:hover:after {
     transform: translateX(10px);
     transition: 0.3s ease;
 }
@@ -2334,6 +2341,7 @@ section.registration {
     justify-content: center;
     align-items: center;
     width: 360px;
+    margin: 0 auto;
 }
 
 .registration .form-fields {
@@ -2367,42 +2375,29 @@ section.registration {
     position: absolute;
     top: 18px;
     left: 14px;
+    width: calc(100% - 28px);
     background-color: #ffffff;
     transition: all .3s;
     font-size: 16px;
+    text-align: left;
 }
 
-.order-form__input .placeholder {
-    color: #8a8989;
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    background-color: #ffffff;
-    transition: all .3s;
-    font-size: 14px;
-}
 
-.registration .form-fields__input input.up {
-    padding: 28px 14px 10px;
-}
-
+.registration .form-fields__input input.up,
 .order-form__input input.up {
-    padding: 17px 8px 3px;
+    padding: 28px 14px 10px;
 }
 
 .registration .form-fields__input input.up + .placeholder,
 .order-form__input input.up + .placeholder  {
-    top: 2px;
+    top: 8px;
     transition: all .3s;
     font-size: 12px;
 }
 
-.registration .form-fields__input input.up + .placeholder  {
-    top: 8px;
-}
-
 .registration-block__help {
     padding-top: 25px;
+    margin: 0 auto;
 }
 
 .registration-block__help p {
@@ -2427,9 +2422,67 @@ section.registration {
 
 .registration-block.bg-grey p {
     font-family: 'Inter-SemiBold';
+    letter-spacing: -0.5px;
     font-size: 24px;
     margin-top: 40px;
     width: 284px;
+    text-align: center;
+}
+
+.transaction {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.transaction .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: none;
+}
+
+.transaction__wrapper,
+.transaction__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction__main {
+  background-color: #ffffff;
+  padding: 20px 32px 32px;
+  margin-top: 40px;
+  max-width: 504px;
+}
+
+.transaction__header {
+  margin-top: 24px;
+}
+
+.transaction__main .title {
+  font-family: 'Inter-SemiBold';
+  font-size: 24px;
+  padding-top: 14px;
+  color: #191716;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.transaction__main p,
+.transaction__footer  {
+  font-family: 'Inter-Regular';
+  font-size: 16px;
+  color: #191716;
+  padding-top: 14px;
+  text-align: center;
+}
+
+.transaction__footer {
+  font-size: 14px;
 }
 
 @media (max-width: 1019px) {
@@ -2583,7 +2636,7 @@ section.registration {
     }
 
     footer .container {
-        padding: 53px 40px 50px;
+        padding: 53px 20px 50px;
     }
 
     .text-line {
@@ -3033,7 +3086,7 @@ section.registration {
     }
 
     .one-product .container {
-        padding: 10px 40px 20px;
+        padding: 10px 20px 20px;
     }
 
     .amount-info .amount-info__main {
@@ -3091,6 +3144,7 @@ section.registration {
     .registration .container {
         justify-content: center;
         align-items: flex-start;
+        background-color: rgba(24, 22, 22, 0.1);
     }
 
     .registration-block__header {
@@ -3110,11 +3164,25 @@ section.registration {
     }
 
     .registration .black-btn {
-        margin: 23px 0;
+        margin: 23px 0 0 0;
+    }
+
+    .registration .black-btn:last-of-type {
+      margin-bottom: 23px;
     }
 
     .registration-block__help {
         padding-top: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(24, 22, 22, 0.1);
+    }
+
+    .registration-block__help p {
+        width: 340px;
+        text-align: left;
     }
 
     .registration-block.bg-white {
@@ -3181,6 +3249,7 @@ section.registration {
 
     .one-product-page .cart-block__title {
         font-family: 'Inter-SemiBold';
+        letter-spacing: -0.5px;
         font-size: 26px;
         text-align: center;
         padding: 44px 0 24px;
@@ -3247,7 +3316,12 @@ section.registration {
 
     .registration form,
     .registration-block__header,
-    .registration-block__help {
-        width: 280px;
+    .registration-block__help p {
+        width: calc(100% - 40px);
+        max-width: 340px;
+    }
+
+    .transaction__main {
+      padding: 20px;
     }
 }
