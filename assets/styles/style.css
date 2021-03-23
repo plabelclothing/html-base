@@ -2145,6 +2145,7 @@ main.order-page {
 
 .order-main__form textarea  {
     padding: 8px;
+    border: 1px solid #d8d8d8;
 }
 
 .order-main__form input:not([type="checkbox"]) {
