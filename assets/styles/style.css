@@ -950,10 +950,10 @@ footer .accordion.language {
 
 /* .modal-background.search-bg {
     top: 121px;
-}
+} */
 .modal-background.filter-bg {
     top: 212px;
-} */
+}
 
 .modal-region.visible {
     transform: translateY(0);
@@ -3064,9 +3064,10 @@ section.registration {
         padding-top: 0px;
     }
 
-    /* .modal-background.filter-bg {
+    .modal-background.filter-bg {
         top: 120px;
-    } */
+    }
+    
     .one-product .container__product-block {
         flex-direction: column;
     }

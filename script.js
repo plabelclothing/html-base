@@ -166,11 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalFilter = document.querySelector('.modal-filter');
   const modalFilterBg = document.querySelector('.modal-background.filter-bg');
   const accordionFilterTitles = document.querySelectorAll('.modal-filter__main-item .title');
-  const filterContainer = document.querySelector('.filter .container');
+  // const filterContainer = document.querySelector('.filter .container');
 
-  if (modalFilterBg && filterContainer) {
-    modalFilterBg.style.top = `${filterContainer.getBoundingClientRect().bottom + 50}px`;
-  }
+  // if (modalFilterBg && filterContainer) {
+  //   modalFilterBg.style.top = `${filterContainer.getBoundingClientRect().bottom + 50}px`;
+  // }
 
   const closeModalFilter = () => {
     modalFilter.classList.remove('visible');
