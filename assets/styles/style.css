@@ -1706,6 +1706,7 @@ main.cart-page section.total .container:after {
 .amount-info .remove-btn:hover,
 .welcome .welcome-btn:hover,
 .order-main__form .agreement a:hover,
+.account-info__form .agreement a:hover,
 .order-page .show-order:hover {
     border-bottom: 1px solid #191716;
 }
@@ -1798,269 +1799,6 @@ main.cart-page section.total .container:after {
     align-self: flex-end;
 }
 
-/*account*/
-main.account-page {
-    padding: 30px 0px 70px;
-}
-
-.welcome .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section.account-menu {
-    background-color: #191716;
-}
-
-.account-menu {
-    cursor: pointer;
-    padding: 15px 0;
-    position: relative;
-    border-bottom: 1px solid #d8d8d8;
-}
-
-.account-menu::after {
-    display: block;
-    content: url('../images/plus-solid-black-big.svg');
-    position: absolute;
-    right: 0;
-    width: 25px;
-    height: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .2s;
-}
-
-.account-menu[aria-expanded="true"]::after {
-    transform: rotate(45deg);
-    transition: .2;
-}
-
-.account-menu[aria-expanded="true"] + .account-block-main {
-    opacity: 1;
-    max-height: 5000px;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-    will-change: opacity, max-height;
-}
-
-.account-menu + .account-block-main {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: opacity 200ms linear, max-height 200ms linear;
-    transition: opacity 200ms linear, max-height 200ms linear;
-    will-change: opacity, max-height;
-}
-
-.account-menu:hover {
-    opacity: .7;
-}
-
-.account-menu .account-menu-title {
-    font-family: 'Inter-Bold';
-    letter-spacing: -0.44px;
-    font-size: 80px;
-    color: #191716;
-}
-
-/* .account-menu .account-menu-description {
-    padding-top: 10px;
-    font-family: 'Inter-Regular';
-    font-size: 14px;
-    color: #191716;
-    letter-spacing: -0.44px;
-    max-width: 450px;
-} */
-
-.order-block__products-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.order-block__products-container .info-wrapper .title,
-.order-block__products-container .info-wrapper .amount,
-.order-block__products-container .info-wrapper .price {
-    font-size: 14px;
-}
-
-.order-block__products-container .info-wrapper .price {
-    font-family: 'Inter-SemiBold';
-}
-
-.order-block__product {
-    padding-top: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.order-block__product:last-of-type {
-    padding-bottom: 16px;
-    border-bottom: 1px solid #d8d8d8;
-}
-
-.order-block__product .info-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    padding-left: 32px;
-}
-
-.order-block__product .photo {
-    display: block;
-    width: 16%;
-    padding-bottom: calc(16% * 0.9);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.form__main {
-    border-bottom: 1px solid #d8d8d8;
-    width: 100%;
-    padding-bottom: 32px;
-}
-
-.settings-block {
-    padding-top: 32px;
-}
-
-input[type=password],
-input.password {
-    -webkit-text-security: square !important;
-    -moz-text-security: square !important;
-    -o-text-security: square !important;
-    text-security: square !important;
-}
-
-.settings-block__form, .form__main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.settings-block__form input:not([type="submit"]) {
-    padding: 8px;
-    width: 30%;
-    min-width: 280px;
-    max-width: 560px;
-    font-family: 'Inter-Regular';
-    letter-spacing: -0.44px;
-    font-size: 14px;
-    color: #191716;
-    margin: 5px 0;
-    border: 1px solid #d8d8d8;
-    transition: all .4 ease;
-}
-
-.settings-block__form input:not([type="submit"]):focus,
-.settings-block__form .select-country-box.visible {
-    transform: scale(1.02);
-    box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 1px 5px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.75);
-    transition: all .4 ease;
-}
-
-.settings-block__form input::placeholder {
-    color: #8a8989;
-}
-
-.settings-block__form .city-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
-    min-width: 280px;
-    max-width: 560px;
-}
-
-.settings-block__form .city-wrapper input {
-    width: calc((100% - 10px) / 2);
-    min-width: 135px;
-    max-width: 275px;
-}
-
-.settings-block__form .select-country-box {
-    padding: 8px 5px;
-    width: 30%;
-    min-width: 280px;
-    max-width: 560px;
-    font-family: 'Inter-Regular';
-    font-size: 14px;
-    color: #191716;
-    margin: 5px 0;
-    border: 1px solid #d8d8d8;
-    position: relative;
-    display: block;
-    letter-spacing: -0.44px;
-}
-
-.select-country-box__input-text {
-    font-family: 'Inter-Regular';
-    font-size: 16px;
-    color: #191716;
-    margin: 0;
-    letter-spacing: -0.44px;
-    display: none;
-}
-
-.settings-block__form input[type="submit"] {
-    margin-top: 24px;
-}
-
-.settings-block__title,
-.order-block__title {
-    font-size: 32px;
-    padding: 20px 0 10px;
-    font-family: 'Inter-Bold';
-    letter-spacing: -0.44px;
-    color: #191716;
-}
-
-.order-block__one-order,
-.settings-block__title,
-.settings-block__subtitle {
-    width: 70%;
-    text-align: left;
-    margin: 0 auto;
-}
-
-.settings-block__subtitle,
-.order-block__subtitle {
-    font-size: 16px;
-    padding: 10px 0;
-    font-family: 'Inter-Bold';
-    letter-spacing: -0.44px;
-    color: #191716;
-}
-
-.order-block__subtitle a {
-    font-family: 'Inter-Bold';
-    letter-spacing: -0.44px;
-    color: #191716;
-    cursor: pointer;
-}
-
-.order-block__subtitle a:hover {
-    opacity: .7;
-}
-
-.container form input.red {
-    border: 1px solid #fc7373;
-}
-
-.container form input.red + .placeholder {
-    color: #fc7373;
-}
-
 /*order page*/
 main.order-page {
     padding: 30px 0px 70px;
@@ -2091,7 +1829,8 @@ main.order-page {
     letter-spacing: -0.5px;
 }
 
-.order-page .order-main .subtitle {
+.order-page .order-main .subtitle,
+.account-info .subtitle {
     font-family: 'Inter-SemiBold';
     font-size: 16px;
     cursor: pointer;
@@ -2103,14 +1842,16 @@ main.order-page {
     margin: 24px 0 0;
 }
 
-.order-main__form {
+.order-main__form,
+.account-info__form {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
 }
 
-.order-main__form .input-with-description {
+.order-main__form .input-with-description,
+.account-info__form .input-with-description {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -2119,7 +1860,8 @@ main.order-page {
     align-items: center;
 }
 
-.order-main__form .input-with-description__desc {
+.order-main__form .input-with-description__desc,
+.account-info__form .input-with-description__desc {
     min-width: 280px;
     max-width: 560px;
     width: 50%;
@@ -2127,12 +1869,18 @@ main.order-page {
     font-family: 'Inter-Regular';
     font-size: 12px;
     color: #191716;
-    max-height: 34px;
+    max-height: 58px;
     letter-spacing: -0.44px;
+    overflow: hidden;
 }
 
-.order-form__input,
-.order-main__form textarea {
+.account-info__form .input-with-description__desc {
+  min-width: 170px;
+}
+
+.order-form__input, .account-info__input,
+.order-main__form textarea,
+.account-info__form textarea {
     width: 50%;
     min-width: 280px;
     max-width: 560px;
@@ -2143,19 +1891,22 @@ main.order-page {
     transition: all .4 ease;
 }
 
-.order-main__form textarea  {
+.order-main__form textarea,
+.account-info__form textarea {
     padding: 8px;
     border: 1px solid #d8d8d8;
 }
 
-.order-main__form input:not([type="checkbox"]) {
+.order-main__form input:not([type="checkbox"]),
+.account-info__form input:not([type="checkbox"]) {
     width: 100%;
     border: 1px solid #d8d8d8;
     padding: 18px 14px;
     font-size: 16px;
 }
 
-.order-main__form .agreement {
+.order-main__form .agreement,
+.account-info__form .agreement {
     font-family: 'Inter-Regular';
     letter-spacing: -0.44px;
     font-size: 14px;
@@ -2163,11 +1914,13 @@ main.order-page {
     margin-top: 32px;
 }
 
-.order-main__form .agreement #agreement-checkbox {
+.order-main__form .agreement #agreement-checkbox,
+.account-info__form .agreement #agreement-checkbox {
     display: none;
 }
 
-.order-main__form .agreement [for="agreement-checkbox"] {
+.order-main__form .agreement [for="agreement-checkbox"],
+.account-info__form .agreement [for="agreement-checkbox"] {
     cursor: pointer;
 	  position: relative;
     border: 1px solid #d8d8d8;
@@ -2177,13 +1930,15 @@ main.order-page {
     margin-right: 7px;
 }
 
-.order-main__form .agreement a {
+.order-main__form .agreement a,
+.account-info__form .agreement a {
     font-family: 'Inter-SemiBold';
     cursor: pointer;
     border-bottom: 1px solid transparent;
 }
 
-.order-main__form #agreement-checkbox:checked + [for="agreement-checkbox"]:after {
+.order-main__form #agreement-checkbox:checked + [for="agreement-checkbox"]:after,
+.account-info__form #agreement-checkbox:checked + [for="agreement-checkbox"]:after {
 	position: absolute;
 	content: '';
     display: block;
@@ -2220,11 +1975,13 @@ main.order-page {
     margin-right: 12px;
 }
 
-.order-main__form  input::placeholder {
+.order-main__form  input::placeholder,
+.account-info__form  input::placeholder  {
     color: #8a8989;
 }
 
-.order-main__form  .city-wrapper {
+.order-main__form .city-wrapper,
+.account-info__form .city-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2233,13 +1990,15 @@ main.order-page {
     max-width: 560px;
 }
 
-.order-main__form .city-wrapper .order-form__input{
+.order-main__form .city-wrapper .order-form__input,
+.account-info__form .city-wrapper .account-info__input {
     width: calc((100% - 10px) / 2);
     min-width: 135px;
     max-width: 275px;
 }
 
-.order-main__form .select-country-box {
+.order-main__form .select-country-box,
+.account-info__form .select-country-box {
     padding: 18px 14px;
     width: 50%;
     min-width: 280px;
@@ -2361,7 +2120,8 @@ section.registration {
 }
 
 .registration .form-fields__input,
-.order-form__input {
+.order-form__input,
+.account-info__input {
     position: relative;
     margin: 8px 0;
 }
@@ -2371,7 +2131,8 @@ section.registration {
 }
 
 .registration .placeholder,
-.order-form__input .placeholder {
+.order-form__input .placeholder,
+.account-info__input .placeholder {
     color: #8a8989;
     position: absolute;
     top: 18px;
@@ -2385,12 +2146,14 @@ section.registration {
 
 
 .registration .form-fields__input input.up,
-.order-form__input input.up {
+.order-form__input input.up,
+.account-info__input input.up {
     padding: 28px 14px 10px;
 }
 
 .registration .form-fields__input input.up + .placeholder,
-.order-form__input input.up + .placeholder  {
+.order-form__input input.up + .placeholder,
+.account-info__input input.up + .placeholder  {
     top: 8px;
     transition: all .3s;
     font-size: 12px;
@@ -2486,6 +2249,126 @@ section.registration {
   font-size: 14px;
 }
 
+/*account page*/
+.account-page .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.account-menu {
+  width: 20%;
+  border-right: 1px solid #d8d8d8;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+.account-info {
+  padding-left: 32px;
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+.account-menu__wrapper {
+  width: 100%;
+}
+
+.account-menu__email,
+.account-info__title {
+  font-family: 'Inter-SemiBold';
+  font-size: 18px;
+  color: #191716;
+  letter-spacing: -0.5px;
+}
+
+.account-menu__email {
+  padding-left: 12px;
+  padding-right: 5px;
+  word-wrap: break-word;
+}
+
+.account-menu__items {
+  padding-top: 24px;
+  width: 100%;
+}
+
+.account-menu__items span {
+  font-family: 'Inter-Regular';
+  font-size: 16px;
+  color: #191716;
+}
+
+.account-menu__items li {
+  cursor: pointer;
+  padding: 12px 14px;
+  width: calc(100% - 10px);
+  margin-bottom: 7px;
+  height: 52px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.account-menu__items li a {
+  display: flex;
+  align-items: center;
+}
+
+.account-menu__items li svg {
+  color: rgba(24, 22, 22, 0.1);
+  width: 24px;
+  margin-right: 5px;
+}
+
+.account-menu__items li:hover,
+.account-menu__items li.active {
+  background-color: rgba(24, 22, 22, 0.1);
+}
+
+.account-menu__items li:hover svg,
+.account-menu__items li.active svg  {
+  color: #191716;
+}
+
+.account-menu__items li:hover span,
+.account-menu__items li.active span  {
+  font-family: 'Inter-SemiBold';
+}
+
+.select-country-box__input-text {
+  font-family: 'Inter-Regular';
+  font-size: 16px;
+  color: #191716;
+  margin: 0;
+  letter-spacing: -0.44px;
+  display: none;
+}
+
+.account-menu button {
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  font-family: 'Inter-Regular';
+  font-size: 16px;
+  color: #191716;
+  padding: 10px;
+  cursor: pointer;
+  min-width: 80px;
+  height: 52px;
+}
+
+.account-menu button:hover {
+  opacity: .6;
+}
+
+main.account-page {
+  padding: 30px 0px 70px;
+}
+
 @media (max-width: 1019px) {
     .container {
         padding: 20px 60px;
@@ -2545,6 +2428,10 @@ section.registration {
     .registration-block__header,
     .registration-block__help {
         width: 340px;
+    }
+
+    .account-menu {
+      width: 35%;
     }
 }
 
@@ -3082,7 +2969,6 @@ section.registration {
 
     main.one-product-page,
     main.cart-page,
-    main.account-page,
     main.order-page {
         padding: 0px 0px 30px;
     }
@@ -3116,21 +3002,15 @@ section.registration {
         width: 100%;
     }
 
-    .account-menu .account-menu-description {
-        max-width: 350px;
-    }
-
-    .account-menu .account-menu-title {
-        font-size: 64px;
-    }
-
-    .order-page .input-with-description {
+    .order-page .input-with-description,
+    .account-page .input-with-description {
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
     }
 
-    .order-page .input-with-description .input-with-description__desc {
+    .order-page .input-with-description .input-with-description__desc,
+    .account-page .input-with-description .input-with-description__desc {
         padding-left: 0px;
         margin: 10px 0 18px;
     }
@@ -3189,6 +3069,55 @@ section.registration {
 
     .registration-block.bg-white {
         width: 100%;
+    }
+
+    .account-page .container {
+      flex-direction: column-reverse;
+    }
+
+    .account-menu {
+      border-right: 0px;
+      flex-direction: row;
+      align-items: flex-end;
+      width: 100%;
+      border-top: 1px solid #d8d8d8;
+      padding-top: 12px;
+      padding-bottom: 10px;
+      position: sticky;
+      bottom: 0;
+      background-color: #ffff;
+      z-index: 1;
+    }
+
+    main.account-page {
+      padding: 0px;
+    }
+
+    .account-menu__items {
+      display: flex;
+      padding-top: 4px;
+    }
+
+    .account-menu__items li {
+      margin-bottom: 0px;
+      padding: 6px 10px;
+      justify-content: center;
+    }
+
+    .account-menu__items li a {
+      flex-direction: column;
+    }
+
+    .account-menu button {
+      padding: 16px 10px;
+    }
+
+    .account-info {
+      padding-left: 0px;
+    }
+
+    .account-menu__items span {
+      text-align: center;
     }
 }
 
@@ -3281,10 +3210,6 @@ section.registration {
         margin-top: 34px;
     }
 
-    .account-menu .account-menu-description {
-        max-width: 230px;
-    }
-
     .order-block__product .photo {
         display: none;
     }
@@ -3300,10 +3225,6 @@ section.registration {
         width: 100%;
     }
 
-    .account-menu .account-menu-title {
-        font-size: 38px;
-    }
-
     .settings-block__title, .order-block__title {
         font-size: 24px;
     }
@@ -3312,7 +3233,12 @@ section.registration {
     .order-form__input,
     .order-main__form textarea,
     .order-main__form .city-wrapper,
-    .order-main__form .select-country-box {
+    .order-main__form .select-country-box,
+    .account-info__form .input-with-description__desc,
+    .account-info__input,
+    .account-info__form textarea,
+    .account-info__form .city-wrapper,
+    .account-info__form .select-country-box {
         width: 100%;
     }
 
@@ -3326,4 +3252,10 @@ section.registration {
     .transaction__main {
       padding: 20px;
     }
+}
+
+@media (max-width: 375px) {
+  .account-menu__items span {
+    display: none;
+  }
 }

@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalSearch = document.querySelector('.modal-search');
   const accordionTitles = document.querySelectorAll('.accordion .column__title');
   const accordionCountriesTitles = document.querySelectorAll('.modal-region .region__title');
-  const accordionAccount = document.querySelectorAll('.account-page .account-menu');
   const languageTitle = document.querySelector('.language .column__title');
   const burgerBtn = document.querySelector('.burger__button');
   const headerCountry = document.querySelector('header .country');
@@ -90,8 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
   accordionTitles.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionTitles)));
 
   accordionCountriesTitles.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionCountriesTitles)));
-
-  accordionAccount.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionAccount)));
 
   if (headerCountry) {
     headerCountry.addEventListener('click', () => {
@@ -226,19 +223,23 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const authorizationInputs = [...document.querySelectorAll('.form-fields__input input')];
-  if (authorizationInputs.length) {
-    authorizationInputs.forEach((elem) => {
-      elem.addEventListener('focus', onFocusFunc);
-      elem.addEventListener('blur', onBlurFunc);
-    });
+
+  function addEventsForInputs(arr) {
+    if (arr.length) {
+      arr.forEach((elem) => {
+        elem.addEventListener('focus', onFocusFunc);
+        elem.addEventListener('blur', onBlurFunc);
+      });
+    }
   }
+
+  addEventsForInputs(authorizationInputs);
 
   // order
   const orderInputs = [...document.querySelectorAll('.order-form__input input')];
-  if (orderInputs.length) {
-    orderInputs.forEach((elem) => {
-      elem.addEventListener('focus', onFocusFunc);
-      elem.addEventListener('blur', onBlurFunc);
-    });
-  }
+  addEventsForInputs(orderInputs);
+
+  // account
+  const accountInputs = [...document.querySelectorAll('.account-info__input input')];
+  addEventsForInputs(accountInputs);
 });
