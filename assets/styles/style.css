@@ -2253,7 +2253,7 @@ section.registration {
 .account-page .container {
   display: flex;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .account-menu {
@@ -2271,10 +2271,12 @@ section.registration {
   padding-left: 32px;
   padding-top: 40px;
   padding-bottom: 32px;
+  width: 80%;
 }
 
 .account-menu__wrapper {
   width: 100%;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .account-menu__email,
@@ -2359,6 +2361,7 @@ section.registration {
   cursor: pointer;
   min-width: 80px;
   height: 52px;
+  align-self: center;
 }
 
 .account-menu button:hover {
@@ -2367,6 +2370,10 @@ section.registration {
 
 main.account-page {
   padding: 30px 0px 70px;
+}
+
+.account-info .black-btn {
+  margin-top: 24px;
 }
 
 @media (max-width: 1019px) {
@@ -2431,7 +2438,11 @@ main.account-page {
     }
 
     .account-menu {
-      width: 35%;
+      width: 30%;
+    }
+
+    .account-info {
+      width: 70%;
     }
 }
 
@@ -3080,17 +3091,32 @@ main.account-page {
       flex-direction: row;
       align-items: flex-end;
       width: 100%;
-      border-top: 1px solid #d8d8d8;
-      padding-top: 12px;
-      padding-bottom: 10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
       position: sticky;
       bottom: 0;
       background-color: #ffff;
       z-index: 1;
     }
 
+    .account-menu__wrapper {
+      border-bottom: 0px;
+    }
+
     main.account-page {
       padding: 0px;
+    }
+
+    main.account-page .container {
+      padding-bottom: 0px;
+    }
+
+    .account-menu__items li svg {
+      margin-right: 0px;
+    }
+
+    .account-menu__email {
+      display: none;
     }
 
     .account-menu__items {
@@ -3114,10 +3140,16 @@ main.account-page {
 
     .account-info {
       padding-left: 0px;
+      width: 100%;
+      padding-top: 10px;
     }
 
     .account-menu__items span {
       text-align: center;
+    }
+
+    footer {
+      display: none;
     }
 }
 
@@ -3252,10 +3284,17 @@ main.account-page {
     .transaction__main {
       padding: 20px;
     }
-}
 
-@media (max-width: 375px) {
-  .account-menu__items span {
-    display: none;
-  }
+    .account-menu__items span {
+      display: none;
+    }
+
+    .account-menu__items li,
+    .account-menu button {
+      height: 43px;
+      height: 43px;
+      padding: 0px 10px;
+      line-height: 43px;
+      vertical-align: middle;
+    }
 }
