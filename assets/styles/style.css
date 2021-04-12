@@ -2374,6 +2374,7 @@ main.account-page {
 
 .account-info .black-btn {
   margin-top: 24px;
+  align-self: center;
 }
 
 @media (max-width: 1019px) {
@@ -3121,7 +3122,7 @@ main.account-page {
 
     .account-menu__items {
       display: flex;
-      padding-top: 4px;
+      padding-top: 0px;
     }
 
     .account-menu__items li {
@@ -3146,6 +3147,10 @@ main.account-page {
 
     .account-menu__items span {
       text-align: center;
+    }
+
+    .account-menu button {
+      margin-left: 8px;
     }
 
     footer {
@@ -3296,5 +3301,9 @@ main.account-page {
       padding: 0px 10px;
       line-height: 43px;
       vertical-align: middle;
+    }
+
+    .account-menu button {
+      margin-left: 5px;
     }
 }
