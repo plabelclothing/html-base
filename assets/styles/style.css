@@ -1905,22 +1905,20 @@ main.order-page {
     font-size: 16px;
 }
 
-.order-main__form .agreement,
-.account-info__form .agreement {
+.agreement {
     font-family: 'Inter-Regular';
     letter-spacing: -0.44px;
     font-size: 14px;
     color: #191716;
     margin-top: 32px;
+    text-align: left;
 }
 
-.order-main__form .agreement #agreement-checkbox,
-.account-info__form .agreement #agreement-checkbox {
+.agreement #agreement-checkbox {
     display: none;
 }
 
-.order-main__form .agreement [for="agreement-checkbox"],
-.account-info__form .agreement [for="agreement-checkbox"] {
+.agreement [for="agreement-checkbox"] {
     cursor: pointer;
 	  position: relative;
     border: 1px solid #d8d8d8;
@@ -1930,15 +1928,13 @@ main.order-page {
     margin-right: 7px;
 }
 
-.order-main__form .agreement a,
-.account-info__form .agreement a {
+.agreement a {
     font-family: 'Inter-SemiBold';
     cursor: pointer;
     border-bottom: 1px solid transparent;
 }
 
-.order-main__form #agreement-checkbox:checked + [for="agreement-checkbox"]:after,
-.account-info__form #agreement-checkbox:checked + [for="agreement-checkbox"]:after {
+#agreement-checkbox:checked + [for="agreement-checkbox"]:after {
 	position: absolute;
 	content: '';
     display: block;
