@@ -1823,7 +1823,6 @@ main.order-page {
 .order-page .order-main .title {
     font-family: 'Inter-SemiBold';
     font-size: 24px;
-    cursor: pointer;
     color: #191716;
     padding-top: 10px;
     letter-spacing: -0.5px;
@@ -1833,7 +1832,6 @@ main.order-page {
 .account-info .subtitle {
     font-family: 'Inter-SemiBold';
     font-size: 16px;
-    cursor: pointer;
     color: #191716;
     padding: 24px 0;
 }
@@ -2017,6 +2015,14 @@ main.order-page {
 section.registration {
     height: 100vh;
     background-color: #ffffff;
+}
+
+input[type=password],
+input.password {
+    -webkit-text-security: square !important;
+    -moz-text-security: square !important;
+    -o-text-security: square !important;
+    text-security: square !important;
 }
 
 .registration .container {
@@ -2370,7 +2376,15 @@ main.account-page {
 
 .account-info .black-btn {
   margin-top: 24px;
-  align-self: center;
+}
+
+.account-info__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  max-width: 560px;
+  width: 50%;
 }
 
 @media (max-width: 1019px) {
@@ -3271,7 +3285,8 @@ main.account-page {
     .account-info__input,
     .account-info__form textarea,
     .account-info__form .city-wrapper,
-    .account-info__form .select-country-box {
+    .account-info__form .select-country-box,
+    .account-info__btn-container {
         width: 100%;
     }
 
