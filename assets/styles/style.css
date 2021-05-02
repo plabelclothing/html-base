@@ -1644,7 +1644,8 @@ main.cart-page section .container:after {
 }
 
 main.cart-page section.subtotal .container:after,
-main.cart-page section.total .container:after {
+main.cart-page section.total .container:after,
+main.cart-page section.shipping-adress .container:after  {
     margin-left: calc(20% + 32px);
     width: calc(80% - 32px);
 }
@@ -1659,6 +1660,10 @@ main.cart-page section.total .container:after {
 .cart-page .info-text {
     text-align: center;
     padding-top: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .amount-info .amount-info__main {
@@ -1731,7 +1736,8 @@ main.cart-page section.total .container:after {
     justify-content: center;
 }
 
-.info-wrapper .characteristics p {
+.info-wrapper .characteristics p,
+.shipping-adress .adress {
     padding-top: 3px;
     font-size: 14px;
     font-family: "Inter-Regular";
@@ -1768,14 +1774,16 @@ main.cart-page section.total .container:after {
     opacity: .6;
 }
 
-.subtotal .subtotal__item, .total .total__main {
+.subtotal .subtotal__item, .total .total__main,
+.shipping-adress__main, .purchase_buttons__main {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding-left: calc(20% + 32px);
 }
 
-.subtotal__item p {
+.subtotal__item p,
+.shipping-adress__main .title {
     font-size: 16px;
     font-family: "Inter-SemiBold";
 }
@@ -1797,6 +1805,27 @@ main.cart-page section.total .container:after {
 .total .black-btn {
     margin-top: 24px;
     align-self: flex-end;
+}
+
+.purchase_buttons .purchase_buttons__main {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.purchase_buttons .black-btn {
+  flex: 200px 0 1;
+}
+
+.purchase_buttons .black-btn:not(:first-of-type) {
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.cart-page section.purchase_buttons .container:after {
+  display: none;
 }
 
 /*order page*/
@@ -2357,6 +2386,7 @@ input.password {
   border: 1px solid #d8d8d8;
   background-color: #ffffff;
   font-family: 'Inter-Regular';
+  letter-spacing: -0.44px;
   font-size: 16px;
   color: #191716;
   padding: 10px;
@@ -2385,6 +2415,131 @@ main.account-page {
   min-width: 280px;
   max-width: 560px;
   width: 50%;
+}
+
+.account-info__table-item,
+.account-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-info .price-col {
+  text-align: right;
+  flex: 75px 1 1;
+  margin-left: 20px;
+  overflow-wrap: break-word;
+}
+
+.account-info .purchase-col {
+  flex: auto 1 1;
+}
+
+.account-info .status-col {
+  text-align: left;
+  flex: 112px 0 0;
+  margin-left: 20px;
+}
+
+.status-col__value {
+  border: 1px solid #d8d8d8;
+  text-align: center;
+  padding: 3px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-info__header {
+  position: relative;
+  padding: 24px 0 8px;
+}
+
+.account-info__table {
+  position: relative;
+}
+
+.account-info__outline {
+  position: absolute;
+  border-bottom: 1px solid #d8d8d8;
+  bottom: 0;
+  left: -32px;
+  width: calc(100% + 32px);
+}
+
+.table-item__icon {
+  border: 2px solid #191716;
+  color:#191716;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+  font-family: 'Inter-SemiBold';
+  font-size: 16px;
+  color: #191716;
+  letter-spacing: -0.44px;
+}
+
+.account-info__header * {
+  font-family: 'Inter-Regular';
+  font-size: 12px;
+  color: #191716;
+  letter-spacing: -0.44px;
+}
+
+.account-info__table-item .purchase-col {
+  display: flex;
+  align-items: center;
+}
+
+.account-info__table-item .price-col {
+  font-family: 'Inter-SemiBold';
+}
+
+.account-info__table-item  .table-item__name {
+  font-family: 'Inter-SemiBold';
+  padding-left: 20px;
+  word-break: break-word;
+}
+
+.account-info__table-item {
+  padding: 24px 0;
+  cursor: pointer;
+}
+
+.account-info__table-item:hover {
+  opacity: .6;
+}
+
+.account-info__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.account-info__tabs-separator {
+  height: 22px;
+  border-right: 1px solid #d8d8d8;
+}
+.account-info__tab.left {
+  transform: rotate(180deg)
+}
+
+.account-info__tab {
+  margin: 8px;
+  cursor: pointer;
+}
+
+.account-info__tab:hover {
+  opacity: .6;
 }
 
 @media (max-width: 1019px) {
@@ -3014,12 +3169,14 @@ main.account-page {
         padding-left: 0;
     }
 
-    .subtotal .subtotal__item, .total .total__main {
+    .subtotal .subtotal__item, .total .total__main,
+    .shipping-adress__main, .purchase_buttons__main {
         padding-left: 0;
     }
 
     main.cart-page section.subtotal .container:after,
-    main.cart-page section.total .container:after {
+    main.cart-page section.total .container:after,
+    main.cart-page section.shipping-adress .container:after {
         margin-left: 0px;
         width: 100%;
     }
@@ -3153,6 +3310,33 @@ main.account-page {
       padding-left: 0px;
       width: 100%;
       padding-top: 10px;
+    }
+
+    .account-info__header__outline {
+      left: 0px;
+      width: 100%;
+    }
+
+    .account-info .price-col {
+      flex: 65px 0 0;
+      margin-left: 10px;
+    }
+
+    .account-info__table-item  .table-item__name {
+      padding-left: 10px;
+    }
+
+    .account-info .status-col {
+      flex: 75px 0 0;
+      margin-left: 8px;
+    }
+
+    .account-info__table-item .table-item__name {
+      padding-left: 8px;
+    }
+
+    .account-info__table-item {
+      padding: 16px 0;
     }
 
     .account-menu__items span {
