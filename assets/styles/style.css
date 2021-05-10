@@ -46,11 +46,22 @@
 
 a {
     text-decoration: none;
+    color:#191716
 }
 
 textarea {
     resize: none;
     height: 120px;
+}
+
+textarea,
+input,
+input[type="date"] {
+    -webkit-appearance: none !important; 
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 0 !important;
+    -webkit-border-radius:0 !important; 
 }
 
 body {
@@ -241,6 +252,8 @@ header {
     animation-timing-function: step-start;
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    max-height: 120px;
+    overflow: auto;
 }
 
 
@@ -270,7 +283,7 @@ header {
 
 .select-box__option, .select-country-box__option {
     display: block;
-    padding: 5px 20px 0px 10px;
+    padding: 10px 20px 10px 10px;
 }
 
 .select-box__option:hover,
@@ -2166,13 +2179,21 @@ input.password {
 .account-info__input .placeholder {
     color: #8a8989;
     position: absolute;
-    top: 18px;
+    top: 19px;
     left: 14px;
     width: calc(100% - 28px);
     background-color: #ffffff;
     transition: all .3s;
     font-size: 16px;
     text-align: left;
+}
+
+.registration .form-fields [type="date"] {
+  display: block;
+  min-height: 57px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  background-color: #ffffff;
 }
 
 
@@ -2285,6 +2306,8 @@ input.password {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  height: 100%;
+  min-height: calc(100vh - 120px);
 }
 
 .account-menu {
@@ -2303,6 +2326,10 @@ input.password {
   padding-top: 40px;
   padding-bottom: 32px;
   width: 80%;
+  flex: auto 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
 
 .account-menu__wrapper {
@@ -2427,12 +2454,15 @@ main.account-page {
 .account-info .price-col {
   text-align: right;
   flex: 75px 1 1;
+  min-width: 75px;
   margin-left: 20px;
   overflow-wrap: break-word;
+  font-family: 'Inter-Regular';
 }
 
 .account-info .purchase-col {
   flex: auto 1 1;
+  overflow: hidden;
 }
 
 .account-info .status-col {
@@ -2457,6 +2487,7 @@ main.account-page {
 
 .account-info__table {
   position: relative;
+  flex: auto 1 1;
 }
 
 .account-info__outline {
@@ -2499,14 +2530,12 @@ main.account-page {
   align-items: center;
 }
 
-.account-info__table-item .price-col {
-  font-family: 'Inter-SemiBold';
-}
-
 .account-info__table-item  .table-item__name {
   font-family: 'Inter-SemiBold';
   padding-left: 20px;
-  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .account-info__table-item {
@@ -3250,10 +3279,6 @@ main.account-page {
         width: 100%;
     }
 
-    .account-page .container {
-      flex-direction: column-reverse;
-    }
-
     .account-menu {
       border-right: 0px;
       flex-direction: row;
@@ -3277,6 +3302,8 @@ main.account-page {
 
     main.account-page .container {
       padding-bottom: 0px;
+      min-height: calc(100vh - 50px);
+      flex-direction: column-reverse;
     }
 
     .account-menu__items li svg {
