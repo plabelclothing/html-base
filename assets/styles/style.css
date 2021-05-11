@@ -2395,11 +2395,6 @@ input.password {
   color: #191716;
 }
 
-.account-menu__items li:hover span,
-.account-menu__items li.active span  {
-  font-family: 'Inter-SemiBold';
-}
-
 .select-country-box__input-text {
   font-family: 'Inter-Regular';
   font-size: 16px;
@@ -2531,7 +2526,6 @@ main.account-page {
 }
 
 .account-info__table-item  .table-item__name {
-  font-family: 'Inter-SemiBold';
   padding-left: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
