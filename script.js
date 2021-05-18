@@ -242,4 +242,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // account
   const accountInputs = [...document.querySelectorAll('.account-info__input input')];
   addEventsForInputs(accountInputs);
+
+  // toSupport
+  const toSupportInputs = [...document.querySelectorAll('.toSupport-form__input input')];
+  addEventsForInputs(toSupportInputs);
 });

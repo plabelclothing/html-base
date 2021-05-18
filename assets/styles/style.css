@@ -235,7 +235,7 @@ header {
     font-size: 16px;
 }
 
-.select-box__list, .select-country-box__list {
+.select-box__list {
     position: absolute;
     padding: 0;
     list-style: none;
@@ -252,15 +252,13 @@ header {
     animation-timing-function: step-start;
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    max-height: 120px;
-    overflow: auto;
 }
 
-
 .select-country-box__list {
-    left: 0;
-    padding-left: 5px;
-    width: 100%;
+  max-height: 120px;
+  overflow: auto;
+  left: 0;
+  width: 100%;
 }
 
 .select-country-box__list li {
@@ -283,7 +281,7 @@ header {
 
 .select-box__option, .select-country-box__option {
     display: block;
-    padding: 10px 20px 10px 10px;
+    padding: 5px 20px 0px 0px;
 }
 
 .select-box__option:hover,
@@ -1862,7 +1860,8 @@ main.order-page {
     margin-top: 32px;
 }
 
-.order-page .order-main .title {
+.order-page .order-main .title,
+.support-page .title {
     font-family: 'Inter-SemiBold';
     font-size: 24px;
     color: #191716;
@@ -1891,7 +1890,8 @@ main.order-page {
 }
 
 .order-main__form .input-with-description,
-.account-info__form .input-with-description {
+.account-info__form .input-with-description,
+.support-form .input-with-description {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -1901,7 +1901,8 @@ main.order-page {
 }
 
 .order-main__form .input-with-description__desc,
-.account-info__form .input-with-description__desc {
+.account-info__form .input-with-description__desc,
+.support-form .input-with-description__desc {
     min-width: 280px;
     max-width: 560px;
     width: 50%;
@@ -1920,7 +1921,9 @@ main.order-page {
 
 .order-form__input, .account-info__input,
 .order-main__form textarea,
-.account-info__form textarea {
+.account-info__form textarea,
+.support-form__input,
+.support-form textarea {
     width: 50%;
     min-width: 280px;
     max-width: 560px;
@@ -1932,13 +1935,15 @@ main.order-page {
 }
 
 .order-main__form textarea,
-.account-info__form textarea {
+.account-info__form textarea,
+.support-form textarea {
     padding: 8px;
     border: 1px solid #d8d8d8;
 }
 
 .order-main__form input:not([type="checkbox"]),
-.account-info__form input:not([type="checkbox"]) {
+.account-info__form input:not([type="checkbox"]),
+.support-form input:not([type="checkbox"])  {
     width: 100%;
     border: 1px solid #d8d8d8;
     padding: 18px 14px;
@@ -2012,7 +2017,8 @@ main.order-page {
 }
 
 .order-main__form  input::placeholder,
-.account-info__form  input::placeholder  {
+.account-info__form  input::placeholder,
+.support-form  input::placeholder  {
     color: #8a8989;
 }
 
@@ -2165,7 +2171,8 @@ input.password {
 
 .registration .form-fields__input,
 .order-form__input,
-.account-info__input {
+.account-info__input,
+.support-form__input {
     position: relative;
     margin: 8px 0;
 }
@@ -2176,7 +2183,8 @@ input.password {
 
 .registration .placeholder,
 .order-form__input .placeholder,
-.account-info__input .placeholder {
+.account-info__input .placeholder,
+.support-form__input .placeholder {
     color: #8a8989;
     position: absolute;
     top: 19px;
@@ -2199,13 +2207,15 @@ input.password {
 
 .registration .form-fields__input input.up,
 .order-form__input input.up,
-.account-info__input input.up {
+.account-info__input input.up,
+.support-form__input input.up {
     padding: 28px 14px 10px;
 }
 
 .registration .form-fields__input input.up + .placeholder,
 .order-form__input input.up + .placeholder,
-.account-info__input input.up + .placeholder  {
+.account-info__input input.up + .placeholder,
+.support-form__input input.up + .placeholder  {
     top: 8px;
     transition: all .3s;
     font-size: 12px;
@@ -2430,7 +2440,8 @@ main.account-page {
   margin-top: 24px;
 }
 
-.account-info__btn-container {
+.account-info__btn-container,
+.support-form__btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2563,6 +2574,58 @@ main.account-page {
 
 .account-info__tab:hover {
   opacity: .6;
+}
+
+.security-form {
+  padding-top: 24px;
+}
+
+/* support page */
+
+.support-form {
+  padding-top: 24px;
+}
+
+.support-form__btn-container {
+  padding-top: 24px;
+}
+
+.support-form textarea {
+  margin: 8px 0;
+}
+
+/* empty cart*/
+.empty-page__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 0;
+}
+
+.empty-page__description {
+  padding-top: 16px;
+}
+
+.empty-page__container img {
+  width: 140px;
+}
+
+.empty-page__description p {
+  color: #191716;
+  font-size: 16px;
+  font-family: 'Inter-Regular';
+  letter-spacing: -0.5px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.empty-page__description p:first-child {
+  font-size: 24px;
+}
+
+.empty-page__description a:hover {
+  border-bottom: 1px solid #191716;
 }
 
 @media (max-width: 1019px) {
@@ -3205,14 +3268,16 @@ main.account-page {
     }
 
     .order-page .input-with-description,
-    .account-page .input-with-description {
+    .account-page .input-with-description,
+    .support-form .input-with-description {
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
     }
 
     .order-page .input-with-description .input-with-description__desc,
-    .account-page .input-with-description .input-with-description__desc {
+    .account-page .input-with-description .input-with-description__desc,
+    .support-form .input-with-description .input-with-description__desc {
         padding-left: 0px;
         margin: 10px 0 18px;
     }
@@ -3371,6 +3436,14 @@ main.account-page {
     footer {
       display: none;
     }
+
+    .empty-page .container {
+      min-height: calc(100vh - 58px);
+    }
+
+    .empty-page__container img {
+      width: 100px;
+    }
 }
 
 @media (max-width: 479px) {
@@ -3491,7 +3564,10 @@ main.account-page {
     .account-info__form textarea,
     .account-info__form .city-wrapper,
     .account-info__form .select-country-box,
-    .account-info__btn-container {
+    .account-info__btn-container,
+    .support-form__input,
+    .support-form textarea,
+    .support-form .input-with-description__desc {
         width: 100%;
     }
 
