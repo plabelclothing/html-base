@@ -1668,7 +1668,8 @@ main.cart-page section.shipping-adress .container:after  {
     flex-direction: column;
 }
 
-.cart-page .info-text {
+.cart-page .info-text,
+.privacy-page .info-text {
     text-align: center;
     padding-top: 24px;
     align-items: center;
