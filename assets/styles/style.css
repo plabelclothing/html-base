@@ -3445,6 +3445,11 @@ main.account-page {
     .empty-page__container img {
       width: 100px;
     }
+
+    .account-info__outline {
+      left: -40px;
+      width: calc(100% + 80px);
+    }
 }
 
 @media (max-width: 479px) {
@@ -3598,5 +3603,10 @@ main.account-page {
 
     .account-menu button {
       margin-left: 5px;
+    }
+
+    .account-info__outline {
+      left: -20px;
+      width: calc(100% + 40px);
     }
 }
