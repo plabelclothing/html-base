@@ -2612,6 +2612,14 @@ main.account-page {
   width: 140px;
 }
 
+.modal-search .empty-page__container img {
+  width: 100px;
+}
+
+.modal-search .empty-page__description p:first-child {
+  font-size: 18px;
+}
+
 .empty-page__description p {
   color: #191716;
   font-size: 16px;
