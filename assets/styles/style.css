@@ -1096,7 +1096,9 @@ footer .accordion.language {
 
 /*product page*/
 
-main.products-page {
+main.products-page,
+main.privacy-page,
+main.return-page {
     padding: 30px 0px 70px;
 }
 
@@ -1669,13 +1671,21 @@ main.cart-page section.shipping-adress .container:after  {
 }
 
 .cart-page .info-text,
-.privacy-page .info-text {
+.privacy-page .info-text,
+.return-page .info-text {
     text-align: center;
     padding-top: 24px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    font-family: 'Inter-Regular';
+    font-size: 16px;
+}
+
+.return-page .info-text {
+  text-align: left;
+}
+
+.info-text_number {
+  font-size: 32px;
+  font-family: 'inter-SemiBold';
 }
 
 .amount-info .amount-info__main {
@@ -2717,7 +2727,12 @@ main.account-page {
         top: 58px;
     }
 
-    main.products-page {
+    main.products-page,
+    main.privacy-page,
+    main.return-page,
+    main.one-product-page,
+    main.cart-page,
+    main.order-page {
         padding: 0px 0px 30px;
     }
 
@@ -3237,12 +3252,6 @@ main.account-page {
 
     .one-product .right-column {
         padding-top: 32px;
-    }
-
-    main.one-product-page,
-    main.cart-page,
-    main.order-page {
-        padding: 0px 0px 30px;
     }
 
     .one-product .container {
