@@ -181,7 +181,8 @@ header {
     cursor: pointer;
 }
 
-.select-country-box.visible .select-country-box__icon {
+.select-country-box.visible .select-country-box__icon,
+.select-box.visible .select-box__icon {
     -webkit-transform: translateY(-50%) rotate(180deg);
     transform: translateY(-50%) rotate(180deg);
 }
@@ -254,6 +255,11 @@ header {
     background-color: #ffffff;
 }
 
+.container__country .select-box__list {
+  padding: 5px 0 20px 0;
+  left: -20px;
+}
+
 .select-country-box__list {
   max-height: 120px;
   overflow: auto;
@@ -281,7 +287,7 @@ header {
 
 .select-box__option, .select-country-box__option {
     display: block;
-    padding: 5px 20px 0px 0px;
+    padding: 5px 20px 0px 20px;
 }
 
 .select-box__option:hover,
