@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='./assets/styles/style.css'>
-    <title>Plabel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='./assets/styles/style.css'>
+  <title>Plabel</title>
 </head>
 <body>
-    <header>
+  <header>
         <div class="container">
             <div class="container__country">
                 <div class="country">
@@ -47,22 +47,22 @@
                       <label class="burger__search">
                         <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
                         <input placeholder="Search" type="search" name="search">
-                      </label>
+                      </label>  
                       <a class="nav_text" href="productPage.html">T-shirts</a>
-                      <a class="nav_text" >Company</a>
+                      <a class="nav_text">Company</a>
                     </div>
                 </nav>
-                <a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.svg"></a>
+                <a href="index.html" class="logo"><img  alt="logo" src="assets/images/logo.svg"></a>
                 <nav class="nav-icons">
-                    <a class="nav_icon open-search-modal-btn" >
+                    <a class="nav_icon open-search-modal-btn">
                         <img alt="search" src="assets/images/icons-search.svg">
                     </a>
                     <a class="nav_icon account" href="account.html">
                         <img alt="account" src="assets/images/icons-account.svg">
                     </a>
-                    <a class="nav_icon cart" href="cart.html">
+                    <a class="nav_icon cart">
                         <img alt="cart" src="assets/images/icons-cart.svg">
-                        <span class="cart__counter">99+</span>
+                        <span class="cart__counter">1</span>
                     </a>
                 </nav>
             </div>
@@ -76,16 +76,16 @@
             </label>
             <div class="container__search-results">
               <div class="search-results__item">
-                <a class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+                <a href="oneProductPage.html" class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
                 <div class="item-text">
-                  <a class="item-title">T-shirt-1</a>
+                  <a href="oneProductPage.html" class="item-title">T-shirt-1</a>
                   <p class="item-price price">150</p>
                 </div>
               </div>
               <div class="search-results__item">
-                <a class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+                <a href="oneProductPage.html" class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
                 <div class="item-text">
-                  <a class="item-title">T-shirt-2</a>
+                  <a href="oneProductPage.html" class="item-title">T-shirt-2</a>
                   <p class="item-price price">120</p>
                 </div>
               </div>
@@ -93,110 +93,77 @@
             <button class="container__all-btn black-btn">view all products</button>
           </div>
         </div>
-    </header>
-    <main class="one-product-page">
-      <section class="one-product">
+  </header>
+  <main class="cart-page">
+    <section class="cart-info">
+      <div class="container">
+        <div class="block-title">
+          <span class="bold">Your purchase №12356.</span>
+        </div>
+        <div class="info-text">
+            <div class="status-col__value">pending</div>
+        </div>
+        </div>
+      </section>
+      <section class="amount-info">
+          <div class="container">
+            <div class="amount-info__main">
+              <a href="oneProductPage.html" class="photo" style="background-image: url(assets/images/t-shirt.jfif)"></a>
+              <div class="info-wrapper">
+                <div class="characteristics">
+                  <a href="oneProductPage.html" class="title">T-shirt black "Summer 2021"</a>
+                  <p>Color: red</p>
+                  <p>Size: xl</p>
+                </div>
+                <div class="total-price">
+                    <div class="price">1000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="subtotal">
         <div class="container">
-          <div class="container__product-block">
-            <div class="left-column">
-              <div class="photo" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-              <div class="info-text">
-                  <p>worldwide free delivery</p>
-                  <p>info about tax *</p>
-              </div>
+          <div class="subtotal__item">
+            <p>Subtotal</p>
+            <p class="price">1000</p>
+          </div>
+          <div class="subtotal__item">
+            <p>Shipping</p>
+            <p class="price">FREE</p>
+          </div>
+        </div>
+      </section>
+      <section class="shipping-adress">
+        <div class="container">
+          <div class="shipping-adress__main">
+            <div class="title">
+              Shipping adress
             </div>
-            <div class="right-column">
-              <div class="one-product-info">
-                <div class="title">T-Shirt-1</div>
-                <p>worldwide free delivery</p>
-              </div>
-              <div class="size">
-                <div class="size__title">Choose your size.</div>
-                  <form class="size-form">
-                    <div>
-                      <input type="radio" name="size" value="s" id="s">
-                      <label for="s">s</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="m" id="m">
-                      <label for="m">m</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="l" id="l">
-                      <label for="l">l</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="xl" id="xl">
-                      <label for="xl">xl</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="xxl" id="xxl">
-                      <label for="xxl">xxl</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="xxxl" id="xxxl">
-                      <label for="xxxl">xxxl</label>
-                    </div>
-                  </form>
-                </div>
-                <div class="colors">
-                <div class="colors__title">Choose your color.</div>
-                  <form class="colors-form">
-                    <div class="color-form-div">
-                      <input type="radio" name="one-product-color" value="white" id="white">
-                      <label for="white" class="white">
-                          <p class="color-bg" style="background-color: white"></p>
-                          <p class="text">White</p>
-                      </label>
-                    </div>
-                    <div class="color-form-div">
-                      <input type="radio" name="one-product-color" id="black" value="black">
-                      <label class="black" for="black">
-                          <p class="color-bg" style="background-color: black"></p>
-                          <p class="text">Black</p>
-                      </label>
-                    </div>
-                    <div class="color-form-div">
-                      <input type="radio" name="one-product-color" value="red" id="red">
-                      <label class="red" for="red">
-                          <p class="color-bg" style="background-color: red"></p>
-                          <p class="text">Red</p>
-                      </label>
-                    </div>
-                  </form>
-                </div>
-                <div class="addition">
-                    <div class="addition__price price">160</div>
-                    <div class="info-text">
-                        <p>worldwide free delivery</p>
-                        <p>info about tax *</p>
-                    </div>
-                    <div class="addition__buttons">
-                      <button class="black-btn">pay</button>
-                      <a class="cart" >
-                        <img alt="cart" src="assets/images/icons-cart.svg">
-                    </a>
-                    </div>
-                </div>
+            <div class="adress">
+              <p>Ivan Ivanov</p>
+              <p>Minsk, Belarus</p>
+              <p>pr.Pobeditelei, 32</p>
+              <p>220121</p>
+              <p>+375258967458</p>
             </div>
           </div>
-          <div class="container__foto-block">
-            <div class="cart-block__product-image" style="background-image: url(assets/images/karsten-winegeart-sda-u-6-n-4-dki-8-unsplash.jpg)"></div>
-            <div class="cart-block__text">Some text will be here</div>
-            <div class="cart-block__product-image" style="background-image: url(assets/images/karsten-winegeart-sda-u-6-n-4-dki-8-unsplash.jpg)"></div>
+        </div>
+      </section>
+      <section class="total">
+        <div class="container">
+          <div class="total__main">
+            <div class="title">Total</div>
+            <div class="price">1000</div>
           </div>
-          <div class="container__cart-block">
-            <div class="cart-block__title block-title">
-              <span class="bold">What’s in the Box</span>
-            </div>
-            <div class="cart-block__main">
-              <div class="cart-product" style="background-image: url(assets/images/iphone-cart.jfif)">
-                <p class="cart-product__name">iPhone</p>
-              </div>
-              <div class="cart-product" style="background-image: url(assets/images/usb-cart.jfif)">
-                <p class="cart-product__name">USB-C to Lightning Cable</p>
-              </div>
-            </div>
+        </div>
+      </section>
+      <section class="purchase_buttons">
+        <div class="container">
+          <div class="purchase_buttons__main">
+            <div class="black-btn">create refound</div>
+            <div class="black-btn">contact manager</div>
+            <div class="black-btn">track</div>
           </div>
         </div>
       </section>
@@ -205,7 +172,7 @@
       <div class="container">
         <img class="logo_white" alt="logo" src="assets/images/logo-white.png">
         <div class="columns-wrapper">
-          <div class="columns-wrapper__column accordion">
+          <div class="columns-wrapper__column  accordion">
             <div class="column__title">
               Company
             </div>
@@ -215,7 +182,7 @@
               <li><a>Find a store</a></li>
             </ul>
           </div>
-          <div class="columns-wrapper__column accordion">
+          <div class="columns-wrapper__column  accordion">
             <div class="column__title">
               Customer Support
             </div>
@@ -226,7 +193,7 @@
               <li><a>Your privacy</a></li>
             </ul>
           </div>
-          <div class="columns-wrapper__column accordion">
+          <div class="columns-wrapper__column  accordion">
             <div class="column__title">
               Account
             </div>
@@ -237,7 +204,7 @@
               <li><a>Order history</a></li>
             </ul>
           </div>
-          <div class="columns-wrapper__column accordion language">
+          <div class="columns-wrapper__column  accordion language">
             <div class="column__title">
               Language
             </div>
@@ -254,9 +221,9 @@
           </div>
           <div class="columns-wrapper__column">
             <div class="column__title">
-              <a ><img src="assets/images/fb.svg" al="fb"></a>
-              <a ><img src="assets/images/in.svg" al="in"></a>
-              <a ><img src="assets/images/tt.svg" al="tt"></a>
+              <a><img src="assets/images/fb.svg" al="fb"></a>
+              <a><img src="assets/images/in.svg" al="in"></a>
+              <a><img src="assets/images/tt.svg" al="tt"></a>
             </div>
             <div class="country">
               <img class="country__icon" alt="country" src="assets/images/usa.png">
