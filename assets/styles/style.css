@@ -1639,8 +1639,14 @@ main.one-product-page {
     background-position: center;
 }
 
-.cart-block__product-image.first-image {
+.cart-block__product-image:first-of-type {
     margin-top: 20px;
+}
+
+.cart-block__text {
+  font-family: 'Inter-Bold';
+  font-size: 24px;
+  padding: 110px 0;
 }
 
 /* cart */
