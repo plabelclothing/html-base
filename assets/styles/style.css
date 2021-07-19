@@ -256,7 +256,7 @@ header {
 }
 
 .container__country .select-box__list {
-  padding: 5px 0 20px 0;
+  padding: 5px 0 10px 0;
   left: -20px;
 }
 
@@ -2467,10 +2467,17 @@ main.account-page {
 .support-form__btn-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   min-width: 280px;
   max-width: 560px;
   width: 50%;
+}
+
+.support-form__btn-container {
+  justify-content: center;
+}
+
+.account-info__btn-container {
+  justify-content: flex-start;
 }
 
 .account-info__table-item,
