@@ -1809,7 +1809,7 @@ main.cart-page section.shipping-adress .container:after  {
 }
 
 .subtotal .subtotal__item, .total .total__main,
-.shipping-adress__main, .purchase_buttons__main {
+.shipping-adress__main {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -1844,7 +1844,8 @@ main.cart-page section.shipping-adress .container:after  {
 .purchase_buttons .purchase_buttons__main {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding-left: calc(20% + 32px);
 }
 
 .purchase_buttons .black-btn {
@@ -2514,6 +2515,11 @@ main.account-page {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.cart-page .info-text .status-col__value {
+  width: 112px;
+  margin: 0 auto;
 }
 
 .account-info__header {
@@ -3293,7 +3299,8 @@ main.account-page {
     }
 
     .subtotal .subtotal__item, .total .total__main,
-    .shipping-adress__main, .purchase_buttons__main {
+    .shipping-adress__main,
+    .purchase_buttons .purchase_buttons__main {
         padding-left: 0;
     }
 
