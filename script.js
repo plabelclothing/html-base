@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo(0, 0);
       document.body.style.overflow = 'auto';
     }
-    if (modalSearch && modalSearch.classList.contains('visible') && e.target.closest('.modal-background.search-bg')) {
+    if (modalSearch && modalSearch.classList.contains('visible') && !(e.target.closest('.modal-search label')) && !(e.target.closest('.open-search-modal-btn'))) {
       closeModalSearch();
     }
   });
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('click', (e) => {
-    if (modalFilter && modalFilter.classList.contains('visible') && e.target.closest('.modal-background.filter-bg')) {
+    if (modalFilter && modalFilter.classList.contains('visible') && !(e.target.closest('.modal-filter')) && !(e.target.closest('.filter-btn'))) {
       closeModalFilter();
     }
   });
