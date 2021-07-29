@@ -1333,6 +1333,18 @@ main.return-page {
     flex-wrap: wrap;
 }
 
+.product-card__colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__colors .color-bg {
+  margin: 3px;
+  width: 12px;
+  height: 12px;
+}
+
 .product-card {
     width: calc((100% - 50px) / 3);
     display: flex;
