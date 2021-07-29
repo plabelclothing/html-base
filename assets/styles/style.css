@@ -498,9 +498,14 @@ header {
 }
 
 .search-results__item-wrapper {
-  padding-bottom: 5px;
+  padding-bottom: 25px;
   border-bottom: 1px solid #d8d8d8;
   margin: 25px 0;
+}
+
+.search-results__item-wrapper:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0px;
 }
 
 .search-results__item {
@@ -552,7 +557,6 @@ header {
 
 .search-results__item:hover {
   background-color: #d8d8d8;
-  opacity: .6;
 }
 
 .black-btn:hover {
