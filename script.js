@@ -247,3 +247,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const supportInputs = [...document.querySelectorAll('.support-form__input input')];
   addEventsForInputs(supportInputs);
 });
+
+// add to cart button
+const addToCartBtn = document.querySelector('.container__product-block .black-btn');
+addToCartBtn.addEventListener('click', (e) => {
+  const btn = e.currentTarget;
+  e.currentTarget.classList.remove('done');
+  setTimeout(() => btn.classList.add('done'), 0);
+});
