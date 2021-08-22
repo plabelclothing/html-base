@@ -15,19 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const openSearchModalBtn = document.querySelector('.open-search-modal-btn');
 
   if (modalSearchBg && modalSearch) {
-    modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height + 80}px`;
+    modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height}px`;
   }
 
   const closeModalRegion = () => {
     modalRegion.classList.remove('visible');
-    modalRegionBg.classList.remove('visible');
-
+    modalRegionBg.classList.remove('mbg-opacity');
+    modalRegionBg.addEventListener('transitionend', () => {
+      modalRegionBg.classList.remove('mbg-display');
+    });
     accordionCountriesTitles.forEach((item) => item.setAttribute('aria-expanded', 'false'));
   };
 
   const closeModalSearch = () => {
     modalSearch.classList.remove('visible');
-    modalSearchBg.classList.remove('visible');
+    modalSearchBg.classList.remove('mbg-opacity');
+    modalSearchBg.addEventListener('transitionend', () => {
+      modalSearchBg.classList.remove('mbg-display');
+    });
   };
 
   document.addEventListener('click', (e) => {
@@ -93,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerCountry) {
     headerCountry.addEventListener('click', () => {
       modalRegion.classList.add('visible');
-      modalRegionBg.classList.add('visible');
+      modalRegionBg.classList.add('mbg-display');
+      modalRegionBg.classList.add('mbg-opacity');
 
       document.addEventListener('scroll', () => {
         if (modalRegion.classList.contains('visible')) {
@@ -127,7 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerCountry) {
     footerCountry.addEventListener('click', () => {
       modalRegion.classList.add('visible');
-      modalRegionBg.classList.add('visible');
+      modalRegionBg.classList.add('mbg-display');
+      modalRegionBg.classList.add('mbg-opacity');
       document.body.style.overflow = 'hidden';
     });
   }
@@ -149,7 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModalSearch();
       } else {
         modalSearch.classList.add('visible');
-        modalSearchBg.classList.add('visible');
+        modalSearchBg.classList.add('mbg-display');
+        modalSearchBg.classList.add('mbg-opacity');
       }
     });
   }
@@ -171,12 +179,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeModalFilter = () => {
     modalFilter.classList.remove('visible');
-    modalFilterBg.classList.remove('visible');
+    setTimeout(() => {
+      modalFilter.style.display = 'none';
+    }, 400);
+    modalFilterBg.classList.remove('mbg-display');
+    modalFilterBg.classList.remove('mbg-opacity');
   };
 
   const openModalFilter = () => {
+    modalFilterBg.style.top = `${document.querySelector('.filter .tb-border .container').getBoundingClientRect().bottom}px`;
+    modalFilter.style.display = 'block';
     modalFilter.classList.add('visible');
-    modalFilterBg.classList.add('visible');
+    modalFilterBg.classList.add('mbg-display');
+    modalFilterBg.classList.add('mbg-opacity');
   };
 
   if (document.querySelector('.hide-filter-btn')) {
@@ -250,8 +265,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // add to cart button
 const addToCartBtn = document.querySelector('.container__product-block .black-btn');
-addToCartBtn.addEventListener('click', (e) => {
-  const btn = e.currentTarget;
-  e.currentTarget.classList.remove('done');
-  setTimeout(() => btn.classList.add('done'), 0);
-});
+if (addToCartBtn) {
+  addToCartBtn.addEventListener('click', (e) => {
+    const btn = e.currentTarget;
+    e.currentTarget.classList.remove('done');
+    setTimeout(() => btn.classList.add('done'), 0);
+  });
+}

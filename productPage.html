@@ -8,7 +8,7 @@
     <title>Plabel</title>
 </head>
 <body>
-    <header>
+    <header class="header_bpb">
         <div class="container">
             <div class="container__country">
                 <div class="country">
@@ -67,57 +67,20 @@
                 </nav>
             </div>
         </div>
-        <div class="modal-search">
-          <div class="container">
-            <label>
-              <img alt="search" src="assets/images/icons-search.svg">
-              <input placeholder="Search" type="search" name="search">
-              <!-- <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg"> -->
-            </label>
-            <div class="container__search-results">
-              <div class="search-results__item-wrapper">
-                <a href="#" class="search-results__item">
-                  <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-                  <div class="item-text">
-                    <span class="item-title">T-shirt-1</span>
-                    <p class="item-price price">150</p>
-                  </div>
-                </a>
-              </div>
-              <div class="search-results__item-wrapper">
-                <a href="#" class="search-results__item">
-                  <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-                  <div class="item-text">
-                    <span class="item-title">T-shirt-1</span>
-                    <p class="item-price price">150</p>
-                  </div>
-                </a>
-              </div>
-              <div class="search-results__item-wrapper">
-                <a href="#" class="search-results__item">
-                  <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-                  <div class="item-text">
-                    <span class="item-title">T-shirt-2</span>
-                    <p class="item-price price">120</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <button class="container__all-btn black-btn">view all products</button>
-          </div>
-        </div>
     </header>
     <main class="products-page">
       <section class="filter sticky">
-        <div class="container">
-          <div class="filter-title">
-            <span class="bold">All t-shirts</span>
-            <span class="regular">(120 products)</span>
+        <div class="tb-border">
+          <div class="container">
+            <div class="filter-title">
+              <span class="bold">All t-shirts</span>
+              <span class="regular">(120 products)</span>
+            </div>
+            <button class="filter-btn">
+              <svg class="ui-icon-controls-filter" id="sprite-controls-filter" viewBox="0 0 80 80"><path d="M67.3 79.9V31.6h6.5v48.3zm0-72V.1h6.5v7.8zm-4.6 19.2V11.5h15.6v15.6zM36.8 79.9V51.6h6.5v28.3zm0-51.1V.1h6.5v28.7zm-4.5 19.3V32.5h15.6v15.6zm-26 31.8v-7.8h6.5v7.8zm0-29.8V.1h6.5v50zm-4.6 18V52.5h15.6v15.6z" fill-rule="evenodd"></path></svg>
+              <div>Filters</div>
+            </button>
           </div>
-          <button class="filter-btn">
-            <svg class="ui-icon-controls-filter" id="sprite-controls-filter" viewBox="0 0 80 80"><path d="M67.3 79.9V31.6h6.5v48.3zm0-72V.1h6.5v7.8zm-4.6 19.2V11.5h15.6v15.6zM36.8 79.9V51.6h6.5v28.3zm0-51.1V.1h6.5v28.7zm-4.5 19.3V32.5h15.6v15.6zm-26 31.8v-7.8h6.5v7.8zm0-29.8V.1h6.5v50zm-4.6 18V52.5h15.6v15.6z" fill-rule="evenodd"></path></svg>
-            <div>Filters</div>
-          </button>
         </div>
         <div class="modal-filter">
           <div class="container">
@@ -363,92 +326,133 @@
         </div>
       </div>
     </footer>
-    <div class="modal-region">
-      <div class="modal-region__background-lines container">
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-      </div>
-      <div class="container">
-        <div class="modal-region__header">
-          <img class="logo" alt="logo" src="assets/images/logo.svg">
-          <p class="title">Choose your country/region</p>
-          <div class="close-btn">
-            <img alt="close" src="assets/images/icons-close.svg">
-            <p>close</p>
-          </div>
+    <div class="modal-background region-bg">
+      <div class="modal-region">
+        <div class="modal-region__background-lines container">
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+          <div class="background-line"></div>
         </div>
-        <div class="modal-region__main">
-          <div class="region">
-            <div class="region__title">Americas</div>
-            <ul>
-              <li>USA</li>
-              <li>Brasil</li>
-              <li>Canada (English)</li>
-              <li>Canada (Français)</li>
-            </ul>
+        <div class="container">
+          <div class="modal-region__header">
+            <img class="logo" alt="logo" src="assets/images/logo.svg">
+            <p class="title">Choose your country/region</p>
+            <div class="close-btn">
+              <img alt="close" src="assets/images/icons-close.svg">
+              <p>close</p>
+            </div>
           </div>
-          <div class="region">
-            <div class="region__title">Europe</div>
-            <ul>
-              <li>Belgium (English)</li>
-              <li>Denmark (English)</li>
-              <li>Deutschland</li>
-              <li>España</li>
-              <li>France</li>
-              <li>Ireland</li>
-              <li>Italia</li>
-              <li>Luxembourg (English)</li>
-              <li>Monaco (English)</li>
-              <li>Nederland (English)</li>
-              <li>Österreich (English)</li>
-              <li>Suomi (English)</li>
-              <li>Sweden (English)</li>
-              <li>United Kingdom</li>
-              <li>Россия</li>
-            </ul>
-          </div>
-          <div class="region">
-            <div class="region__title">Asia</div>
-            <ul>
-              <li>中国大陆</li>
-              <li>日本</li>
-              <li>대한민국</li>
-              <li>Hong Kong SAR</li>
-              <li>香港特別行政區</li>
-              <li>Singapore</li>
-              <li>Malaysia</li>
-              <li>台灣地區</li>
-              <li>ประเทศไทย</li>
-            </ul>
-          </div>
-          <div class="region">
-            <div class="region__title">Oceania</div>
-            <ul>
-              <li>Australia</li>
-              <li>New Zealand</li>
-            </ul>
-          </div>
-          <div class="region">
-            <div class="region__title">Middle East</div>
-            <ul>
-              <li>UAE (English)</li>
-              <li>(الإمارات العربية المتحدة (العربية</li>
-              <li>KSA (English)</li>
-              <li>(المملكة العربية السعودية (العربية</li>
-              <li>Kuwait (English)</li>
-              <li>(الكويت (العربية</li>
-              <li>Qatar (English)</li>
-              <li>(قطر (العربية</li>
-            </ul>
+          <div class="modal-region__main">
+            <div class="region">
+              <div class="region__title">Americas</div>
+              <ul>
+                <li>USA</li>
+                <li>Brasil</li>
+                <li>Canada (English)</li>
+                <li>Canada (Français)</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Europe</div>
+              <ul>
+                <li>Belgium (English)</li>
+                <li>Denmark (English)</li>
+                <li>Deutschland</li>
+                <li>España</li>
+                <li>France</li>
+                <li>Ireland</li>
+                <li>Italia</li>
+                <li>Luxembourg (English)</li>
+                <li>Monaco (English)</li>
+                <li>Nederland (English)</li>
+                <li>Österreich (English)</li>
+                <li>Suomi (English)</li>
+                <li>Sweden (English)</li>
+                <li>United Kingdom</li>
+                <li>Россия</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Asia</div>
+              <ul>
+                <li>中国大陆</li>
+                <li>日本</li>
+                <li>대한민국</li>
+                <li>Hong Kong SAR</li>
+                <li>香港特別行政區</li>
+                <li>Singapore</li>
+                <li>Malaysia</li>
+                <li>台灣地區</li>
+                <li>ประเทศไทย</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Oceania</div>
+              <ul>
+                <li>Australia</li>
+                <li>New Zealand</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Middle East</div>
+              <ul>
+                <li>UAE (English)</li>
+                <li>(الإمارات العربية المتحدة (العربية</li>
+                <li>KSA (English)</li>
+                <li>(المملكة العربية السعودية (العربية</li>
+                <li>Kuwait (English)</li>
+                <li>(الكويت (العربية</li>
+                <li>Qatar (English)</li>
+                <li>(قطر (العربية</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal-background region-bg"></div>
-    <div class="modal-background search-bg"></div>
+    <div class="modal-background search-bg">
+      <div class="modal-search">
+        <div class="container">
+          <label>
+            <img alt="search" src="assets/images/icons-search.svg">
+            <input placeholder="Search" type="search" name="search">
+            <!-- <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg"> -->
+          </label>
+          <div class="container__search-results">
+            <div class="search-results__item-wrapper">
+              <a href="#" class="search-results__item">
+                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
+                <div class="item-text">
+                  <span class="item-title">T-shirt-1</span>
+                  <p class="item-price price">150</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-results__item-wrapper">
+              <a href="#" class="search-results__item">
+                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
+                <div class="item-text">
+                  <span class="item-title">T-shirt-1</span>
+                  <p class="item-price price">150</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-results__item-wrapper">
+              <a href="#" class="search-results__item">
+                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
+                <div class="item-text">
+                  <span class="item-title">T-shirt-2</span>
+                  <p class="item-price price">120</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="container__all-btn black-btn">view all products</button>
+        </div>
+      </div>
+    </div>
     <div class="modal-background filter-bg"></div>
     <script src="script.js"></script>
 </body>

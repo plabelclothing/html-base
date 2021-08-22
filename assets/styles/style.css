@@ -65,7 +65,7 @@ input[type="date"] {
 }
 
 body {
-    background-color: #191716;
+    background-color: #ffffff;
     position: relative;
     min-height: 100vh;
 }
@@ -109,8 +109,12 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /*header*/
 header {
-    position: relative;
     z-index: 3;
+    position: relative;
+}
+
+header.header_bpb {
+  padding-bottom: 30px;
 }
 
 .country {
@@ -321,46 +325,22 @@ header {
 
 @-webkit-keyframes ShowModal {
     from {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
+      transform: translateY(-100%);
+      opacity:0
     }
     to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+      transform: translateY(0px);
+      opacity:1
     }
 }
 
 @keyframes ShowModal {
-    from {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@-webkit-keyframes HideModal {
-    from {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@keyframes HideModal {
-    from {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    to {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes BtnStatusDone {
@@ -450,12 +430,16 @@ header {
 
 /*modal search*/
 .modal-search {
-    max-height: 0;
     overflow: hidden;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-100%);
+    webkit-animation-name:ShowModal;
+    -webkit-animation-duration:0.4s;
+    animation-name:ShowModalSmall;
+    animation-duration:0.4s;
+    webkit-animation-name:ShowModal;
+    -webkit-animation-duration:0.4s;
+    animation-name:ShowModal;
+    animation-duration:0.4s;
     transition: all .4s ease;
     width: 100%;
     background: #ffffff;
@@ -466,8 +450,8 @@ header {
 }
 
 .modal-search.visible {
-    max-height: 5000px;
-    transition: all .4s ease;
+  transform: translateY(0px);
+  transition: all .4s ease;
 }
 
 .modal-search .container {
@@ -535,6 +519,10 @@ header {
     width: 10%;
     padding-bottom: 10%;
     cursor: pointer;
+}
+
+.search-bg {
+  z-index: 2;
 }
 
 .black-btn {
@@ -948,49 +936,49 @@ footer .accordion.language {
 .modal-region {
     position: absolute;
     background-color: #ffffff;
-    top: 0;
+    top: 0px;
     transform: translateY(-100%);
-    animation-name: ShowModal;
-    -webkit-animation-name: ShowModal;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    width: 100%;
-    z-index: 3;
+    webkit-animation-name:ShowModal;
+    -webkit-animation-duration:0.4s;
+    animation-name:ShowModal;
+    animation-duration:0.4s;
+    webkit-animation-name:ShowModal;
+    -webkit-animation-duration:0.4s;
+    animation-name:ShowModal;
+    animation-duration:0.4s;
     padding-bottom: 163px;
+    z-index: 999;
+    width: 100%; 
+    transition: transform .4s ease;
 }
 
 .modal-background {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: rgba(25, 23, 22, 0);
+    transition: background-color .2s ease;
+    display: none;
+}
+
+.modal-background.mbg-opacity {
     background-color: rgba(25, 23, 22, .8);
-    z-index: -1;
-    opacity: 0;
-    transition: all .4s ease;
+    transition: background-color .2s ease;
 }
 
-.modal-background.visible {
-    opacity: 1;
-    z-index: 1;
-    transition: all .4s ease;
+.modal-background.mbg-display {
+  display: block;
 }
 
-/* .modal-background.search-bg {
-    top: 121px;
-} */
-.modal-background.filter-bg {
+/* .modal-background.filter-bg {
     top: 212px;
-}
+} */
 
-.modal-region.visible {
-    transform: translateY(0);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    animation-name: HideModal;
-    -webkit-animation-name: HideModal;
-    overflow: auto;
+.region-bg .modal-region.visible {
+  transform: translateY(0px);
+  transition: transform .4s ease;
 }
 
 .modal-region .modal-region__background-lines {
@@ -1114,22 +1102,32 @@ footer .accordion.language {
 
 /*product page*/
 
-main.products-page,
 main.privacy-page,
 main.return-page {
     padding: 30px 0px 70px;
+}
+
+main.products-page {
+  padding: 0px 0px 70px;
 }
 
 .sticky {
     position: sticky;
     top: -1px;
     background: #ffffff;
-    z-index: 2;
-    border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
+    z-index: 1;
+}
+
+.sticky .tb-border {
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  width: 100%;
+  z-index: 2;
+  position: relative;
 }
 
 .filter .container {
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1189,16 +1187,25 @@ main.return-page {
     position: absolute;
     background: #ffffff;
     width: 100%;
-    max-height: 0;
-    border-top: 1px solid #d8d8d8;
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all .4s ease;
-    z-index: 9;
+    display: none;
+    transform: translateY(-100%);
+    webkit-animation-name:ShowModal;
+    -webkit-animation-duration:0.4s;
+    animation-name:ShowModalSmall;
+    animation-duration:0.4s;
+    webkit-animation-name:ShowModal;
+    -webkit-animation-duration:0.4s;
+    animation-name:ShowModal;
+    animation-duration:0.4s;
+    transition: all .4s ease;
 }
 
 .modal-filter.visible {
-    max-height: 2000px;
+    /* max-height: 2000px; */
+    transform: translateY(0px);
     transition: all .4s ease;
 }
 
@@ -2799,11 +2806,14 @@ main.account-page {
         top: 0;
     }
 
+    header.header_bpb {
+      padding-bottom: 0px;
+    }
+
     .filter.sticky {
         top: 58px;
     }
 
-    main.products-page,
     main.privacy-page,
     main.return-page,
     main.one-product-page,
@@ -3314,9 +3324,9 @@ main.account-page {
         padding-top: 0px;
     }
 
-    .modal-background.filter-bg {
+    /* .modal-background.filter-bg {
         top: 120px;
-    }
+    } */
     
     .one-product .container__product-block {
         flex-direction: column;
