@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalSearchBg = document.querySelector('.modal-background.search-bg');
   const modalRegion = document.querySelector('.modal-region');
   const modalSearch = document.querySelector('.modal-search');
+  const modalProduct = document.querySelector('.modal-product');
   const accordionTitles = document.querySelectorAll('.accordion .column__title');
   const accordionCountriesTitles = document.querySelectorAll('.modal-region .region__title');
   const languageTitle = document.querySelector('.language .column__title');
@@ -13,9 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalRegionCloseBtn = document.querySelector('.modal-region__header .close-btn');
   const footerCountry = document.querySelector('footer .country');
   const openSearchModalBtn = document.querySelector('.open-search-modal-btn');
+  const modalProductBtn = document.querySelector('.open-mp-btn');
+  const closeModalProductBtn = document.querySelector('.modal-product .close-btn');
 
   if (modalSearchBg && modalSearch) {
     modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height}px`;
+  }
+
+  const openModalProduct = () => {
+    modalProduct.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+    modalProduct.addEventListener('transitioned', () => { modalProduct.style.overflow = 'auto'; });
+  };
+
+  const closeModalProduct = () => {
+    modalProduct.classList.remove('visible');
+    document.body.style.overflow = 'auto';
+    modalProduct.style.overflow = 'hidden';
+  };
+
+  closeModalProductBtn.addEventListener('click', () => closeModalProduct());
+
+  if (modalProductBtn) {
+    modalProductBtn.addEventListener('click', () => (modalProduct.classList.contains('visible') ? closeModalProduct : openModalProduct)());
   }
 
   const closeModalRegion = () => {
@@ -147,6 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (modalSearch && modalSearch.classList.contains('visible') && !(e.target.closest('.modal-search label')) && !(e.target.closest('.open-search-modal-btn'))) {
       closeModalSearch();
+    }
+    if (modalProduct && modalProduct.classList.contains('visible') && !(e.target.closest('.modal-product')) && !(e.target.closest('.open-mp-btn'))) {
+      closeModalProduct();
     }
   });
 
