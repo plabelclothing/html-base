@@ -473,10 +473,6 @@ header {
   padding-top: 32px;
 }
 
-main.products-page {
-  padding: 0px 0px 70px;
-}
-
 .product-menu_item {
   padding: 8px 16px 8px 0px;
 }
@@ -2896,8 +2892,12 @@ main.account-page {
         top: 0;
     }
 
+    main.products-page {
+      padding: 0px 0px 70px;
+    }
+
     .filter.sticky {
-        top: 58px;
+        top: 48px;
     }
 
     main.privacy-page,
@@ -2980,7 +2980,7 @@ main.account-page {
 
     main {
         padding: 0;
-        min-height: calc(100vh - 58px);
+        min-height: calc(100vh - 48px);
     }
 
     footer .container {
@@ -3304,11 +3304,11 @@ main.account-page {
     }
 
     header .container__nav-bar .logo img {
-        width: 100px;
+        width: 85px;
     }
 
     header .container {
-        padding: 15px 40px;
+        padding: 10px 40px;
     }
 
     header .container__nav-bar {
@@ -3630,7 +3630,7 @@ main.account-page {
     }
 
     .empty-page .container {
-      min-height: calc(100vh - 58px);
+      min-height: calc(100vh - 48px);
     }
 
     .empty-page__container img {
@@ -3649,7 +3649,7 @@ main.account-page {
     }
 
     header .container {
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
 
     .rectangle .container {
