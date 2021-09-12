@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProduct.style.overflow = 'hidden';
   };
 
-  closeModalProductBtn.addEventListener('click', () => closeModalProduct());
+  if (closeModalProductBtn) closeModalProductBtn.addEventListener('click', () => closeModalProduct());
 
   if (modalProductBtn) {
     modalProductBtn.addEventListener('click', () => (modalProduct.classList.contains('visible') ? closeModalProduct : openModalProduct)());
