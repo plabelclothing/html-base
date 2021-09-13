@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProduct.style.overflow = 'hidden';
   };
 
-  closeModalProductBtn.addEventListener('click', () => closeModalProduct());
+  if (closeModalProductBtn) closeModalProductBtn.addEventListener('click', () => closeModalProduct());
 
   if (modalProductBtn) {
     modalProductBtn.addEventListener('click', () => (modalProduct.classList.contains('visible') ? closeModalProduct : openModalProduct)());
@@ -168,6 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (modalSearch && modalSearch.classList.contains('visible') && !(e.target.closest('.modal-search label')) && !(e.target.closest('.open-search-modal-btn'))) {
       closeModalSearch();
+    }
+    if (modalProduct && modalProduct.classList.contains('visible') && !(e.target.closest('.modal-product')) && !(e.target.closest('.open-mp-btn'))) {
+      closeModalProduct();
     }
   });
 

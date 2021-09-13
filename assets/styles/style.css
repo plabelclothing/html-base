@@ -113,10 +113,6 @@ header {
     position: relative;
 }
 
-header.header_bpb {
-  padding-bottom: 30px;
-}
-
 .country {
     display: flex;
     align-items: center;
@@ -437,6 +433,7 @@ header.header_bpb {
   overflow-y: hidden;
   max-height: 0;
   transition: all .4s ease;
+  padding-top: 20px;
 }
 
 .modal-product.visible {
@@ -445,12 +442,21 @@ header.header_bpb {
 
 .modal-product .container {
   display: flex;
-  padding: 20px 0px 0px 100px;
+  padding: 0px;
+  max-width: none;
+  border-top: 1px solid #d8d8d8;
+  padding-left: calc((100% - 1440px) / 2 + 100px)
+}
+
+@media (max-width: 1440px){
+  .modal-product .container {
+    padding-left: 100px;
+  }
 }
 
 @media (max-width: 1019px){
   .modal-product .container {
-    padding: 20px 0px 0px 60px;
+    padding-left: 60px;
   }
 }
 
@@ -464,6 +470,7 @@ header.header_bpb {
   width: 34%;
   background: #ffffff;
   min-height: calc(100vh - 140px);
+  padding-top: 32px;
 }
 
 .product-menu_item {
@@ -492,11 +499,22 @@ header.header_bpb {
 
 .product_foto  .close-btn {
   margin: 0 0 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  width: 54px;
+  height: 54px;
 }
 
-.product_foto  .close-btn p {
-  color: #ffffff;
+.product_foto  .close-btn img {
+  width: 14px;
+  height: 14px;
 }
+
+.product_foto  .close-btn:hover {
+  opacity: 1;
+  background: #f8f8f8;
+}
+
 
 /*modal search*/
 .modal-search {
@@ -633,6 +651,7 @@ header.header_bpb {
 /*main*/
 main {
     padding: 70px 0px 110px;
+    min-height: calc(100vh - 588px);
 }
 
 .container__title {
@@ -1175,7 +1194,7 @@ main.return-page {
 }
 
 main.products-page {
-  padding: 0px 0px 70px;
+  padding: 30px 0px 70px;
 }
 
 .sticky {
@@ -2873,12 +2892,12 @@ main.account-page {
         top: 0;
     }
 
-    header.header_bpb {
-      padding-bottom: 0px;
+    main.products-page {
+      padding: 0px 0px 70px;
     }
 
     .filter.sticky {
-        top: 58px;
+        top: 48px;
     }
 
     main.privacy-page,
@@ -2961,6 +2980,7 @@ main.account-page {
 
     main {
         padding: 0;
+        min-height: calc(100vh - 48px);
     }
 
     footer .container {
@@ -3284,11 +3304,11 @@ main.account-page {
     }
 
     header .container__nav-bar .logo img {
-        width: 100px;
+        width: 85px;
     }
 
     header .container {
-        padding: 15px 40px;
+        padding: 10px 40px;
     }
 
     header .container__nav-bar {
@@ -3610,7 +3630,7 @@ main.account-page {
     }
 
     .empty-page .container {
-      min-height: calc(100vh - 58px);
+      min-height: calc(100vh - 48px);
     }
 
     .empty-page__container img {
@@ -3629,7 +3649,7 @@ main.account-page {
     }
 
     header .container {
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
 
     .rectangle .container {
