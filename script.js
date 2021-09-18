@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProductBtn.addEventListener('click', () => (modalProduct.classList.contains('visible') ? closeModalProduct : openModalProduct)());
   }
 
+  document.querySelectorAll('.modal-product li.product-menu_item').forEach((elem) => elem.addEventListener('click', () => {
+    closeModalProduct();
+  }));
+
   const closeModalRegion = () => {
     modalRegion.classList.remove('visible');
     modalRegionBg.classList.remove('mbg-opacity');

@@ -113,6 +113,10 @@ header {
     position: relative;
 }
 
+header.header_bpb {
+  padding-bottom: 30px;
+}
+
 .country {
     display: flex;
     align-items: center;
@@ -651,7 +655,11 @@ header {
 /*main*/
 main {
     padding: 70px 0px 110px;
-    min-height: calc(100vh - 588px);
+    min-height: calc(100vh - 558px);
+}
+
+main.products-page {
+  min-height: calc(100vh - 588px);
 }
 
 .container__title {
@@ -1194,7 +1202,7 @@ main.return-page {
 }
 
 main.products-page {
-  padding: 30px 0px 70px;
+  padding: 0px 0px 70px;
 }
 
 .sticky {
@@ -2890,6 +2898,10 @@ main.account-page {
     header {
         position: sticky;
         top: 0;
+    }
+
+    header.header_bpb {
+      padding-bottom: 0px;
     }
 
     main.products-page {
