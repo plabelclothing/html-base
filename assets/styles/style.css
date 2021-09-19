@@ -1373,13 +1373,15 @@ main.products-page {
     display: none;
 }
 
-.modal-filter__main-item.collection input:checked + label,
-.modal-filter__main-item.product_type input:checked + label {
+.modal-filter__main-item.text input:checked + label {
     text-decoration: underline;
 }
 
-.modal-filter__main-item.color input:checked + label,
-.modal-filter__main-item.size input:checked + label {
+.modal-filter__main-item.box label {
+  margin-bottom: 1px;
+}
+
+.modal-filter__main-item.box input:checked + label {
     box-shadow: 0px 1px 0px #191716;
 }
 
@@ -3381,16 +3383,20 @@ main.account-page {
     }
 
     .modal-filter__main-item .title::after {
-        content: url('../images/plus-solid-black.svg');
+        content: '';
+        background: url('../images/icons-chevron-down.svg') center no-repeat;
+        background-size: contain;
         right: 0;
         bottom: 0px;
         display: block;
+        width: 16px;
+        height: 16px;
         position: absolute;
         transition: .2s;
     }
 
     .modal-filter__main-item .title[aria-expanded="true"]::after {
-        transform: rotate(45deg);
+        transform: rotate(180deg);
         transition: .2;
     }
 
@@ -3408,8 +3414,12 @@ main.account-page {
 
     .modal-filter__main-item {
         width: 100%;
-        padding: 20px;
+        padding: 15px 20px;
         border-bottom: 1px solid #d8d8d8;
+    }
+
+    .modal-filter__main-item .title {
+      font-family: 'Inter-Regular';
     }
 
     .modal-filter__main-item fieldset {
@@ -3423,6 +3433,14 @@ main.account-page {
 
     .modal-filter__main-item:not(:first-of-type) {
         border-left: 0px solid #d8d8d8;
+    }
+
+    .modal-filter__main-item:last-of-type {
+      border-bottom: 0px;
+    }
+
+    .modal-filter__main-item fieldset label {
+      margin: 15px 10px 0px 10px;
     }
 
     .modal-filter__main-item fieldset {
