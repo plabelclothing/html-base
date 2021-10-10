@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectCountryBox = document.querySelector('.select-country-box');
   const modalRegionBg = document.querySelector('.modal-background.region-bg');
   const modalSearchBg = document.querySelector('.modal-background.search-bg');
+  const modalBurgerBg = document.querySelector('.modal-background.burger-bg');
   const modalRegion = document.querySelector('.modal-region');
   const modalSearch = document.querySelector('.modal-search');
+  const modalBurger = document.querySelector('.burger-modal');
   const modalProduct = document.querySelector('.modal-product');
   const accordionTitles = document.querySelectorAll('.accordion .column__title');
-  const accordionCountriesTitles = document.querySelectorAll('.modal-region .region__title');
+  const accordionCountriesTitles = document.querySelectorAll('.region__title');
+  const accordionBurgerItems = document.querySelectorAll('.burger_item_dual');
   const languageTitle = document.querySelector('.language .column__title');
   const burgerBtn = document.querySelector('.burger__button');
   const headerCountry = document.querySelector('header .country');
@@ -16,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const openSearchModalBtn = document.querySelector('.open-search-modal-btn');
   const modalProductBtn = document.querySelector('.open-mp-btn');
   const closeModalProductBtn = document.querySelector('.modal-product .close-btn');
+  const regionBurgerSection = document.querySelector('.burger_region .burger_item_dual');
+  const languageBurgerSection = document.querySelector('.language .burger_item_dual');
+  const logoIcon = document.querySelector('.container__nav-bar .logo img');
+  const cartIcon = document.querySelector('.nav_icon.cart img');
 
   if (modalSearchBg && modalSearch) {
     modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height}px`;
@@ -80,6 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBurger = () => {
     document.body.classList.remove('open-burger');
     document.body.style.overflow = 'auto';
+    logoIcon.setAttribute('src', 'assets/images/logo.svg');
+    cartIcon.setAttribute('src', 'assets/images/icons-cart.svg');
+    setTimeout(() => modalBurgerBg.classList.remove('mbg-display'), 400);
   };
 
   if (burgerBtn) {
@@ -90,15 +100,36 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         body.classList.add('open-burger');
         body.style.overflow = 'hidden';
+        modalBurgerBg.classList.add('mbg-display');
+        logoIcon.setAttribute('src', 'assets/images/logo-white.svg');
+        cartIcon.setAttribute('src', 'assets/images/icons-cart-white.svg');
       }
     });
   }
 
-  document.querySelectorAll('.burger__menu a').forEach((elem) => elem.addEventListener('click', () => {
-    if (document.body.classList.contains('open-burger')) {
-      closeBurger();
-    }
-  }));
+  if (modalBurgerBg && modalBurger) {
+    document.querySelectorAll('.burger_item a')
+      .forEach((elem) => elem.addEventListener('click', () => {
+        if (document.body.classList.contains('open-burger')) {
+          closeBurger();
+        }
+      }));
+
+    document.querySelectorAll('.burger_subitem.item-with-link')
+      .forEach((elem) => elem.addEventListener('click', () => {
+        if (document.body.classList.contains('open-burger')) {
+          closeBurger();
+        }
+      }));
+
+    modalBurger.addEventListener('click', (e) => {
+      if (e.target.closest('.region .burger_sub-subitem') && e.target.closest('.burger_sub-subitem')) {
+        regionBurgerSection.setAttribute('aria-expanded', 'false');
+      } else if (e.target.closest('.language .burger_subitem')) {
+        languageBurgerSection.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
   function toggleAccordion(e, arr) {
     const target = e.currentTarget;
@@ -117,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   accordionTitles.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionTitles)));
+
+  accordionBurgerItems.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionBurgerItems)));
 
   accordionCountriesTitles.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionCountriesTitles)));
 
