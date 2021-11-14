@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalProductBtn = document.querySelector('.modal-product .close-btn');
   const regionBurgerSection = document.querySelector('.burger_region .burger_item_dual');
   const languageBurgerSection = document.querySelector('.language .burger_item_dual');
-  const logoIcon = document.querySelector('.container__nav-bar .logo img');
+  const burgerSearchInput = document.querySelector('.burger__search input');
+  const burgerItems = document.querySelector('.burger-items');
+  const burgerSearchResults = document.querySelector('.burger_search-results');
+  const burgerSearchResultsItems = document.querySelectorAll('.burger_search-results_item');
 
   if (modalSearchBg && modalSearch) {
     modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height}px`;
@@ -86,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBurger = () => {
     document.body.classList.remove('open-burger');
     document.body.style.overflow = 'auto';
-    logoIcon.setAttribute('src', 'assets/images/logo.svg');
     setTimeout(() => modalBurgerBg.classList.remove('mbg-display'), 400);
   };
 
@@ -99,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.add('open-burger');
         body.style.overflow = 'hidden';
         modalBurgerBg.classList.add('mbg-display');
-        logoIcon.setAttribute('src', 'assets/images/logo-white.svg');
       }
     });
   }
@@ -149,6 +150,20 @@ document.addEventListener('DOMContentLoaded', () => {
   accordionBurgerItems.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionBurgerItems)));
 
   accordionCountriesTitles.forEach((item) => item.addEventListener('click', (e) => toggleAccordion(e, accordionCountriesTitles)));
+
+  // burger search
+  if (burgerSearchInput) {
+    burgerSearchInput.addEventListener('focus', () => {
+      burgerItems.style.display = 'none';
+      burgerSearchResults.style.display = 'block';
+    });
+
+    burgerSearchResultsItems.forEach((item) => item.addEventListener('click', () => {
+      burgerItems.style.display = 'block';
+      burgerSearchResults.style.display = 'none';
+      closeBurger();
+    }));
+  }
 
   if (headerCountry) {
     headerCountry.addEventListener('click', () => {

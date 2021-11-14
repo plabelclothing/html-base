@@ -340,6 +340,24 @@ header {
     }
 }
 
+@-webkit-keyframes ShowBurgerList {
+  from {
+      transform: translateY(-50px);
+  }
+  to {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes ShowBurgerList {
+  from {
+      transform: translateY(-50px);
+  }
+  to {
+      transform: translateY(0px);
+  }
+}
+
 @keyframes BtnStatusDone {
     0% {
         height: 0;
@@ -3109,6 +3127,16 @@ main.account-page {
       width: 100%;
     }
 
+    .burger_search-results .container,
+    .burger-items .container {
+      animation-duration: 0.4s;
+      webkit-animation-name: ShowBurgerList;
+      -webkit-animation-duration: 0.4s;
+      animation-name: ShowBurgerList;
+      animation-duration: 0.4s;
+      transition: all .4s ease;
+    }
+
     .accordion .column__title:hover,
     .burger_item_dual:hover,
     .burger_sub-subitem:hover,
@@ -3147,10 +3175,10 @@ main.account-page {
     .accordion .column__title[aria-expanded="true"] + ul,
     .accordion .burger_item_dual[aria-expanded="true"] + ul {
         opacity: 1;
-        max-height: 20em;
-        -webkit-transition: all 200ms linear;
+        max-height: none;
+        /* -webkit-transition: all 200ms linear;
         transition: all 200ms linear;
-        will-change: opacity, max-height;
+        will-change: opacity, max-height; */
     }
 
     .accordion ul,
@@ -3160,7 +3188,7 @@ main.account-page {
         overflow: hidden;
         -webkit-transition: opacity 200ms linear, max-height 200ms linear;
         transition: opacity 200ms linear, max-height 200ms linear;
-        will-change: opacity, max-height;
+        /* will-change: opacity, max-height; */
     }
 
     footer .accordion.language {
@@ -3186,10 +3214,7 @@ main.account-page {
 
     .burger_region .region__title[aria-expanded="true"] + ul {
         opacity: 1;
-        max-height: 120em;
-        -webkit-transition: all 200ms linear;
-        transition: all 200ms linear;
-        will-change: opacity, max-height;
+        max-height: none;
     }
 
     .burger_region .region ul {
@@ -3198,7 +3223,6 @@ main.account-page {
         overflow: hidden;
         -webkit-transition: opacity 200ms linear, max-height 200ms linear;
         transition: opacity 200ms linear, max-height 200ms linear;
-        will-change: opacity, max-height;
         width: 100%;
     }
 
@@ -3207,18 +3231,37 @@ main.account-page {
     }
 
     /*burger*/
-    .burger_item a,
     .burger_subitem,
     .burger_sub-subitem,
-    .burger_subitem a,
     .burger_item_dual,
-    .burger_item .text {
+    .burger_item .text,
+    .burger_item a,
+    .burger_subitem a,
+    .burger_search-results_item {
+      padding: 10px 0;
       font-family: 'Inter-Regular';
       letter-spacing: -0.44px;
       font-size: 16px;
       color: #f5f5f7;
-      padding: 10px 0;
     }
+
+    .burger_search-results_item a {
+      font-family: 'Inter-Regular';
+      letter-spacing: -0.44px;
+      font-size: 16px;
+      color: #f5f5f7;
+    }
+
+    .burger_search-results_item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .burger_search-results {
+      display: none;
+    }
+
 
     .burger_subitem {
       padding-left: 15px;
@@ -3261,7 +3304,8 @@ main.account-page {
       transform: rotate(180deg);
     }
   
-    .burger_item:hover {
+    .burger_item:hover,
+    .burger_search-results_item:hover {
       opacity: .6;
     }
     
@@ -3409,6 +3453,18 @@ main.account-page {
         width: 85px;
     }
 
+    .open-burger header .container__nav-bar .logo {
+      display: block;
+      width: 85px;
+      height: 30px;
+      background: url("../images/logo-white.svg") transparent no-repeat center;
+      background-size: contain;
+    }
+
+    .open-burger header .container__nav-bar .logo img {
+      opacity: 0;
+    }
+
     header .container {
         padding: 10px 40px;
     }
@@ -3493,7 +3549,6 @@ main.account-page {
         max-height: 16em;
         -webkit-transition: all 200ms linear;
         transition: all 200ms linear;
-        will-change: opacity, max-height;
     }
 
     .modal-filter__main-item {
@@ -3512,7 +3567,6 @@ main.account-page {
         overflow: hidden;
         -webkit-transition: opacity 200ms linear, max-height 200ms linear;
         transition: opacity 200ms linear, max-height 200ms linear;
-        will-change: opacity, max-height;
     }
 
     .modal-filter__main-item:not(:first-of-type) {
