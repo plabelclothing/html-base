@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerItems = document.querySelector('.burger-items');
   const burgerSearchResults = document.querySelector('.burger_search-results');
   const burgerSearchResultsItems = document.querySelectorAll('.burger_search-results_item');
+  const cancelBtn = document.querySelector('.cancel-btn');
 
   if (modalSearchBg && modalSearch) {
     modalSearchBg.style.top = `${document.querySelector('header .container').getBoundingClientRect().height}px`;
@@ -156,13 +157,21 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerSearchInput.addEventListener('focus', () => {
       burgerItems.style.display = 'none';
       burgerSearchResults.style.display = 'block';
+      cancelBtn.classList.add('search-focus');
     });
 
     burgerSearchResultsItems.forEach((item) => item.addEventListener('click', () => {
       burgerItems.style.display = 'block';
       burgerSearchResults.style.display = 'none';
+      cancelBtn.classList.remove('search-focus');
       closeBurger();
     }));
+
+    cancelBtn.addEventListener('click', () => {
+      burgerItems.style.display = 'block';
+      burgerSearchResults.style.display = 'none';
+      cancelBtn.classList.remove('search-focus');
+    });
   }
 
   if (headerCountry) {

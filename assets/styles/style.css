@@ -204,8 +204,8 @@ header {
     width: 16px;
     margin-left: 4px;
     opacity: 0.3;
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .select-country-box__icon {
@@ -3137,6 +3137,31 @@ main.account-page {
       transition: all .4s ease;
     }
 
+    .cancel-btn {
+      font-family: 'Inter-Regular';
+      letter-spacing: -0.44px;
+      font-size: 0px;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      padding: 0px;
+      margin-left: 0px;
+      color: #191716;
+      transition: all .4s ease;
+    }
+
+    .cancel-btn.search-focus {
+      font-size: 16px;
+      padding: 0 8px;
+      margin-left: 10px;
+      color: #d8d8d8;
+      opacity: .6;
+    }
+
+    .cancel-btn:hover {
+      opacity: 1;
+    }
+
     .accordion .column__title:hover,
     .burger_item_dual:hover,
     .burger_sub-subitem:hover,
@@ -3262,7 +3287,6 @@ main.account-page {
       display: none;
     }
 
-
     .burger_subitem {
       padding-left: 15px;
     }
@@ -3367,6 +3391,13 @@ main.account-page {
       transition: transform .4s ease;
     }
 
+    .burger-modal .search_wrapper .container {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
     body.open-burger .burger-modal {
       transform: translateY(0);
     }
@@ -3375,6 +3406,7 @@ main.account-page {
         background-color: #ffffff;
         position: relative;
         z-index: 3;
+        transition: all .4s ease;
     }
 
     .container__nav-bar {
@@ -3386,8 +3418,6 @@ main.account-page {
         border-bottom: 1px solid #d8d8d8;
         padding: 32px 0 15px;
     }
-
-
 
     .burger__button {
         display: block;
@@ -3402,10 +3432,10 @@ main.account-page {
 
     .burger__search {
         display: flex;
-        width: 100%;
         background: #1d1d1f;
         align-items: center;
         padding: 3px;
+        width: 100%;
     }
 
     .burger__search input {
