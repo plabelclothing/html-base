@@ -43,58 +43,75 @@
                   <div class="burger__button_top"></div>
                   <div class="burger__button_bottom"></div>
                 </div>
-                <div class="burger__menu">
-                  <label class="burger__search">
-                    <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
-                    <input placeholder="Search" type="search" name="search">
-                  </label>  
-                  <a class="nav_text" href="productPage.html">T-shirts</a>
+                <div class="nav-bar__menu">
+                  <a class="nav_text open-mp-btn">T-shirts</a>
                   <a class="nav_text">Company</a>
+                  <div class="modal-product">
+                    <div class="container">
+                      <ul class="product-menu">
+                        <li class="product-menu_item"><a href="#">Women</a></li>
+                        <li class="product-menu_item"><a href="#">Men</a></li>
+                        <li class="product-menu_item"><a href="#">Children</a></li>
+                      </ul>
+                      <div class="product_foto" style="background-image: url('assets/images/img-right@3x.jpg')">
+                        <div class="close-btn">
+                          <img alt="close" src="assets/images/icons-close.svg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </nav>
-            <a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.svg"></a>
+            <a href="index.html" class="logo">
+              <img alt="logo" src="assets/images/logo.svg">
+            </a>
             <nav class="nav-icons">
                 <a class="nav_icon open-search-modal-btn">
                     <img alt="search" src="assets/images/icons-search.svg">
                 </a>
-                <a class="nav_icon account">
+                <a class="nav_icon account" href="account.html">
                     <img alt="account" src="assets/images/icons-account.svg">
                 </a>
                 <a class="nav_icon cart" href="cart.html">
                     <img alt="cart" src="assets/images/icons-cart.svg">
-                    <span class="cart__counter">1</span>
+                    <span class="cart__counter">99+</span>
                 </a>
             </nav>
         </div>
     </div>
-  </header>
+</header>
   <main class="account-page">
     <div class="container">
       <div class="account-menu">
         <div class="account-menu__wrapper">
-          <div class="account-menu__email">jan.noval@gmail.com</div>
-          <ul class="account-menu__items">
-            <li>
-              <a>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-cog" class="svg-inline--fa fa-user-cog fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M610.5 373.3c2.6-14.1 2.6-28.5 0-42.6l25.8-14.9c3-1.7 4.3-5.2 3.3-8.5-6.7-21.6-18.2-41.2-33.2-57.4-2.3-2.5-6-3.1-9-1.4l-25.8 14.9c-10.9-9.3-23.4-16.5-36.9-21.3v-29.8c0-3.4-2.4-6.4-5.7-7.1-22.3-5-45-4.8-66.2 0-3.3.7-5.7 3.7-5.7 7.1v29.8c-13.5 4.8-26 12-36.9 21.3l-25.8-14.9c-2.9-1.7-6.7-1.1-9 1.4-15 16.2-26.5 35.8-33.2 57.4-1 3.3.4 6.8 3.3 8.5l25.8 14.9c-2.6 14.1-2.6 28.5 0 42.6l-25.8 14.9c-3 1.7-4.3 5.2-3.3 8.5 6.7 21.6 18.2 41.1 33.2 57.4 2.3 2.5 6 3.1 9 1.4l25.8-14.9c10.9 9.3 23.4 16.5 36.9 21.3v29.8c0 3.4 2.4 6.4 5.7 7.1 22.3 5 45 4.8 66.2 0 3.3-.7 5.7-3.7 5.7-7.1v-29.8c13.5-4.8 26-12 36.9-21.3l25.8 14.9c2.9 1.7 6.7 1.1 9-1.4 15-16.2 26.5-35.8 33.2-57.4 1-3.3-.4-6.8-3.3-8.5l-25.8-14.9zM496 400.5c-26.8 0-48.5-21.8-48.5-48.5s21.8-48.5 48.5-48.5 48.5 21.8 48.5 48.5-21.7 48.5-48.5 48.5zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm201.2 226.5c-2.3-1.2-4.6-2.6-6.8-3.9l-7.9 4.6c-6 3.4-12.8 5.3-19.6 5.3-10.9 0-21.4-4.6-28.9-12.6-18.3-19.8-32.3-43.9-40.2-69.6-5.5-17.7 1.9-36.4 17.9-45.7l7.9-4.6c-.1-2.6-.1-5.2 0-7.8l-7.9-4.6c-16-9.2-23.4-28-17.9-45.7.9-2.9 2.2-5.8 3.2-8.7-3.8-.3-7.5-1.2-11.4-1.2h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c10.1 0 19.5-3.2 27.2-8.5-1.2-3.8-2-7.7-2-11.8v-9.2z"></path></svg>
-                <span>My data</span>
-              </a>
-            </li>
-            <li class="active">
-              <a>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="history" class="svg-inline--fa fa-history fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"></path></svg>
-                <span>History</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="fingerprint" class="svg-inline--fa fa-fingerprint fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256.12 245.96c-13.25 0-24 10.74-24 24 1.14 72.25-8.14 141.9-27.7 211.55-2.73 9.72 2.15 30.49 23.12 30.49 10.48 0 20.11-6.92 23.09-17.52 13.53-47.91 31.04-125.41 29.48-224.52.01-13.25-10.73-24-23.99-24zm-.86-81.73C194 164.16 151.25 211.3 152.1 265.32c.75 47.94-3.75 95.91-13.37 142.55-2.69 12.98 5.67 25.69 18.64 28.36 13.05 2.67 25.67-5.66 28.36-18.64 10.34-50.09 15.17-101.58 14.37-153.02-.41-25.95 19.92-52.49 54.45-52.34 31.31.47 57.15 25.34 57.62 55.47.77 48.05-2.81 96.33-10.61 143.55-2.17 13.06 6.69 25.42 19.76 27.58 19.97 3.33 26.81-15.1 27.58-19.77 8.28-50.03 12.06-101.21 11.27-152.11-.88-55.8-47.94-101.88-104.91-102.72zm-110.69-19.78c-10.3-8.34-25.37-6.8-33.76 3.48-25.62 31.5-39.39 71.28-38.75 112 .59 37.58-2.47 75.27-9.11 112.05-2.34 13.05 6.31 25.53 19.36 27.89 20.11 3.5 27.07-14.81 27.89-19.36 7.19-39.84 10.5-80.66 9.86-121.33-.47-29.88 9.2-57.88 28-80.97 8.35-10.28 6.79-25.39-3.49-33.76zm109.47-62.33c-15.41-.41-30.87 1.44-45.78 4.97-12.89 3.06-20.87 15.98-17.83 28.89 3.06 12.89 16 20.83 28.89 17.83 11.05-2.61 22.47-3.77 34-3.69 75.43 1.13 137.73 61.5 138.88 134.58.59 37.88-1.28 76.11-5.58 113.63-1.5 13.17 7.95 25.08 21.11 26.58 16.72 1.95 25.51-11.88 26.58-21.11a929.06 929.06 0 0 0 5.89-119.85c-1.56-98.75-85.07-180.33-186.16-181.83zm252.07 121.45c-2.86-12.92-15.51-21.2-28.61-18.27-12.94 2.86-21.12 15.66-18.26 28.61 4.71 21.41 4.91 37.41 4.7 61.6-.11 13.27 10.55 24.09 23.8 24.2h.2c13.17 0 23.89-10.61 24-23.8.18-22.18.4-44.11-5.83-72.34zm-40.12-90.72C417.29 43.46 337.6 1.29 252.81.02 183.02-.82 118.47 24.91 70.46 72.94 24.09 119.37-.9 181.04.14 246.65l-.12 21.47c-.39 13.25 10.03 24.31 23.28 24.69.23.02.48.02.72.02 12.92 0 23.59-10.3 23.97-23.3l.16-23.64c-.83-52.5 19.16-101.86 56.28-139 38.76-38.8 91.34-59.67 147.68-58.86 69.45 1.03 134.73 35.56 174.62 92.39 7.61 10.86 22.56 13.45 33.42 5.86 10.84-7.62 13.46-22.59 5.84-33.43z"></path></svg>
-                <span>Security</span>
-              </a>
-            </li>
-          </ul>
+          <div class="account-menu__container">
+            <div class="account-menu__email">jan.noval@gmail.com</div>
+            <ul class="account-menu__items">
+              <li>
+                <a>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-cog" class="svg-inline--fa fa-user-cog fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M610.5 373.3c2.6-14.1 2.6-28.5 0-42.6l25.8-14.9c3-1.7 4.3-5.2 3.3-8.5-6.7-21.6-18.2-41.2-33.2-57.4-2.3-2.5-6-3.1-9-1.4l-25.8 14.9c-10.9-9.3-23.4-16.5-36.9-21.3v-29.8c0-3.4-2.4-6.4-5.7-7.1-22.3-5-45-4.8-66.2 0-3.3.7-5.7 3.7-5.7 7.1v29.8c-13.5 4.8-26 12-36.9 21.3l-25.8-14.9c-2.9-1.7-6.7-1.1-9 1.4-15 16.2-26.5 35.8-33.2 57.4-1 3.3.4 6.8 3.3 8.5l25.8 14.9c-2.6 14.1-2.6 28.5 0 42.6l-25.8 14.9c-3 1.7-4.3 5.2-3.3 8.5 6.7 21.6 18.2 41.1 33.2 57.4 2.3 2.5 6 3.1 9 1.4l25.8-14.9c10.9 9.3 23.4 16.5 36.9 21.3v29.8c0 3.4 2.4 6.4 5.7 7.1 22.3 5 45 4.8 66.2 0 3.3-.7 5.7-3.7 5.7-7.1v-29.8c13.5-4.8 26-12 36.9-21.3l25.8 14.9c2.9 1.7 6.7 1.1 9-1.4 15-16.2 26.5-35.8 33.2-57.4 1-3.3-.4-6.8-3.3-8.5l-25.8-14.9zM496 400.5c-26.8 0-48.5-21.8-48.5-48.5s21.8-48.5 48.5-48.5 48.5 21.8 48.5 48.5-21.7 48.5-48.5 48.5zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm201.2 226.5c-2.3-1.2-4.6-2.6-6.8-3.9l-7.9 4.6c-6 3.4-12.8 5.3-19.6 5.3-10.9 0-21.4-4.6-28.9-12.6-18.3-19.8-32.3-43.9-40.2-69.6-5.5-17.7 1.9-36.4 17.9-45.7l7.9-4.6c-.1-2.6-.1-5.2 0-7.8l-7.9-4.6c-16-9.2-23.4-28-17.9-45.7.9-2.9 2.2-5.8 3.2-8.7-3.8-.3-7.5-1.2-11.4-1.2h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c10.1 0 19.5-3.2 27.2-8.5-1.2-3.8-2-7.7-2-11.8v-9.2z"></path></svg>
+                  <span>My data</span>
+                </a>
+              </li>
+              <li class="active">
+                <a>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="history" class="svg-inline--fa fa-history fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"></path></svg>
+                  <span>History</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="fingerprint" class="svg-inline--fa fa-fingerprint fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256.12 245.96c-13.25 0-24 10.74-24 24 1.14 72.25-8.14 141.9-27.7 211.55-2.73 9.72 2.15 30.49 23.12 30.49 10.48 0 20.11-6.92 23.09-17.52 13.53-47.91 31.04-125.41 29.48-224.52.01-13.25-10.73-24-23.99-24zm-.86-81.73C194 164.16 151.25 211.3 152.1 265.32c.75 47.94-3.75 95.91-13.37 142.55-2.69 12.98 5.67 25.69 18.64 28.36 13.05 2.67 25.67-5.66 28.36-18.64 10.34-50.09 15.17-101.58 14.37-153.02-.41-25.95 19.92-52.49 54.45-52.34 31.31.47 57.15 25.34 57.62 55.47.77 48.05-2.81 96.33-10.61 143.55-2.17 13.06 6.69 25.42 19.76 27.58 19.97 3.33 26.81-15.1 27.58-19.77 8.28-50.03 12.06-101.21 11.27-152.11-.88-55.8-47.94-101.88-104.91-102.72zm-110.69-19.78c-10.3-8.34-25.37-6.8-33.76 3.48-25.62 31.5-39.39 71.28-38.75 112 .59 37.58-2.47 75.27-9.11 112.05-2.34 13.05 6.31 25.53 19.36 27.89 20.11 3.5 27.07-14.81 27.89-19.36 7.19-39.84 10.5-80.66 9.86-121.33-.47-29.88 9.2-57.88 28-80.97 8.35-10.28 6.79-25.39-3.49-33.76zm109.47-62.33c-15.41-.41-30.87 1.44-45.78 4.97-12.89 3.06-20.87 15.98-17.83 28.89 3.06 12.89 16 20.83 28.89 17.83 11.05-2.61 22.47-3.77 34-3.69 75.43 1.13 137.73 61.5 138.88 134.58.59 37.88-1.28 76.11-5.58 113.63-1.5 13.17 7.95 25.08 21.11 26.58 16.72 1.95 25.51-11.88 26.58-21.11a929.06 929.06 0 0 0 5.89-119.85c-1.56-98.75-85.07-180.33-186.16-181.83zm252.07 121.45c-2.86-12.92-15.51-21.2-28.61-18.27-12.94 2.86-21.12 15.66-18.26 28.61 4.71 21.41 4.91 37.41 4.7 61.6-.11 13.27 10.55 24.09 23.8 24.2h.2c13.17 0 23.89-10.61 24-23.8.18-22.18.4-44.11-5.83-72.34zm-40.12-90.72C417.29 43.46 337.6 1.29 252.81.02 183.02-.82 118.47 24.91 70.46 72.94 24.09 119.37-.9 181.04.14 246.65l-.12 21.47c-.39 13.25 10.03 24.31 23.28 24.69.23.02.48.02.72.02 12.92 0 23.59-10.3 23.97-23.3l.16-23.64c-.83-52.5 19.16-101.86 56.28-139 38.76-38.8 91.34-59.67 147.68-58.86 69.45 1.03 134.73 35.56 174.62 92.39 7.61 10.86 22.56 13.45 33.42 5.86 10.84-7.62 13.46-22.59 5.84-33.43z"></path></svg>
+                  <span>Security</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="log-out">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg>
+            <span class="text">Log out</span>
+          </button>
         </div>
-        <button>Log out</button>
       </div>
       <div class="account-info">
         <div class="account-info__title">History</div>
@@ -345,6 +362,169 @@
           </div>
         </div>
         <button class="container__all-btn black-btn">view all products</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-background burger-bg">
+    <div class="burger-modal">
+      <div class="bb search_wrapper">
+        <div class="container">
+          <label class="burger__search">
+            <img alt="search" width="16px" height="16px" src="assets/images/icons-search-gray.svg">
+            <input placeholder="Search" type="search" name="search">
+          </label>
+          <button class="cancel-btn" >Cancel</button>
+        </div>
+      </div>
+      <div class="burger-items">
+        <div class="container big-paddings_mobile">
+          <ul>
+            <li class="accordion">
+              <div class="burger_item_dual bb" >Clothes</div>
+              <ul>
+                <li class="burger_subitem item-with-link"><a href="#">Women</a></li>
+                <li class="burger_subitem item-with-link"><a href="#">Men</a></li>
+                <li class="burger_subitem item-with-link"><a href="#">Children</a></li>
+              </ul>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Company</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Cart</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">My account</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Check order status</a>
+            </li>
+            <li class="burger_item bb mb40">
+              <a href="#">Contact us</a>
+            </li>
+            <li class="burger_region accordion">
+              <div class="burger_item_dual bb">
+                <div class="country">
+                  <img class="country__icon" alt="country" src="assets/images/usa.png">
+                  <div class="text">Ship to: United States</div>
+                </div>
+              </div>
+              <ul>
+                <li class="region">
+                  <div class="region__title burger_subitem">Americas</div>
+                  <ul>
+                    <li class="burger_sub-subitem">USA</li>
+                    <li class="burger_sub-subitem">Brasil</li>
+                    <li class="burger_sub-subitem">Canada (English)</li>
+                    <li class="burger_sub-subitem">Canada (Français)</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Europe</div>
+                  <ul>
+                    <li class="burger_sub-subitem">Belgium (English)</li>
+                    <li class="burger_sub-subitem">Denmark (English)</li>
+                    <li class="burger_sub-subitem">Deutschland</li>
+                    <li class="burger_sub-subitem">España</li>
+                    <li class="burger_sub-subitem">France</li>
+                    <li class="burger_sub-subitem">Ireland</li>
+                    <li class="burger_sub-subitem">Italia</li>
+                    <li class="burger_sub-subitem">Luxembourg (English)</li>
+                    <li class="burger_sub-subitem">Monaco (English)</li>
+                    <li class="burger_sub-subitem">Nederland (English)</li>
+                    <li class="burger_sub-subitem">Österreich (English)</li>
+                    <li class="burger_sub-subitem">Suomi (English)</li>
+                    <li class="burger_sub-subitem">Sweden (English)</li>
+                    <li class="burger_sub-subitem">United Kingdom</li>
+                    <li class="burger_sub-subitem">Россия</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Asia</div>
+                  <ul>
+                    <li class="burger_sub-subitem">中国大陆</li>
+                    <li class="burger_sub-subitem">日本</li>
+                    <li class="burger_sub-subitem">대한민국</li>
+                    <li class="burger_sub-subitem">Hong Kong SAR</li>
+                    <li class="burger_sub-subitem">香港特別行政區</li>
+                    <li class="burger_sub-subitem">Singapore</li>
+                    <li class="burger_sub-subitem">Malaysia</li>
+                    <li class="burger_sub-subitem">台灣地區</li>
+                    <li class="burger_sub-subitem">ประเทศไทย</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Oceania</div>
+                  <ul>
+                    <li class="burger_sub-subitem">Australia</li>
+                    <li class="burger_sub-subitem">New Zealand</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Middle East</div>
+                  <ul>
+                    <li class="burger_sub-subitem">UAE (English)</li>
+                    <li class="burger_sub-subitem">(الإمارات العربية المتحدة (العربية</li>
+                    <li class="burger_sub-subitem">KSA (English)</li>
+                    <li class="burger_sub-subitem">(المملكة العربية السعودية (العربية</li>
+                    <li class="burger_sub-subitem">Kuwait (English)</li>
+                    <li class="burger_sub-subitem">(الكويت (العربية</li>
+                    <li class="burger_sub-subitem">Qatar (English)</li>
+                    <li class="burger_sub-subitem">(قطر (العربية</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion language mb40">
+              <div class="burger_item_dual bb">
+                Language
+              </div>
+              <ul>
+                <li class="burger_subitem">
+                  <input type="radio" name="language" id="EN" value="English" checked>
+                  <label for="EN">English</label>
+                </li>
+                <li class="burger_subitem">
+                  <input type="radio" name="language" id="RU" value="Русский">
+                  <label for="RU">Русский</label>
+                </li>
+              </ul>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">How to refund a purchase?</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Refund Policy</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Sale Policy</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Shipping Policy</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="burger_search-results">
+        <div class="container big-paddings_mobile">
+          <ul>
+            <li class="burger_search-results_item bb">
+              <a href="#">Company</a>
+            </li>
+            <li class="burger_search-results_item bb">
+              <a href="#">Result 1</a>
+            </li>
+            <li class="burger_search-results_item bb">
+              <a href="#">Long long long long long long result 2</a>
+            </li>
+            <li class="burger_search-results_item bb">
+              <a href="#">Result 3</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

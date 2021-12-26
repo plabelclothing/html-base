@@ -1292,6 +1292,7 @@ main.products-page {
 .filter-btn div {
     font-family: 'Inter-Regular';
     font-size: 16px;
+    color: #191716;
 }
 
 .filter-btn svg {
@@ -2543,9 +2544,20 @@ input.password {
     justify-content: stretch;
 }
 
-.account-menu__wrapper {
+.account-menu__container {
     width: 100%;
     border-bottom: 1px solid #d8d8d8;
+}
+
+.account-menu__wrapper {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .account-menu__email,
@@ -2590,8 +2602,9 @@ input.password {
     align-items: center;
 }
 
-.account-menu__items li svg {
-    color: rgba(24, 22, 22, 0.1);
+.account-menu__items li svg,
+button.log-out svg {
+    color: #d8d8d8;
     width: 24px;
     margin-right: 5px;
 }
@@ -2615,7 +2628,7 @@ input.password {
     display: none;
 }
 
-.account-menu button {
+.account-menu button.log-out {
     border: 1px solid #d8d8d8;
     background-color: #ffffff;
     font-family: 'Inter-Regular';
@@ -2629,7 +2642,11 @@ input.password {
     align-self: center;
 }
 
-.account-menu button:hover {
+.account-menu button.log-out svg {
+  display: none;
+}
+
+.account-menu button.log-out:hover {
     opacity: .6;
 }
 
@@ -2924,6 +2941,29 @@ main.account-page {
     header {
         position: sticky;
         top: 0;
+    }
+
+    .account-menu__container {
+      background-color: rgba(0,0,0,.7);
+      width: 75%;
+    }
+
+    .account-menu__wrapper {
+      width: 70%;
+      padding: 5px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      backdrop-filter: blur(1px);
+      height: auto;
+    }
+
+    .account-menu__items li:hover svg {
+      color: #fffe1c;
+    }
+
+    .account-menu__items span {
+      display: none;
     }
 
     header.header_bpb {
@@ -3742,11 +3782,10 @@ main.account-page {
         padding-bottom: 0px;
         position: sticky;
         bottom: 0;
-        background-color: #ffff;
         z-index: 1;
     }
 
-    .account-menu__wrapper {
+    .account-menu__container {
         border-bottom: 0px;
     }
 
@@ -3783,8 +3822,41 @@ main.account-page {
         flex-direction: column;
     }
 
-    .account-menu button {
-        padding: 16px 10px;
+    .account-menu button.log-out {
+        border: 0px solid #d8d8d8;
+        min-width: auto;
+        width: 25%;
+        padding: 6px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,.7);
+    }
+
+    .account-menu button.log-out span.text {
+        display: none;
+    }
+
+    .account-menu button.log-out svg {
+        display: block;
+        margin-right: 0;
+    }
+
+    .account-menu button.log-out:hover {
+      opacity: 1;
+    }
+
+    .account-menu button.log-out:hover svg {
+      color: #fffe1c;
+    }
+
+    .account-menu button:hover {
+      opacity: .8;
+    }
+
+    .account-menu__items li:hover,
+    .account-menu__items li.active {
+        background-color: transparent;
     }
 
     .account-info {
@@ -3822,10 +3894,6 @@ main.account-page {
 
     .account-menu__items span {
         text-align: center;
-    }
-
-    .account-menu button {
-        margin-left: 8px;
     }
 
     footer {
@@ -3986,21 +4054,13 @@ main.account-page {
         padding: 20px;
     }
 
-    .account-menu__items span {
-        display: none;
-    }
-
     .account-menu__items li,
-    .account-menu button {
-        height: 43px;
+    .account-menu button,
+    .account-menu button.log-out {
         height: 43px;
         padding: 0px 10px;
         line-height: 43px;
         vertical-align: middle;
-    }
-
-    .account-menu button {
-        margin-left: 5px;
     }
 
     .account-info__outline {
