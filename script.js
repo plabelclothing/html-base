@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const selectBox = document.querySelector('.select-box');
-  const selectCountryBox = document.querySelector('.select-country-box');
   const modalRegionBg = document.querySelector('.modal-background.region-bg');
   const modalSearchBg = document.querySelector('.modal-background.search-bg');
   const modalBurgerBg = document.querySelector('.modal-background.burger-bg');
@@ -72,18 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.select-box') && selectBox) selectBox.classList.remove('visible');
-    if (!e.target.closest('.select-country-box') && selectCountryBox) selectCountryBox.classList.remove('visible');
   });
 
   if (selectBox) {
     selectBox.addEventListener('click', (e) => {
       if (!e.target.classList.contains('select-box__input')) selectBox.classList.toggle('visible');
-    });
-  }
-
-  if (selectCountryBox) {
-    selectCountryBox.addEventListener('click', (e) => {
-      if (!e.target.classList.contains('select-country-box__input')) selectCountryBox.classList.toggle('visible');
     });
   }
 

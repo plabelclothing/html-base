@@ -43,31 +43,43 @@
                   <div class="burger__button_top"></div>
                   <div class="burger__button_bottom"></div>
                 </div>
-                <div class="burger__menu">
-                  <label class="burger__search">
-                    <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
-                    <input placeholder="Search" type="search" name="search">
-                  </label>  
-                  <a class="nav_text" href="productPage.html">T-shirts</a>
+                <div class="nav-bar__menu">
+                  <a class="nav_text open-mp-btn">T-shirts</a>
                   <a class="nav_text">Company</a>
+                  <div class="modal-product">
+                    <div class="container">
+                      <ul class="product-menu">
+                        <li class="product-menu_item"><a href="#">Women</a></li>
+                        <li class="product-menu_item"><a href="#">Men</a></li>
+                        <li class="product-menu_item"><a href="#">Children</a></li>
+                      </ul>
+                      <div class="product_foto" style="background-image: url('assets/images/img-right@3x.jpg')">
+                        <div class="close-btn">
+                          <img alt="close" src="assets/images/icons-close.svg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </nav>
-            <a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.svg"></a>
+            <a href="index.html" class="logo">
+              <img alt="logo" src="assets/images/logo.svg">
+            </a>
             <nav class="nav-icons">
                 <a class="nav_icon open-search-modal-btn">
                     <img alt="search" src="assets/images/icons-search.svg">
                 </a>
-                <a class="nav_icon account">
+                <a class="nav_icon account" href="account.html">
                     <img alt="account" src="assets/images/icons-account.svg">
                 </a>
                 <a class="nav_icon cart" href="cart.html">
                     <img alt="cart" src="assets/images/icons-cart.svg">
-                    <span class="cart__counter">1</span>
+                    <span class="cart__counter">99+</span>
                 </a>
             </nav>
         </div>
     </div>
-  </header>
+</header>
   <main class="order-page">
     <section class="top-bar">
       <div class="container">
@@ -106,26 +118,14 @@
               <label for="order-city" class="placeholder">City, State</label>
             </div>
           </div>
-          <div class="select-country-box">
-            <div class="select-country-box__current" tabindex="1">
-              <div class="select-country-box__value">
-                <input class="select-country-box__input" type="radio" id="usa" value="USA" name="country" checked="checked"/>
-                <p class="select-country-box__input-text">USA</p>
-              </div>
-              <div class="select-country-box__value">
-                <input class="select-country-box__input" type="radio" id="poland" value="Poland" name="country" />
-                <p class="select-country-box__input-text">Poland</p>
-              </div>
-              <img class="select-country-box__icon" src="assets/images/icons-chevron-down.svg" alt="Arrow Icon" aria-hidden="true"/>
-            </div>
-            <ul class="select-country-box__list">
-              <li>
-                <label class="select-country-box__option" for="usa" aria-hidden="aria-hidden">USA</label>
-              </li>
-              <li>
-                <label class="select-country-box__option" for="poland" aria-hidden="aria-hidden">Poland</label>
-              </li>
-            </ul>
+          <div class="select_country">
+            <select>
+              <option value="USA">USA</option>
+              <option value="Poland">Poland</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Russia">Russia</option>
+              <option value="UK">UK</option>
+            </select>
           </div>
           <div class="subtitle">What`s your contact information?</div>
           <div class="input-with-description">
@@ -140,7 +140,7 @@
           <div class="input-with-description">
             <div class="order-form__input">
               <input type="text" id="order-phone">
-              <label for="order-phone" class="placeholder">Phone Numbe</label>
+              <label for="order-phone" class="placeholder">Phone Number</label>
             </div>
             <div class="input-with-description__desc">
               The phone number you enter can`t be changed after you place your order, so please make sure it`s correct.
@@ -359,6 +359,169 @@
           </div>
         </div>
         <button class="container__all-btn black-btn">view all products</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-background burger-bg">
+    <div class="burger-modal">
+      <div class="bb search_wrapper">
+        <div class="container">
+          <label class="burger__search">
+            <img alt="search" width="16px" height="16px" src="assets/images/icons-search-gray.svg">
+            <input placeholder="Search" type="search" name="search">
+          </label>
+          <button class="cancel-btn" >Cancel</button>
+        </div>
+      </div>
+      <div class="burger-items">
+        <div class="container big-paddings_mobile">
+          <ul>
+            <li class="accordion">
+              <div class="burger_item_dual bb" >Clothes</div>
+              <ul>
+                <li class="burger_subitem item-with-link"><a href="#">Women</a></li>
+                <li class="burger_subitem item-with-link"><a href="#">Men</a></li>
+                <li class="burger_subitem item-with-link"><a href="#">Children</a></li>
+              </ul>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Company</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Cart</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">My account</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Check order status</a>
+            </li>
+            <li class="burger_item bb mb40">
+              <a href="#">Contact us</a>
+            </li>
+            <li class="burger_region accordion">
+              <div class="burger_item_dual bb">
+                <div class="country">
+                  <img class="country__icon" alt="country" src="assets/images/usa.png">
+                  <div class="text">Ship to: United States</div>
+                </div>
+              </div>
+              <ul>
+                <li class="region">
+                  <div class="region__title burger_subitem">Americas</div>
+                  <ul>
+                    <li class="burger_sub-subitem">USA</li>
+                    <li class="burger_sub-subitem">Brasil</li>
+                    <li class="burger_sub-subitem">Canada (English)</li>
+                    <li class="burger_sub-subitem">Canada (Français)</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Europe</div>
+                  <ul>
+                    <li class="burger_sub-subitem">Belgium (English)</li>
+                    <li class="burger_sub-subitem">Denmark (English)</li>
+                    <li class="burger_sub-subitem">Deutschland</li>
+                    <li class="burger_sub-subitem">España</li>
+                    <li class="burger_sub-subitem">France</li>
+                    <li class="burger_sub-subitem">Ireland</li>
+                    <li class="burger_sub-subitem">Italia</li>
+                    <li class="burger_sub-subitem">Luxembourg (English)</li>
+                    <li class="burger_sub-subitem">Monaco (English)</li>
+                    <li class="burger_sub-subitem">Nederland (English)</li>
+                    <li class="burger_sub-subitem">Österreich (English)</li>
+                    <li class="burger_sub-subitem">Suomi (English)</li>
+                    <li class="burger_sub-subitem">Sweden (English)</li>
+                    <li class="burger_sub-subitem">United Kingdom</li>
+                    <li class="burger_sub-subitem">Россия</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Asia</div>
+                  <ul>
+                    <li class="burger_sub-subitem">中国大陆</li>
+                    <li class="burger_sub-subitem">日本</li>
+                    <li class="burger_sub-subitem">대한민국</li>
+                    <li class="burger_sub-subitem">Hong Kong SAR</li>
+                    <li class="burger_sub-subitem">香港特別行政區</li>
+                    <li class="burger_sub-subitem">Singapore</li>
+                    <li class="burger_sub-subitem">Malaysia</li>
+                    <li class="burger_sub-subitem">台灣地區</li>
+                    <li class="burger_sub-subitem">ประเทศไทย</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Oceania</div>
+                  <ul>
+                    <li class="burger_sub-subitem">Australia</li>
+                    <li class="burger_sub-subitem">New Zealand</li>
+                  </ul>
+                </li>
+                <li class="region">
+                  <div class="region__title burger_subitem">Middle East</div>
+                  <ul>
+                    <li class="burger_sub-subitem">UAE (English)</li>
+                    <li class="burger_sub-subitem">(الإمارات العربية المتحدة (العربية</li>
+                    <li class="burger_sub-subitem">KSA (English)</li>
+                    <li class="burger_sub-subitem">(المملكة العربية السعودية (العربية</li>
+                    <li class="burger_sub-subitem">Kuwait (English)</li>
+                    <li class="burger_sub-subitem">(الكويت (العربية</li>
+                    <li class="burger_sub-subitem">Qatar (English)</li>
+                    <li class="burger_sub-subitem">(قطر (العربية</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="accordion language mb40">
+              <div class="burger_item_dual bb">
+                Language
+              </div>
+              <ul>
+                <li class="burger_subitem">
+                  <input type="radio" name="language" id="EN" value="English" checked>
+                  <label for="EN">English</label>
+                </li>
+                <li class="burger_subitem">
+                  <input type="radio" name="language" id="RU" value="Русский">
+                  <label for="RU">Русский</label>
+                </li>
+              </ul>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">How to refund a purchase?</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Refund Policy</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Sale Policy</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Shipping Policy</a>
+            </li>
+            <li class="burger_item bb">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="burger_search-results">
+        <div class="container big-paddings_mobile">
+          <ul>
+            <li class="burger_search-results_item bb">
+              <a href="#">Company</a>
+            </li>
+            <li class="burger_search-results_item bb">
+              <a href="#">Result 1</a>
+            </li>
+            <li class="burger_search-results_item bb">
+              <a href="#">Long long long long long long result 2</a>
+            </li>
+            <li class="burger_search-results_item bb">
+              <a href="#">Result 3</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
