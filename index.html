@@ -43,16 +43,28 @@
                       <div class="burger__button_top"></div>
                       <div class="burger__button_bottom"></div>
                     </div>
-                    <div class="burger__menu">
-                      <label class="burger__search">
-                        <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
-                        <input placeholder="Search" type="search" name="search">
-                      </label>
-                      <a class="nav_text" href="productPage.html">T-shirts</a>
+                    <div class="nav-bar__menu">
+                      <a class="nav_text open-mp-btn">T-shirts</a>
                       <a class="nav_text">Company</a>
+                      <div class="modal-product">
+                        <div class="container">
+                          <ul class="product-menu">
+                            <li class="product-menu_item"><a href="#">Women</a></li>
+                            <li class="product-menu_item"><a href="#">Men</a></li>
+                            <li class="product-menu_item"><a href="#">Children</a></li>
+                          </ul>
+                          <div class="product_foto" style="background-image: url('assets/images/img-right@3x.jpg')">
+                            <div class="close-btn">
+                              <img alt="close" src="assets/images/icons-close.svg">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </nav>
-                <a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.svg"></a>
+                <a href="index.html" class="logo">
+                  <img alt="logo" src="assets/images/logo.svg">
+                </a>
                 <nav class="nav-icons">
                     <a class="nav_icon open-search-modal-btn">
                         <img alt="search" src="assets/images/icons-search.svg">
@@ -66,32 +78,6 @@
                     </a>
                 </nav>
             </div>
-        </div>
-        <div class="modal-search">
-          <div class="container">
-            <label>
-              <img alt="search" src="assets/images/icons-search.svg">
-              <input placeholder="Search" type="search" name="search">
-              <!-- <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg"> -->
-            </label>
-            <div class="container__search-results">
-              <div class="search-results__item">
-                <a class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
-                <div class="item-text">
-                  <a class="item-title">T-shirt-1</a>
-                  <p class="item-price price">150</p>
-                </div>
-              </div>
-              <div class="search-results__item">
-                <a class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
-                <div class="item-text">
-                  <a class="item-title">T-shirt-2</a>
-                  <p class="item-price price">120</p>
-                </div>
-              </div>
-            </div>
-            <button class="container__all-btn black-btn">view all products</button>
-          </div>
         </div>
     </header>
     <main>
@@ -235,93 +221,287 @@
         </div>
       </div>
     </footer>
-    <div class="modal-region">
-      <div class="modal-region__background-lines container">
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-        <div class="background-line"></div>
-      </div>
-      <div class="container">
-        <div class="modal-region__header">
-          <img class="logo" alt="logo" src="assets/images/logo.svg">
-          <p class="title">Choose your country/region</p>
-          <div class="close-btn">
-            <img alt="close" src="assets/images/icons-close.svg">
-            <p>close</p>
+    <div class="modal-background region-bg">
+      <div class="modal-region">
+        <div class="modal-region__background-lines container">
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+          <div class="background-line"></div>
+        </div>
+        <div class="container">
+          <div class="modal-region__header">
+            <img class="logo" alt="logo" src="assets/images/logo.svg">
+            <p class="title">Choose your country/region</p>
+            <div class="close-btn">
+              <img alt="close" src="assets/images/icons-close.svg">
+              <p>close</p>
+            </div>
+          </div>
+          <div class="modal-region__main">
+            <div class="region">
+              <div class="region__title">Americas</div>
+              <ul>
+                <li>USA</li>
+                <li>Brasil</li>
+                <li>Canada (English)</li>
+                <li>Canada (Français)</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Europe</div>
+              <ul>
+                <li>Belgium (English)</li>
+                <li>Denmark (English)</li>
+                <li>Deutschland</li>
+                <li>España</li>
+                <li>France</li>
+                <li>Ireland</li>
+                <li>Italia</li>
+                <li>Luxembourg (English)</li>
+                <li>Monaco (English)</li>
+                <li>Nederland (English)</li>
+                <li>Österreich (English)</li>
+                <li>Suomi (English)</li>
+                <li>Sweden (English)</li>
+                <li>United Kingdom</li>
+                <li>Россия</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Asia</div>
+              <ul>
+                <li>中国大陆</li>
+                <li>日本</li>
+                <li>대한민국</li>
+                <li>Hong Kong SAR</li>
+                <li>香港特別行政區</li>
+                <li>Singapore</li>
+                <li>Malaysia</li>
+                <li>台灣地區</li>
+                <li>ประเทศไทย</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Oceania</div>
+              <ul>
+                <li>Australia</li>
+                <li>New Zealand</li>
+              </ul>
+            </div>
+            <div class="region">
+              <div class="region__title">Middle East</div>
+              <ul>
+                <li>UAE (English)</li>
+                <li>(الإمارات العربية المتحدة (العربية</li>
+                <li>KSA (English)</li>
+                <li>(المملكة العربية السعودية (العربية</li>
+                <li>Kuwait (English)</li>
+                <li>(الكويت (العربية</li>
+                <li>Qatar (English)</li>
+                <li>(قطر (العربية</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="modal-region__main">
-          <div class="region">
-            <div class="region__title">Americas</div>
+      </div>
+    </div>
+    <div class="modal-background search-bg">
+      <div class="modal-search">
+        <div class="container">
+          <label>
+            <img alt="search" src="assets/images/icons-search.svg">
+            <input placeholder="Search" type="search" name="search">
+            <!-- <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg"> -->
+          </label>
+          <div class="container__search-results">
+            <div class="search-results__item-wrapper">
+              <a href="#" class="search-results__item">
+                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
+                <div class="item-text">
+                  <span class="item-title">T-shirt-1</span>
+                  <p class="item-price price">150</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-results__item-wrapper">
+              <a href="#" class="search-results__item">
+                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
+                <div class="item-text">
+                  <span class="item-title">T-shirt-1</span>
+                  <p class="item-price price">150</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="container__all-btn black-btn">view all products</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-background burger-bg">
+      <div class="burger-modal">
+        <div class="bb search_wrapper">
+          <div class="container">
+            <label class="burger__search">
+              <img alt="search" width="16px" height="16px" src="assets/images/icons-search-gray.svg">
+              <input placeholder="Search" type="search" name="search">
+            </label>
+            <button class="cancel-btn" >Cancel</button>
+          </div>
+        </div>
+        <div class="burger-items">
+          <div class="container big-paddings_mobile">
             <ul>
-              <li>USA</li>
-              <li>Brasil</li>
-              <li>Canada (English)</li>
-              <li>Canada (Français)</li>
+              <li class="accordion">
+                <div class="burger_item_dual bb" >Clothes</div>
+                <ul>
+                  <li class="burger_subitem item-with-link"><a href="#">Women</a></li>
+                  <li class="burger_subitem item-with-link"><a href="#">Men</a></li>
+                  <li class="burger_subitem item-with-link"><a href="#">Children</a></li>
+                </ul>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Company</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Cart</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">My account</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Check order status</a>
+              </li>
+              <li class="burger_item bb mb40">
+                <a href="#">Contact us</a>
+              </li>
+              <li class="burger_region accordion">
+                <div class="burger_item_dual bb">
+                  <div class="country">
+                    <img class="country__icon" alt="country" src="assets/images/usa.png">
+                    <div class="text">Ship to: United States</div>
+                  </div>
+                </div>
+                <ul>
+                  <li class="region">
+                    <div class="region__title burger_subitem">Americas</div>
+                    <ul>
+                      <li class="burger_sub-subitem">USA</li>
+                      <li class="burger_sub-subitem">Brasil</li>
+                      <li class="burger_sub-subitem">Canada (English)</li>
+                      <li class="burger_sub-subitem">Canada (Français)</li>
+                    </ul>
+                  </li>
+                  <li class="region">
+                    <div class="region__title burger_subitem">Europe</div>
+                    <ul>
+                      <li class="burger_sub-subitem">Belgium (English)</li>
+                      <li class="burger_sub-subitem">Denmark (English)</li>
+                      <li class="burger_sub-subitem">Deutschland</li>
+                      <li class="burger_sub-subitem">España</li>
+                      <li class="burger_sub-subitem">France</li>
+                      <li class="burger_sub-subitem">Ireland</li>
+                      <li class="burger_sub-subitem">Italia</li>
+                      <li class="burger_sub-subitem">Luxembourg (English)</li>
+                      <li class="burger_sub-subitem">Monaco (English)</li>
+                      <li class="burger_sub-subitem">Nederland (English)</li>
+                      <li class="burger_sub-subitem">Österreich (English)</li>
+                      <li class="burger_sub-subitem">Suomi (English)</li>
+                      <li class="burger_sub-subitem">Sweden (English)</li>
+                      <li class="burger_sub-subitem">United Kingdom</li>
+                      <li class="burger_sub-subitem">Россия</li>
+                    </ul>
+                  </li>
+                  <li class="region">
+                    <div class="region__title burger_subitem">Asia</div>
+                    <ul>
+                      <li class="burger_sub-subitem">中国大陆</li>
+                      <li class="burger_sub-subitem">日本</li>
+                      <li class="burger_sub-subitem">대한민국</li>
+                      <li class="burger_sub-subitem">Hong Kong SAR</li>
+                      <li class="burger_sub-subitem">香港特別行政區</li>
+                      <li class="burger_sub-subitem">Singapore</li>
+                      <li class="burger_sub-subitem">Malaysia</li>
+                      <li class="burger_sub-subitem">台灣地區</li>
+                      <li class="burger_sub-subitem">ประเทศไทย</li>
+                    </ul>
+                  </li>
+                  <li class="region">
+                    <div class="region__title burger_subitem">Oceania</div>
+                    <ul>
+                      <li class="burger_sub-subitem">Australia</li>
+                      <li class="burger_sub-subitem">New Zealand</li>
+                    </ul>
+                  </li>
+                  <li class="region">
+                    <div class="region__title burger_subitem">Middle East</div>
+                    <ul>
+                      <li class="burger_sub-subitem">UAE (English)</li>
+                      <li class="burger_sub-subitem">(الإمارات العربية المتحدة (العربية</li>
+                      <li class="burger_sub-subitem">KSA (English)</li>
+                      <li class="burger_sub-subitem">(المملكة العربية السعودية (العربية</li>
+                      <li class="burger_sub-subitem">Kuwait (English)</li>
+                      <li class="burger_sub-subitem">(الكويت (العربية</li>
+                      <li class="burger_sub-subitem">Qatar (English)</li>
+                      <li class="burger_sub-subitem">(قطر (العربية</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion language mb40">
+                <div class="burger_item_dual bb">
+                  Language
+                </div>
+                <ul>
+                  <li class="burger_subitem">
+                    <input type="radio" name="language" id="EN" value="English" checked>
+                    <label for="EN">English</label>
+                  </li>
+                  <li class="burger_subitem">
+                    <input type="radio" name="language" id="RU" value="Русский">
+                    <label for="RU">Русский</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">How to refund a purchase?</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Refund Policy</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Sale Policy</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Shipping Policy</a>
+              </li>
+              <li class="burger_item bb">
+                <a href="#">Terms of Use</a>
+              </li>
             </ul>
           </div>
-          <div class="region">
-            <div class="region__title">Europe</div>
+        </div>
+        <div class="burger_search-results">
+          <div class="container big-paddings_mobile">
             <ul>
-              <li>Belgium (English)</li>
-              <li>Denmark (English)</li>
-              <li>Deutschland</li>
-              <li>España</li>
-              <li>France</li>
-              <li>Ireland</li>
-              <li>Italia</li>
-              <li>Luxembourg (English)</li>
-              <li>Monaco (English)</li>
-              <li>Nederland (English)</li>
-              <li>Österreich (English)</li>
-              <li>Suomi (English)</li>
-              <li>Sweden (English)</li>
-              <li>United Kingdom</li>
-              <li>Россия</li>
-            </ul>
-          </div>
-          <div class="region">
-            <div class="region__title">Asia</div>
-            <ul>
-              <li>中国大陆</li>
-              <li>日本</li>
-              <li>대한민국</li>
-              <li>Hong Kong SAR</li>
-              <li>香港特別行政區</li>
-              <li>Singapore</li>
-              <li>Malaysia</li>
-              <li>台灣地區</li>
-              <li>ประเทศไทย</li>
-            </ul>
-          </div>
-          <div class="region">
-            <div class="region__title">Oceania</div>
-            <ul>
-              <li>Australia</li>
-              <li>New Zealand</li>
-            </ul>
-          </div>
-          <div class="region">
-            <div class="region__title">Middle East</div>
-            <ul>
-              <li>UAE (English)</li>
-              <li>(الإمارات العربية المتحدة (العربية</li>
-              <li>KSA (English)</li>
-              <li>(المملكة العربية السعودية (العربية</li>
-              <li>Kuwait (English)</li>
-              <li>(الكويت (العربية</li>
-              <li>Qatar (English)</li>
-              <li>(قطر (العربية</li>
+              <li class="burger_search-results_item bb">
+                <a href="#">Company</a>
+              </li>
+              <li class="burger_search-results_item bb">
+                <a href="#">Result 1</a>
+              </li>
+              <li class="burger_search-results_item bb">
+                <a href="#">Long long long long long long result 2</a>
+              </li>
+              <li class="burger_search-results_item bb">
+                <a href="#">Result 3</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal-background region-bg"></div>
-    <div class="modal-background search-bg"></div>
-    <div class="modal-background filter-bg"></div>
     <script src="script.js"></script>
 </body>
 </html>

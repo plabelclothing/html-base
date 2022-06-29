@@ -47,14 +47,14 @@
                     <label class="burger__search">
                       <img alt="search" width="16px" height="16px" src="assets/images/icons-search.svg">
                       <input placeholder="Search" type="search" name="search">
-                    </label>
-                    <a class="nav_text" href="productPage.html">T-shirts</a>
-                    <a class="nav_text" >Company</a>
+                    </label>  
+                    <a class="nav_text">T-shirts</a>
+                    <a class="nav_text">Company</a>
                   </div>
               </nav>
               <a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.svg"></a>
               <nav class="nav-icons">
-                  <a class="nav_icon open-search-modal-btn" >
+                  <a class="nav_icon open-search-modal-btn">
                       <img alt="search" src="assets/images/icons-search.svg">
                   </a>
                   <a class="nav_icon account" href="account.html">
@@ -62,116 +62,141 @@
                   </a>
                   <a class="nav_icon cart" href="cart.html">
                       <img alt="cart" src="assets/images/icons-cart.svg">
-                      <span class="cart__counter">99+</span>
+                      <span class="cart__counter">22</span>
                   </a>
               </nav>
           </div>
       </div>
     </header>
-    <main class="one-product-page">
-      <section class="one-product">
+    <main class="products-page">
+      <section class="filter sticky">
+        <div class="tb-border">
+          <div class="container">
+            <div class="filter-title">
+              <span class="bold">All t-shirts</span>
+              <span class="regular">(120 products)</span>
+            </div>
+            <button class="filter-btn">
+              <svg class="ui-icon-controls-filter" id="sprite-controls-filter" viewBox="0 0 80 80"><path d="M67.3 79.9V31.6h6.5v48.3zm0-72V.1h6.5v7.8zm-4.6 19.2V11.5h15.6v15.6zM36.8 79.9V51.6h6.5v28.3zm0-51.1V.1h6.5v28.7zm-4.5 19.3V32.5h15.6v15.6zm-26 31.8v-7.8h6.5v7.8zm0-29.8V.1h6.5v50zm-4.6 18V52.5h15.6v15.6z" fill-rule="evenodd"></path></svg>
+              <div>Filters</div>
+            </button>
+          </div>
+        </div>
+        <div class="modal-filter">
+          <div class="container">
+            <form class="modal-filter__main">
+              <div class="modal-filter__main-item collection text">
+                <div class="title">Collections</div>
+                <fieldset>
+                  <input type="checkbox" value="winter" id="winter">
+                  <label for="winter">
+                    Winter 
+                  </label>
+                  <input type="checkbox" value="summer" id="summer">
+                  <label for="summer">
+                    Summer
+                  </label>
+                  <input type="checkbox" value="spring" id="spring">
+                  <label for="spring">
+                    Spring 2021
+                  </label>
+                </fieldset>
+              </div>
+              <div class="modal-filter__main-item size box">
+                <div class="title">Size</div>
+                <fieldset>
+                  <input type="checkbox" value="s" id="s">
+                  <label for="s">s</label>
+                  <input type="checkbox" value="m" id="m">
+                  <label for="m">m</label>
+                  <input type="checkbox" value="l" id="l">
+                  <label for="l">l</label>
+                </fieldset>
+              </div>
+              <div class="modal-filter__main-item color box">
+                <div class="title">Colors</div>
+                <fieldset>
+                  <input type="checkbox" value="white" id="white">
+                  <label class="color-bg" for="white" style="background-color: white"></label>
+                  <input type="checkbox" id="black" value="black">
+                  <label class="color-bg" for="black" style="background-color: black"></label>
+                  <input type="checkbox" value="red" id="red">
+                  <label class="color-bg" for="red" style="background-color: red"></label>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <button class="hide-filter-btn">
+            <img alt="arrow" src="assets/images/icons-chevron-down.svg">
+            <span>Hide filters</span>
+          </button>
+        </div>
+      </section>
+      <section class="products">
         <div class="container">
-          <div class="container__product-block">
-            <div class="left-column">
-              <div class="photo" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-              <div class="info-text">
-                  <p>worldwide free delivery</p>
-                  <p>info about tax *</p>
-              </div>
+          <div class="container__products-wrapper">
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
             </div>
-            <div class="right-column">
-              <div class="one-product-info">
-                <div class="title">T-Shirt-1</div>
-                <p>worldwide free delivery</p>
-              </div>
-              <div class="size">
-                <div class="size__title">Choose your size.</div>
-                  <form class="size-form">
-                    <div>
-                      <input type="radio" name="size" value="s" id="s">
-                      <label for="s">s</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="m" id="m">
-                      <label for="m">m</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="l" id="l">
-                      <label for="l">l</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="xl" id="xl">
-                      <label for="xl">xl</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="xxl" id="xxl">
-                      <label for="xxl">xxl</label>
-                    </div>
-                    <div>
-                      <input type="radio" name="size" value="xxxl" id="xxxl">
-                      <label for="xxxl">xxxl</label>
-                    </div>
-                  </form>
-                </div>
-                <div class="colors">
-                <div class="colors__title">Choose your color.</div>
-                  <form class="colors-form">
-                    <div class="color-form-div">
-                      <input type="radio" name="one-product-color" value="white" id="white">
-                      <label for="white" class="white">
-                          <p class="color-bg" style="background-color: white"></p>
-                          <p class="text">White</p>
-                      </label>
-                    </div>
-                    <div class="color-form-div">
-                      <input type="radio" name="one-product-color" id="black" value="black">
-                      <label class="black" for="black">
-                          <p class="color-bg" style="background-color: black"></p>
-                          <p class="text">Black</p>
-                      </label>
-                    </div>
-                    <div class="color-form-div">
-                      <input type="radio" name="one-product-color" value="red" id="red">
-                      <label class="red" for="red">
-                          <p class="color-bg" style="background-color: red"></p>
-                          <p class="text">Red</p>
-                      </label>
-                    </div>
-                  </form>
-                </div>
-                <div class="addition">
-                    <div class="addition__price price">160</div>
-                    <div class="info-text">
-                        <p>worldwide free delivery</p>
-                        <p>info about tax *</p>
-                    </div>
-                    <div class="addition__buttons">
-                      <button class="black-btn">add to cart</button>
-                      <a class="cart" >
-                        <img alt="cart" src="assets/images/icons-cart.svg">
-                    </a>
-                    </div>
-                </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
+            </div>
+            <div class="product-card">
+              <a href="oneProductPage.html" class="product-card__image" style="background-image: url('assets/images/t-shirt.jfif')"></a>
+              <a href="oneProductPage.html" class="product-card__title">T-Shirt</a>
+              <div class="product-card__price price">120</div>
             </div>
           </div>
-          <div class="container__foto-block">
-            <div class="cart-block__product-image" style="background-image: url(assets/images/karsten-winegeart-sda-u-6-n-4-dki-8-unsplash.jpg)"></div>
-            <div class="cart-block__text">Some text will be here</div>
-            <div class="cart-block__product-image" style="background-image: url(assets/images/karsten-winegeart-sda-u-6-n-4-dki-8-unsplash.jpg)"></div>
-          </div>
-          <div class="container__cart-block">
-            <div class="cart-block__title block-title">
-              <span class="bold">What’s in the Box</span>
-            </div>
-            <div class="cart-block__main">
-              <div class="cart-product" style="background-image: url(assets/images/iphone-cart.jfif)">
-                <p class="cart-product__name">iPhone</p>
-              </div>
-              <div class="cart-product" style="background-image: url(assets/images/usb-cart.jfif)">
-                <p class="cart-product__name">USB-C to Lightning Cable</p>
-              </div>
-            </div>
-          </div>
+          <button class="products-info__btn">view all products</button>
         </div>
       </section>
     </main>
@@ -179,7 +204,7 @@
       <div class="container">
         <img class="logo_white" alt="logo" src="assets/images/logo-white.png">
         <div class="columns-wrapper">
-          <div class="columns-wrapper__column accordion">
+          <div class="columns-wrapper__column  accordion">
             <div class="column__title">
               Company
             </div>
@@ -189,7 +214,7 @@
               <li><a>Find a store</a></li>
             </ul>
           </div>
-          <div class="columns-wrapper__column accordion">
+          <div class="columns-wrapper__column  accordion">
             <div class="column__title">
               Customer Support
             </div>
@@ -200,7 +225,7 @@
               <li><a>Your privacy</a></li>
             </ul>
           </div>
-          <div class="columns-wrapper__column accordion">
+          <div class="columns-wrapper__column  accordion">
             <div class="column__title">
               Account
             </div>
@@ -211,7 +236,7 @@
               <li><a>Order history</a></li>
             </ul>
           </div>
-          <div class="columns-wrapper__column accordion language">
+          <div class="columns-wrapper__column  accordion language">
             <div class="column__title">
               Language
             </div>
@@ -228,9 +253,9 @@
           </div>
           <div class="columns-wrapper__column">
             <div class="column__title">
-              <a ><img src="assets/images/fb.svg" al="fb"></a>
-              <a ><img src="assets/images/in.svg" al="in"></a>
-              <a ><img src="assets/images/tt.svg" al="tt"></a>
+              <a><img src="assets/images/fb.svg" al="fb"></a>
+              <a><img src="assets/images/in.svg" al="in"></a>
+              <a><img src="assets/images/tt.svg" al="tt"></a>
             </div>
             <div class="country">
               <img class="country__icon" alt="country" src="assets/images/usa.png">
@@ -334,32 +359,17 @@
           <label>
             <img alt="search" src="assets/images/icons-search.svg">
             <input placeholder="Search" type="search" name="search">
-            <!-- <img class="clear-search-btn" alt="close" src="assets/images/icons-close.svg"> -->
           </label>
-          <div class="container__search-results">
-            <div class="search-results__item-wrapper">
-              <a href="#" class="search-results__item">
-                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-                <div class="item-text">
-                  <span class="item-title">T-shirt-1</span>
-                  <p class="item-price price">150</p>
-                </div>
-              </a>
-            </div>
-            <div class="search-results__item-wrapper">
-              <a href="#" class="search-results__item">
-                <div class="item-image" style="background-image: url('assets/images/t-shirt.jfif')"></div>
-                <div class="item-text">
-                  <span class="item-title">T-shirt-1</span>
-                  <p class="item-price price">150</p>
-                </div>
-              </a>
+          <div class="container empty-page__container">
+            <img src="./assets/images/search-solid.svg" alt="search">
+            <div class="empty-page__description">
+              <p>no result</p>
             </div>
           </div>
-          <button class="container__all-btn black-btn">view all products</button>
         </div>
       </div>
     </div>
+    <div class="modal-background filter-bg"></div>
     <script src="script.js"></script>
 </body>
 </html>
