@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./assets/styles/style.css'>
+    <title>Plabel</title>
+</head>
+<body>
+    <section class="registration">
+      <div class="container">
+        <div class="registration-block bg-white">
+          <div class="registration-block__header">
+            <a href="index.html" class="logo"><img alt="logo" src="assets/images/logo.svg"></a>
+            <p class="title">Login</p>
+          </div>
+          <div class="registration-block__main">
+            <form>
+              <div class="form-fields">
+                <div class="form-fields__input">
+                  <input id="registration-email" type="email">
+                  <label for="registration-email" class="placeholder">Email Address</label>
+                </div>
+                <div class="form-fields__input">
+                  <input id="registration-password" type="text" class="password" />
+                  <label for="registration-password" class="placeholder">Password</label>
+                </div>
+                <div class="form-fields__input">
+                  <input id="registration-repeat-password" type="text" class="password" />
+                  <label for="registration-repeat-password" class="placeholder">Repeat password</label>
+                </div>
+                <div class="form-fields__input">
+                  <input id="registration-date" type="date" placeholder="DD-MM-YYYY"/>
+                  <label for="registration-date" class="placeholder">Date of birth</label>
+                </div>
+                <div class="agreement">
+                  <input type="checkbox" id="agreement-checkbox">
+                  <label for="agreement-checkbox"></label>
+                  <span>I agree to the <a>terms of use</a> and the <a>privacy policy</a></span>
+                </div>
+              </div>
+              <button class="black-btn">Sign up</button>
+            </form>
+            <div class="registration-block__help">
+              <p>
+                <a>Don't remember the password</a>
+              </p>
+              <p>
+                Don't have a account? <a>Sing up</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="registration-block bg-grey">
+          <img class="logo" alt="logo" src="assets/images/logo-small.png">
+          <p>We are here to make beautiful things for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
